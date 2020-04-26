@@ -53,10 +53,10 @@ class Messages extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'client_name' => 'Client Name',
-            'client_phone' => 'Client Phone',
-            'client_mail' => 'Client Mail',
-            'client_address' => 'Client Address',
+            'client_name' => 'Name',
+            'client_phone' => 'Phone',
+            'client_mail' => 'Mail',
+            'client_address' => 'Address',
             'message' => 'Message',
             'status_id' => 'Status ID',
             'user_id' => 'User ID',

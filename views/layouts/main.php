@@ -7,9 +7,10 @@ use app\widgets\Alert;
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
+use yii\widgets\ActiveForm;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
-
+$model = new \app\models\Messages();
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
@@ -25,34 +26,24 @@ AppAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
+<div class = "pre-nav">
 
+</div>
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => Yii::$app->name,
-        'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
+            'class' => 'nav',
         ],
     ]);
     echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
             ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'About', 'url' => ['/site/about']],
-            ['label' => 'Contact', 'url' => ['/site/contact']],
-            Yii::$app->user->isGuest ? (
-                ['label' => 'Login', 'url' => ['/site/login']]
-            ) : (
-                '<li>'
-                . Html::beginForm(['/site/logout'], 'post')
-                . Html::submitButton(
-                    'Logout (' . Yii::$app->user->identity->username . ')',
-                    ['class' => 'btn btn-link logout']
-                )
-                . Html::endForm()
-                . '</li>'
-            )
+            ['label' => 'Common Reasons To Sell Property', 'url' => ['/site/about']],
+            ['label' => 'Our process', 'url' => ['/site/contact']],
+            ['label' => 'Our Services', 'url' => ['/site/index']],
+            ['label' => 'FAQ', 'url' => ['/site/about']],
+            ['label' => 'Contact Us', 'url' => ['/site/contact']],
         ],
     ]);
     NavBar::end();
@@ -68,10 +59,24 @@ AppAsset::register($this);
 </div>
 
 <footer class="footer">
-    <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
+    <div class ="container">
+        <div class="footer-form">
+            <div>
+                <?php $form = ActiveForm::begin(); ?>
 
-        <p class="pull-right"><?= Yii::powered() ?></p>
+                <?= $form->field($model, 'client_name') ?>
+                <?= $form->field($model, 'client_phone') ?>
+                <?= $form->field($model, 'client_mail') ?>
+                <?= $form->field($model, 'client_address') ?>
+                <?= $form->field($model, 'message') ?>
+                <div class="form-group">
+                    <?= Html::submitButton('Send', ['class' => 'btn btn-lg btn-primary', 'style'=>'display: flex; justify-content: center;']) ?>
+                </div>
+
+                <?php ActiveForm::end(); ?>
+            </div>
+
+        </div>
     </div>
 </footer>
 
