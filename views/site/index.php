@@ -1,5 +1,7 @@
 <?php
 use kv4nt\owlcarousel\OwlCarouselWidget;
+use yii\helpers\Url;
+
 /* @var $this yii\web\View */
 
 $this->title = '718 Real Estate Advisors';
@@ -24,8 +26,6 @@ $this->title = '718 Real Estate Advisors';
     <div class="item-class"><img src="/img/2.jpg" alt="Image 2"></div>
     <div class="item-class"><img src="/img/3.jpg" alt="Image 3"></div>
     <div class="item-class"><img src="/img/4.jpg" alt="Image 4"></div>
-
-
     <?php OwlCarouselWidget::end(); ?>
 
 
