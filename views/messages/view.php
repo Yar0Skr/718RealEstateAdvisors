@@ -9,6 +9,10 @@ use yii\widgets\DetailView;
 $this->title = $model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Messages', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
+if(empty($model->user_id)){
+    $model->user_id = Yii::$app->user->id;
+    $model->save();
+}
 \yii\web\YiiAsset::register($this);
 ?>
 <div class="messages-view">
@@ -35,9 +39,9 @@ $this->params['breadcrumbs'][] = $this->title;
             'client_mail',
             'client_address',
             'message:ntext',
-            'status_id',
+            //'status_id',
             'user_id',
-            'is_delete',
+            //'is_delete',
             'created_at',
             'updated_at',
         ],

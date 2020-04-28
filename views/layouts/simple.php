@@ -61,32 +61,6 @@ AppAsset::register($this);
 <footer class="footer">
     <div class ="container">
         <div class="footer-form">
-            <div>
-                <a name="contact"></a>
-                <h2>CONTACT US</h2>
-                <?php $form = ActiveForm::begin(); ?>
-
-                <?= $form->field($model, 'client_name')
-                    ->textInput(['placeholder'=>'Your full name','style' => 'border-radius:30px'])
-                    ->label(false) ?>
-                <?= $form->field($model, 'client_phone')
-                    ->textInput(['placeholder'=>'Phone number','style' => 'border-radius:30px'])
-                    ->label(false) ?>
-                <?= $form->field($model, 'client_mail')
-                    ->textInput(['placeholder'=>'Email','style' => 'border-radius:30px'])
-                    ->label(false) ?>
-                <?= $form->field($model, 'client_address')
-                    ->textInput(['placeholder'=>'Address of property','style' => 'border-radius:30px'])
-                    ->label(false) ?>
-                <?= $form->field($model, 'message')
-                    ->textarea(['placeholder'=>'Message','style' => 'border-radius:30px; height:100px'])
-                    ->label(false) ?>
-
-                <?= Html::submitButton('Send', ['class' => 'btn align-self-center']) ?>
-
-
-                <?php ActiveForm::end(); ?>
-            </div>
         </div>
         <div class="social">
             BUTTONS

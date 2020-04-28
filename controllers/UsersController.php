@@ -35,13 +35,8 @@ class UsersController extends ParentController
      */
     public function actionIndex()
     {
-        $searchModel = new UsersSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
-        return $this->render('index', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
-        ]);
+         $users = Users::find()->all();
+         return $this->render('index',['users'=>$users]);
     }
 
     /**
@@ -65,10 +60,23 @@ class UsersController extends ParentController
     public function actionCreate()
     {
         $model = new Users();
+        $model->is_delete = 0;
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if (!empty(Yii::$app->request->post())){
+            $data = Yii::$app->request->post();
+            $users = Users::findOne(['username'=>$data['Users']['username']]);
+            if (empty($users)){
+                $data['Users']['password'] = Yii::$app->security->generatePasswordHash($data['Users']['password']);
+                if ($model->load($data) && $model->save()) {
+                    return $this->redirect(['view', 'id' => $model->id]);
+                } else {
+                    Yii::$app->session->setFlash('error', 'Error while saving');
+                }
+            } else {
+                Yii::$app->session->setFlash('error', 'Username is already taken');
+            }
         }
+
 
         return $this->render('create', [
             'model' => $model,
@@ -85,9 +93,18 @@ class UsersController extends ParentController
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        $oldPass = $model->password;
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            if($model->password != "") {
+                $model->password = Yii::$app->getSecurity()->generatePasswordHash($model->password);
+            } else {
+                $model->password = $oldPass;
+            }
+            $model->save();
+            return $this->redirect(['index']);
+        } else {
+            $model->password = '';
         }
 
         return $this->render('update', [
@@ -123,5 +140,16 @@ class UsersController extends ParentController
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
+    }
+
+    public function beforeAction($action)
+    {
+
+        if (Yii::$app->user->identity->auth_type != 1){
+            return Yii::$app->getResponse()->redirect('/');
+        } else{
+            return parent::beforeAction($action);
+        }
+
     }
 }

@@ -1,6 +1,7 @@
 html,
 body {
     height: 100%;
+    background-color: #ebebeb;
 }
 .pre-nav{
     height: 150px;
@@ -61,8 +62,37 @@ body {
     height: auto;
     background-color: #014a73;
     padding-top: 20px;
+    margin: 0;
 }
 .footer-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.footer-form h2{
+    color: white;
+}
+
+.footer-form .btn {
+    color: white;
+    background-color: #007cff;
+    font-size: 20px;
+    width: 40%;
+    height: 45px;
+    Border-radius:60px;
+}
+
+.rights{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+.social{
+    margin: 40px;
     display: flex;
     align-items: center;
     justify-content: center;

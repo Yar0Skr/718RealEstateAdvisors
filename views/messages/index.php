@@ -14,31 +14,33 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>
-        <?= Html::a('Create Messages', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
-
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
+    <?php if(Yii::$app->user->identity->auth_type==1){
+        $buttons = '{view} {delete}';
+    } else {
+        $buttons = '{view}';
+    } ?>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
             'client_name',
             'client_phone',
             'client_mail',
             'client_address',
             //'message:ntext',
-            //'status_id',
+            'status_id',
             //'user_id',
             //'is_delete',
             //'created_at',
             //'updated_at',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            [
+                'class' => 'yii\grid\ActionColumn',
+                'template' => $buttons,
+            ],
         ],
     ]); ?>
 

@@ -4,40 +4,49 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel app\models\UsersSearch */
-/* @var $dataProvider yii\data\ActiveDataProvider */
+/* @var $users app\models\Users */
 
 $this->title = 'Users';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="users-index">
-
-    <h1><?= Html::encode($this->title) ?></h1>
-
-    <p>
-        <?= Html::a('Create Users', ['create'], ['class' => 'btn btn-success']) ?>
+<div class="users-create">
+    <?php if(Yii::$app->user->identity->auth_type == 1) {
+    ?>
+    <p class="create-button-container">
+        <?= Html::a('Add user', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
-
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
-    <?= GridView::widget([
-        'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-
-            'id',
-            'name',
-            'username',
-            'password',
-            'auth_type',
-            //'is_delete',
-            //'created_at',
-            //'updated_at',
-
-            ['class' => 'yii\grid\ActionColumn'],
-        ],
-    ]); ?>
-
-
+    <?php
+}?>
+<div class="users-create">
+    <?php if(empty($users)) {
+        ?>
+        <div class="no-user white-block" >
+            <div>No users found</div>
+        </div>
+        <?php
+    } else {
+        foreach ($users as $user){
+            ?>
+            <div class="no-user white-block" >
+                <div>Name: <?=$user->name?></div>
+            </div>
+            <div class="no-user white-block" >
+                <div>Username: <?=$user->username?></div>
+            </div>
+            <div class="no-user white-block" >
+                <div>Role:
+                    <?php if($user->auth_type == 1){
+                        echo 'Administrator';
+                    } else {
+                        echo 'Support';
+                     } ?>
+                </div>
+            </div>
+            <?php if ($user->auth_type == 1){
+                echo Html::a('View', ['view', 'id' => $user->id], ['class' => 'btn btn-primary']);
+             }?>
+        <?php
+        }
+    }
+    ?>
 </div>

@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\web\IdentityInterface;
 
 /**
  * This is the model class for table "users".
@@ -18,7 +19,7 @@ use Yii;
  *
  * @property Messages[] $messages
  */
-class Users extends \yii\db\ActiveRecord
+class Users extends \yii\db\ActiveRecord implements IdentityInterface
 {
     /**
      * {@inheritdoc}
@@ -65,5 +66,70 @@ class Users extends \yii\db\ActiveRecord
     public function getMessages()
     {
         return $this->hasMany(Messages::className(), ['user_id' => 'id']);
+    }
+
+    public static function findIdentity($id)
+    {
+        return static::findOne($id);
+    }
+
+    public static function findIdentityByAccessToken($token, $type = null)
+    {
+        $user = Users::find()
+            ->where(['auth_key' => $token])
+            ->one();
+
+        if ($user) {
+            return $user;
+        } else {
+            return false;
+        }    }
+
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    public function getAuthKey()
+    {
+        return $this->auth_type;
+    }
+
+    public function validateAuthKey($authKey)
+    {
+        return $this->getAuthKey() === $authKey;
+    }
+
+    public static function findByUsername($username) {
+        $user = Users::find()
+            ->where(['username' => $username])
+            ->one();
+
+        if ($user) {
+            return $user;
+        } else {
+            return false;
+        }
+    }
+
+    public function validatePassword($password) {
+        return Yii::$app->getSecurity()
+            ->validatePassword($password, $this->password);
+    }
+
+    public static function getAllUsers() {
+        return $users = Users::find()
+            ->all();
+    }
+
+    /**
+     * Get user by user id.
+     * @param integer $id user id.
+     * @return array|Users $carrier.
+     */
+    public static function getOnUserArray($id) {
+        return $users = Users::find()
+            ->andWhere(['id' => $id])
+            ->all();
     }
 }

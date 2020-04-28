@@ -37,7 +37,7 @@ class Messages extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['client_name', 'client_phone', 'client_address', 'user_id'], 'required'],
+            [['client_name', 'client_phone', 'client_address'], 'required'],
             [['message'], 'string'],
             [['status_id', 'user_id', 'is_delete'], 'integer'],
             [['created_at', 'updated_at'], 'safe'],

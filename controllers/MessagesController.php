@@ -65,7 +65,7 @@ class MessagesController extends ParentController
     public function actionCreate()
     {
         $model = new Messages();
-
+        $model->is_delete = 0;
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }

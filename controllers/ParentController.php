@@ -14,6 +14,7 @@ class ParentController extends Controller
         if (Yii::$app->user->isGuest){
             return Yii::$app->getResponse()->redirect('/');
         } else{
+            $this->layout = 'simple';
             return parent::beforeAction($action);
         }
 
