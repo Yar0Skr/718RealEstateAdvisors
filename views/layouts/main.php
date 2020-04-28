@@ -48,14 +48,7 @@ AppAsset::register($this);
     ]);
     NavBar::end();
     ?>
-
-    <div class="container">
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-        <?= Alert::widget() ?>
-        <?= $content ?>
-    </div>
+    <?= $content ?>
 </div>
 
 <footer class="footer">
@@ -67,16 +60,16 @@ AppAsset::register($this);
                 <?php $form = ActiveForm::begin(); ?>
 
                 <?= $form->field($model, 'client_name')
-                    ->textInput(['placeholder'=>'Your full name','style' => 'border-radius:30px'])
+                    ->textInput(['placeholder'=>'Your full name *','style' => 'border-radius:30px'])
                     ->label(false) ?>
                 <?= $form->field($model, 'client_phone')
-                    ->textInput(['placeholder'=>'Phone number','style' => 'border-radius:30px'])
+                    ->textInput(['placeholder'=>'Phone number *','style' => 'border-radius:30px'])
                     ->label(false) ?>
                 <?= $form->field($model, 'client_mail')
                     ->textInput(['placeholder'=>'Email','style' => 'border-radius:30px'])
                     ->label(false) ?>
                 <?= $form->field($model, 'client_address')
-                    ->textInput(['placeholder'=>'Address of property','style' => 'border-radius:30px'])
+                    ->textInput(['placeholder'=>'Address of property *','style' => 'border-radius:30px'])
                     ->label(false) ?>
                 <?= $form->field($model, 'message')
                     ->textarea(['placeholder'=>'Message','style' => 'border-radius:30px; height:100px'])

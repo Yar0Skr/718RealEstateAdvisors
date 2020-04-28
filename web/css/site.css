@@ -19,9 +19,9 @@ body {
     background-color: #007cff;
 }
 .nav{
-    height: 100%;
+    padding-top:2px;
     border-radius:0;
-    margin-bottom: -5px;
+    margin-bottom: auto;
 
 }
 .nav ul {
