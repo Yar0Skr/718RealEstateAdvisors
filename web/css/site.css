@@ -57,7 +57,40 @@ body {
 .wrap > .container {
     padding: 70px 15px 20px;
 }
+.font-header{
 
+}
+
+.content{
+    width: 100%;
+    height: 570px;
+}
+
+.white{
+    background-color: #ffffff ;
+}
+
+.gray{
+    background-color: #ebebeb;
+}
+
+.container-flex {
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex-div {
+    flex: 1;
+}
+
+.pre-footer{
+    height: 400px;
+    width: 100%;
+    background-image: url("/img/layouts/weBuy.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .footer {
     height: auto;
     background-color: #014a73;
