@@ -12,12 +12,12 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="users-create">
     <?php if(Yii::$app->user->identity->auth_type == 1) {
     ?>
-    <p class="create-button-container">
+    <p class="create-button-container" align="center">
         <?= Html::a('Add user', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?php
 }?>
-<div class="users-create">
+<div align="center" class="users-create">
     <?php if(empty($users)) {
         ?>
         <div class="no-user white-block" >
@@ -27,10 +27,10 @@ $this->params['breadcrumbs'][] = $this->title;
     } else {
         foreach ($users as $user){
             ?>
-            <div class="no-user white-block" >
+            <div>
                 <div>Name: <?=$user->name?></div>
             </div>
-            <div class="no-user white-block" >
+            <div>
                 <div>Username: <?=$user->username?></div>
             </div>
             <div class="no-user white-block" >
@@ -45,6 +45,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <?php if ($user->auth_type == 1){
                 echo Html::a('View', ['view', 'id' => $user->id], ['class' => 'btn btn-primary']);
              }?>
+            <hr>
         <?php
         }
     }
