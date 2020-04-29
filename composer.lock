@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b42d954088b13cb1ffd2dd5d5dfcbbc5",
+    "content-hash": "4da81df02017fafc619fc6f9ef172caf",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -32,7 +32,7 @@
             "version": "3.3.11",
             "source": {
                 "type": "git",
-                "url": "https://github.com/RobinHerbots/Inputmask.git",
+                "url": "git@github.com:RobinHerbots/Inputmask.git",
                 "reference": "5e670ad62f50c738388d4dcec78d2888505ad77b"
             },
             "dist": {
@@ -396,6 +396,53 @@
                 "yii2-owl-carousel"
             ],
             "time": "2019-12-13T09:34:49+00:00"
+        },
+        {
+            "name": "pa3py6aka/yii2-modal-alert-widget",
+            "version": "1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pa3py6aka/yii2-modal-alert-widget.git",
+                "reference": "5776ea455c976782114128dc40f548a3da7800f6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pa3py6aka/yii2-modal-alert-widget/zipball/5776ea455c976782114128dc40f548a3da7800f6",
+                "reference": "5776ea455c976782114128dc40f548a3da7800f6",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "~2.0"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "asset-installer-paths": {
+                    "npm-asset-library": "vendor/npm-asset",
+                    "bower-asset-library": "vendor/bower-asset"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "pa3py6aka\\yii2\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexander Savelyev",
+                    "homepage": "http://weblancer.net/users/alexsava"
+                }
+            ],
+            "description": "Modal alert widget for Yii2",
+            "keywords": [
+                "modal alert",
+                "yii 2",
+                "yii2"
+            ],
+            "time": "2018-11-06T16:59:06+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",

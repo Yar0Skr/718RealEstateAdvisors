@@ -64,6 +64,17 @@ class MessagesController extends ParentController
      */
     public function actionCreate()
     {
+        if(Yii::$app->request->post()){
+            $model = new Messages();
+            $model->load(Yii::$app->request->post());
+            $model->is_delete = 0;
+            if($model->save()){
+                return true;
+            } else {
+                return false;
+            }
+        }
+
         $model = new Messages();
         $model->is_delete = 0;
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -74,7 +85,19 @@ class MessagesController extends ParentController
             'model' => $model,
         ]);
     }
-
+    public function actionPostCreate()
+    {
+        if (Yii::$app->request->post()) {
+            $model = new Messages();
+            $model->load(Yii::$app->request->post());
+            $model->is_delete = 0;
+            if ($model->save()) {
+                return $this->render('success');
+            } else {
+                return $this->render('error');
+            }
+        }
+    }
     /**
      * Updates an existing Messages model.
      * If update is successful, the browser will be redirected to the 'view' page.

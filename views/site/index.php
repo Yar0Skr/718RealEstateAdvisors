@@ -2,7 +2,7 @@
 use kv4nt\owlcarousel\OwlCarouselWidget;
 use yii\helpers\Html;
 use yii\helpers\Url;
-
+use pa3py6aka\yii2\ModalAlert;
 /* @var $this yii\web\View */
 
 $this->title = '718 Real Estate Advisors';
@@ -28,8 +28,9 @@ $this->title = '718 Real Estate Advisors';
 <div class="item-class"><img src="/img/layouts/header.png" alt="Image 1"></div>
 <div class="item-class"><img src="/img/layouts/header.png" alt="Image 1"></div>
     <?php OwlCarouselWidget::end(); ?>
-
-
+<?= ModalAlert::widget([
+    'popupCssClass' => 'my-custom-class',
+]) ?>
 <div class="content gray">
     <div class="container container-flex">
         <div class="flex-div"><h2>Watch this short video to learn about us</h2></div>

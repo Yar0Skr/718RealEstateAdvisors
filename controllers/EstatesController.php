@@ -77,6 +77,20 @@ class EstatesController extends ParentController
         ]);
     }
 
+    public function actionPostCreate()
+    {
+        if (Yii::$app->request->post()) {
+            $model = new Estates();
+            $model->load(Yii::$app->request->post());
+            $model->is_delete = 0;
+            if ($model->save()) {
+                Yii::$app->session->setFlash('success', 'Information was sent successfully');
+            } else {
+                Yii::$app->session->setFlash('error', 'An error has occurred');
+            }
+        }
+        return $this->redirect(Url::toRoute('site/index'));
+    }
     /**
      * Updates an existing Estates model.
      * If update is successful, the browser will be redirected to the 'view' page.

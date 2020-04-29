@@ -4,6 +4,7 @@
 /* @var $content string */
 
 use app\widgets\Alert;
+use yii\bootstrap\Modal;
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
@@ -26,6 +27,26 @@ AppAsset::register($this);
     <?php $this->head() ?>
 </head>
 <body>
+
+<script type="text/javascript">
+    var $form = $('#formId');
+    $form.on('beforeSubmit', function() {
+        var data = $form.serialize();
+        $.ajax({
+            url: $form.attr('action'),
+            type: 'POST',
+            data: data,
+            success: function (data) {
+                // Implement successful
+            },
+            error: function(jqXHR, errMsg) {
+                alert(errMsg);
+            }
+        });
+        return false; // prevent default submit
+    });
+</script>
+
 <?php $this->beginBody() ?>
 <div class = "pre-nav" align="center">
     <div class="flex-nav">
@@ -74,7 +95,9 @@ AppAsset::register($this);
             <div align="center">
                 <a name="contact"></a>
                 <h2>CONTACT US</h2>
-                <?php $form = ActiveForm::begin(); ?>
+                <?php $form = ActiveForm::begin([
+                    'action' => Url::toRoute('messages/post-create')
+                ]); ?>
 
                 <?= $form->field($model, 'client_name')
                     ->textInput(['placeholder'=>'Your full name *','style' => 'border-radius:30px'])
