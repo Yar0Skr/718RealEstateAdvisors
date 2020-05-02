@@ -62,12 +62,6 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-//        if(Yii::$app->request->post()){
-//            $model = new Messages();
-//            $model->load(Yii::$app->request->post());
-//            $model->is_delete = 0;
-//            $model->save();
-//        }
         return $this->render('index');
     }
 
