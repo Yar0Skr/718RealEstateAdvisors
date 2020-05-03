@@ -7,12 +7,18 @@ use pa3py6aka\yii2\ModalAlert;
 
 $this->title = '718 Real Estate Advisors';
 ?>
+<style>
+    body{
+        background-color: #ebebeb;
+    }
+
+</style>
     <?php
     OwlCarouselWidget::begin([
         'container' => 'div',
         'containerOptions' => [
             'id' => 'container-id',
-            'class' => 'container-class'
+            'class' => 'owl'
         ],
         'pluginOptions'    => [
             'autoplay'          => true,
@@ -120,13 +126,6 @@ $this->title = '718 Real Estate Advisors';
 </div>
 
 
-<div align="center" class="pre-footer">
-    <h2>WE BUY HOUSES IN</h2>
-    <br>
-    <div>
-        <p class="h2">Brooklyn  •  Queens  •  Manhattan  •  Staten Island</p>
-    </div>
-    <div>
-        <p class="h2">Bronx  •  Nassau Country  •  New Jersey</p>
-    </div>
+<div align="center" class="process">
+    <img src="/img/layouts/weBuy.png" alt="">
 </div>

@@ -65,6 +65,26 @@ class SiteController extends Controller
         return $this->render('index');
     }
 
+    public function actionAbout()
+    {
+        return $this->render('about');
+    }
+
+    public function actionServices()
+    {
+        return $this->render('services');
+    }
+
+    public function actionReasons()
+    {
+        return $this->render('reasons');
+    }
+
+    public function actionProcess()
+    {
+        return $this->render('process');
+    }
+
     /**
      * Login action.
      *
@@ -115,15 +135,5 @@ class SiteController extends Controller
         return $this->render('contact', [
             'model' => $model,
         ]);
-    }
-
-    /**
-     * Displays about page.
-     *
-     * @return string
-     */
-    public function actionAbout()
-    {
-        return $this->render('about');
     }
 }

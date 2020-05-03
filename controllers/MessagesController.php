@@ -65,8 +65,9 @@ class MessagesController extends ParentController
     public function actionCreate()
     {
         if(Yii::$app->request->post()){
+            $data = Yii::$app->request->post();
             $model = new Messages();
-            $model->load(Yii::$app->request->post());
+            $model->load($data);
             $model->is_delete = 0;
             if($model->save()){
                 return true;
@@ -91,7 +92,14 @@ class MessagesController extends ParentController
             $model = new Messages();
             $model->load(Yii::$app->request->post());
             $model->is_delete = 0;
+            $message=
+                'Name: '.$model->client_name.'. 
+                 Phone number: '.$model->client_phone.'. 
+                 Email: '.$model->client_mail.'. 
+                 Address: '.$model->client_address.'. 
+                 Message: '.$model->message;
             if ($model->save()) {
+                mail('info@718rea.com','Estate Advisors Form №'.$model->id,$message);
                 return $this->render('success');
             } else {
                 return $this->render('error');

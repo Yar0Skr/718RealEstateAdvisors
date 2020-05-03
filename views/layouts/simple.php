@@ -4,6 +4,7 @@
 /* @var $content string */
 
 use app\widgets\Alert;
+use yii\bootstrap\Modal;
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
@@ -26,27 +27,30 @@ AppAsset::register($this);
     <?php $this->head() ?>
 </head>
 <body>
+
+<script type="text/javascript">
+
+</script>
+
 <?php $this->beginBody() ?>
 <div class = "pre-nav" align="center">
     <div class="flex-nav">
-        <a href=<?=Url::home()?>><img src="/img/icons/logo.png" alt=""></a></div>
+        <a href=<?=Url::home()?>><img src="/img/icons/logo.png" alt=""></a>
+    </div>
     <div class="flex-nav">
-        <div class="header-icons">
+        <div align="middle" class="header-icons">
             <a href="tel:6462879111"><img src="\img\icons\phone-header.png" alt=""></a>
-            <p>646-287-9111</p>
         </div>
-        <div class="header-icons">
+        <div align="center" class="header-icons">
             <a href=""><img src="\img\icons\whatsapp-header.png" alt=""></a>
-            <p>Whatsapp</p>
         </div>
-        <div class="header-icons">
+        <div align="center" class="header-icons">
             <a href="mailto:info@718rea.com"><img src="\img\icons\mail-header.png" alt=""></a>
-            <p>info@718rea.com</p>
         </div>
     </div>
 
 </div>
-<div class="" style="height: auto">
+<div class="wrap" style="height: auto">
     <?php
     NavBar::begin([
         'options' => [
@@ -65,11 +69,9 @@ AppAsset::register($this);
     ]);
     NavBar::end();
     ?>
-
-</div>
-<div class="container">
     <?= $content ?>
 </div>
+
 <footer class="footer">
     <div class ="container">
         <div class="social">

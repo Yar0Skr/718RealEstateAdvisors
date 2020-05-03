@@ -29,22 +29,7 @@ AppAsset::register($this);
 <body>
 
 <script type="text/javascript">
-    var $form = $('#formId');
-    $form.on('beforeSubmit', function() {
-        var data = $form.serialize();
-        $.ajax({
-            url: $form.attr('action'),
-            type: 'POST',
-            data: data,
-            success: function (data) {
-                // Implement successful
-            },
-            error: function(jqXHR, errMsg) {
-                alert(errMsg);
-            }
-        });
-        return false; // prevent default submit
-    });
+
 </script>
 
 <?php $this->beginBody() ?>
@@ -89,11 +74,12 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class ="container">
-        <div class="footer-form">
+        <div class="footer-form container">
             <div align="center">
                 <a name="contact"></a>
                 <h2>CONTACT US</h2>
                 <?php $form = ActiveForm::begin([
+                        'id'=>'myForm',
                     'action' => Url::toRoute('messages/post-create')
                 ]); ?>
 
@@ -110,7 +96,7 @@ AppAsset::register($this);
                     ->textInput(['placeholder'=>'Address of property *','style' => 'border-radius:30px'])
                     ->label(false) ?>
                 <?= $form->field($model, 'message')
-                    ->textarea(['placeholder'=>'Message','style' => 'border-radius:30px; height:100px'])
+                    ->textarea(['placeholder'=>'Message','style' => 'border-radius:30px; width:70%'])
                     ->label(false) ?>
 
                 <?= Html::submitButton('Send', ['class' => 'btn align-self-center']) ?>
@@ -119,7 +105,7 @@ AppAsset::register($this);
                 <?php ActiveForm::end(); ?>
             </div>
         </div>
-        <div class="social">
+        <div align="center" class="social">
             <div class="icon-menu"><a href="https://www.facebook.com/realestate718/"><img src="\img\icons\facebook.png" alt=""></a></div>
             <div class="icon-menu"><a href="https://www.instagram.com/718realestateadvisors/"><img src="\img\icons\instagram.png" alt=""></a></div>
             <div class="icon-menu"><a href="tel:6462879111"><img src="\img\icons\phone.png" alt=""></a></div>

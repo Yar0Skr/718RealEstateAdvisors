@@ -11,7 +11,82 @@ body {
     font-family: "MazzardH";
     font-size: 16pt;
     height: 100%;
-    background-color: #ebebeb;
+}
+.navigaonusing{
+    padding-top: 10px;
+    width: 100%;
+}
+.gaonutosal {
+    float: left;
+    width: 100%;
+    padding: 0 1em;
+}
+
+.pesontedan {
+    justify-content: left;
+    margin-bottom: 1px;
+    overflow: hidden;
+}
+
+
+.pesontedan input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+.pesontedan label {
+    color: #007cff;
+    position: relative;
+    display: block;
+    padding: 0 0 0 1em;
+    line-height: 3;
+    cursor: pointer;
+    font-size: 18pt;
+    border: 1px solid #e7e7e7;
+}
+
+.pesontedan-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s;
+    font-size: 14px;
+}
+
+.pesontedan-content p {
+    font-size: 18pt;
+    margin: 1em;
+}
+/* :checked */
+.pesontedan input:checked ~ .pesontedan-content {
+    max-height: 100vh;
+}
+
+/* Icon */
+.pesontedan label::after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    width: 3em;
+    height: 3em;
+    line-height: 3;
+    text-align: center;
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+.pesontedan input[type=checkbox] + label::after {
+    content: "+";
+}
+.pesontedan input[type=radio] + label::after {
+    content: "\25BC";
+}
+.pesontedan input[type=checkbox]:checked + label::after {
+    transform: rotate(315deg);
+}
+.pesontedan input[type=radio]:checked + label::after {
+    transform: rotateX(180deg);
 }
 
 
@@ -27,6 +102,51 @@ body {
 .flex-nav{
     align-content: center;
     margin: auto;
+}
+
+.process{
+    height: auto;
+}
+
+.process img {
+    width: 100%;
+}
+
+
+.half-div{
+    height:50vh;
+}
+
+.full-div{
+    height:100vh;
+}
+.owl{
+    margin: 0;
+    padding: 0;
+}
+
+.FAQ-body{
+    font-family: "MazzardH-Regular";
+    font-size: 18pt;
+    height:auto;
+    padding-top: 65px;
+    padding-bottom: 65px;
+    background-image: url("/img/layouts/FAQbg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.Reasons-body{
+    font-family: "MazzardH-Regular";
+    margin-top: 0px;
+    font-size: 18pt;
+    padding-top: 65px;
+    padding-bottom: 65px;
+    background-image: url("/img/layouts/Reasons-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .header-icons{
@@ -45,10 +165,21 @@ body {
 }
 .wrap {
     min-height: 100%;
-    height: auto;
-    margin: 0 auto -60px;
-    padding: 0 0 60px;
 }
+
+.services{
+    font-family: "MazzardH-Regular";
+    text-align: center;
+
+}
+.services p{
+    margin-bottom: 35px;
+}
+
+.services h4{
+    font-family: "MazzardH";
+}
+
 .navbar{
     font-family: "MazzardH-Regular";
     font-size: 14pt;
@@ -142,7 +273,7 @@ body {
 }
 
 .icon-menu{
-    margin: 25px;
+    margin: 15px;
     float:left;
     width: auto;
     height: auto;
@@ -172,8 +303,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: auto;
 
+}
+
+.footer-form input{
+    width: 70%;
 }
 
 .footer-form h2{
@@ -212,16 +346,17 @@ body {
     margin: 20px;
 }
 .social{
-    margin: 40px;
+    padding-left: 30px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
 .footer-form div {
     width: 595px;
     height: auto;
 }
+
 
 .jumbotron {
     text-align: center;
