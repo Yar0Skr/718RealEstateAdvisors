@@ -37,7 +37,7 @@ AppAsset::register($this);
     <div class="flex-nav">
         <a href=<?=Url::home()?>><img src="/img/icons/logo.png" alt=""></a>
     </div>
-    <div class="flex-nav">
+    <div class="flex-nav hideNav">
         <div align="middle" class="header-icons">
             <a href="tel:6462879111"><img src="\img\icons\phone-header.png" alt=""></a>
         </div>
@@ -54,7 +54,7 @@ AppAsset::register($this);
     <?php
     NavBar::begin([
         'options' => [
-            'class' => 'nav',
+            'class' => 'navbar-inverse nav',
         ],
     ]);
     echo Nav::widget([
@@ -64,7 +64,7 @@ AppAsset::register($this);
             ['label' => 'Our process', 'url' => ['/site/process']],
             ['label' => 'Our Services', 'url' => ['/site/services']],
             ['label' => 'FAQ', 'url' => ['/site/about']],
-            ['label' => 'Contact Us', 'url' => ['#contact']],
+            ['label' => 'Contact Us', 'url' => [Url::current().'#contact'], 'options'=>['id' => 'smoothScroll']],
         ],
     ]);
     NavBar::end();
@@ -105,7 +105,7 @@ AppAsset::register($this);
                 <?php ActiveForm::end(); ?>
             </div>
         </div>
-        <div align="center" class="social">
+        <div align="center" class="social smallWidth">
             <div class="icon-menu"><a href="https://www.facebook.com/realestate718/"><img src="\img\icons\facebook.png" alt=""></a></div>
             <div class="icon-menu"><a href="https://www.instagram.com/718realestateadvisors/"><img src="\img\icons\instagram.png" alt=""></a></div>
             <div class="icon-menu"><a href="tel:6462879111"><img src="\img\icons\phone.png" alt=""></a></div>

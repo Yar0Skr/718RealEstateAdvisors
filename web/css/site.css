@@ -6,16 +6,35 @@
     font-family: "MazzardH-Regular";
     src: url("fonts/MazzardH-Regular.otf");
 }
+@media only screen and (max-width: 600px) {
+    h2{
+        font-size: 15pt;
+    }
+    p,li{
+        font-size: 10pt;
+    }
+    .hideNav {
+        display: none;
+    }
+    .smallWidth img{
+        width: 70px;
+    }
+}
 html,
 body {
+    scroll-behavior: smooth;
     font-family: "MazzardH";
     font-size: 16pt;
     height: 100%;
+}
+.navbar-inverse{
+    border:none;
 }
 .navigaonusing{
     padding-top: 10px;
     width: 100%;
 }
+
 .gaonutosal {
     float: left;
     width: 100%;
@@ -27,7 +46,6 @@ body {
     margin-bottom: 1px;
     overflow: hidden;
 }
-
 
 .pesontedan input {
     position: absolute;
@@ -46,12 +64,13 @@ body {
     border: 1px solid #e7e7e7;
 }
 
-.pesontedan-content {
+.pesontedan-content{
+    overflow-y: scroll;
     max-height: 0;
-    overflow: hidden;
     transition: max-height 1s;
     font-size: 14px;
 }
+
 
 .pesontedan-content p {
     font-size: 18pt;
@@ -104,6 +123,12 @@ body {
     margin: auto;
 }
 
+.flex-nav img{
+    width: auto;
+}
+.image img{
+    width: 300px;
+}
 .process{
     height: auto;
 }
@@ -112,6 +137,9 @@ body {
     width: 100%;
 }
 
+.site-landing{
+    margin-bottom: 30px;
+}
 
 .half-div{
     height:50vh;
@@ -147,6 +175,12 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.info-body{
+    font-family: "MazzardH-Regular";
+    margin: 30px;
+    font-size: 18pt;
 }
 
 .header-icons{
@@ -295,6 +329,7 @@ body {
 }
 .footer {
     height: auto;
+    width: auto;
     background-color: #014a73;
     padding-top: 20px;
     margin: 0;

@@ -95,7 +95,7 @@ $this->title = '718 Real Estate Advisors';
                         <li>Anywhere in New York and New Jersey</li>
                     </ul>
                     <br>
-                    <a href="tel:6462879111">
+                    <a href="#contact">
                         <button class="btn send-btn">Call or fill out the Form</button>
                     </a>
                 </div>

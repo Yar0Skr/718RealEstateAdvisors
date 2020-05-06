@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\Info;
 use app\models\Messages;
 use Yii;
 use yii\filters\AccessControl;
@@ -65,6 +66,12 @@ class SiteController extends Controller
         return $this->render('index');
     }
 
+    public function actionWelcome()
+    {
+        return $this->render('welcome');
+    }
+
+
     public function actionAbout()
     {
         return $this->render('about');
@@ -77,7 +84,8 @@ class SiteController extends Controller
 
     public function actionReasons()
     {
-        return $this->render('reasons');
+        $content = Info::find()->all();
+        return $this->render('reasons',['content'=>$content]);
     }
 
     public function actionProcess()
