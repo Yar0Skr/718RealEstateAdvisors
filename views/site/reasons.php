@@ -67,7 +67,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 <div style="margin:20px" class="row">
                                     <div align="center" class="col-12">
                                         <div>
-                                            <a href="<?=Url::toRoute('/info/view?id='.$element->id)?>"><p>Read more</p></a>
+                                            <a href="<?=Url::toRoute('/info/view?id='.$element->id)?>"><button class="send-btn align-self-center">Read more</button></a>
                                         </div>
                                     </div>
                                 </div>
