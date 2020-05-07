@@ -15,7 +15,7 @@ use yii\helpers\Html;
             ?>
             <?= Html::a('Messages', ['/messages'], ['class'=>'btn btn-primary']) ?>
             <?= Html::a('Estates', ['/estates'], ['class'=>'btn btn-primary']) ?>
-            <?= Html::a('Editor', ['/editor'], ['class'=>'btn btn-primary']) ?>
+            <?= Html::a('Editor', ['/info'], ['class'=>'btn btn-primary']) ?>
         </p>
     </div>
 </div>
