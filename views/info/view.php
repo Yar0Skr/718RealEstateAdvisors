@@ -109,6 +109,7 @@ foreach ($metaTags as $meta){
     <div class="info-body">
         <p><?=$model->text?></p>
     </div>
+
     <?php
     OwlCarouselWidget::begin([
         'container' => 'div',
