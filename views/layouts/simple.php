@@ -33,12 +33,12 @@ AppAsset::register($this);
 </script>
 
 <?php $this->beginBody() ?>
-<div class = "pre-nav" align="center">
+<div class = "pre-nav">
     <div class="flex-nav">
         <a href=<?=Url::home()?>><img src="/img/icons/logo.png" alt=""></a>
     </div>
-    <div class="flex-nav">
-        <div align="middle" class="header-icons">
+    <div class="flex-nav hideNav">
+        <div align="center" class="header-icons">
             <a href="tel:6462879111"><img src="\img\icons\phone-header.png" alt=""></a>
         </div>
         <div align="center" class="header-icons">
@@ -50,11 +50,24 @@ AppAsset::register($this);
     </div>
 
 </div>
+<div class = "pre-nav-bottom showNav">
+    <div class="flex-nav">
+        <div class="header-icons">
+            <a href="tel:6462879111"><img src="\img\icons\phone-header.png" alt=""></a>
+        </div>
+        <div class="header-icons">
+            <a href=""><img src="\img\icons\whatsapp-header.png" alt=""></a>
+        </div>
+        <div class="header-icons">
+            <a href="mailto:info@718rea.com"><img src="\img\icons\mail-header.png" alt=""></a>
+        </div>
+    </div>
+</div>
 <div class="wrap" style="height: auto">
     <?php
     NavBar::begin([
         'options' => [
-            'class' => 'nav',
+            'class' => 'navbar-inverse nav',
         ],
     ]);
     echo Nav::widget([
@@ -64,7 +77,7 @@ AppAsset::register($this);
             ['label' => 'Our process', 'url' => ['/site/process']],
             ['label' => 'Our Services', 'url' => ['/site/services']],
             ['label' => 'FAQ', 'url' => ['/site/about']],
-            ['label' => 'Contact Us', 'url' => ['#contact']],
+            ['label' => 'Contact Us', 'url' => [Url::current().'#contact'], 'options'=>['id' => 'smoothScroll']],
         ],
     ]);
     NavBar::end();
@@ -74,7 +87,7 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class ="container">
-        <div class="social">
+        <div align="center" class="social smallWidth">
             <div class="icon-menu"><a href="https://www.facebook.com/realestate718/"><img src="\img\icons\facebook.png" alt=""></a></div>
             <div class="icon-menu"><a href="https://www.instagram.com/718realestateadvisors/"><img src="\img\icons\instagram.png" alt=""></a></div>
             <div class="icon-menu"><a href="tel:6462879111"><img src="\img\icons\phone.png" alt=""></a></div>

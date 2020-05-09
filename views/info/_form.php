@@ -6,7 +6,11 @@ use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Info */
+/* @var $infoImagesModel app\models\InfoImages */
+/* @var $infoMetaTagsModel app\models\InfoMetatags */
 /* @var $form yii\widgets\ActiveForm */
+
+$infoMetaTagsModel = new \app\models\InfoMetatags();
 ?>
 
 <div class="info-form">
@@ -18,22 +22,6 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'short_info')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'text')->textarea(['rows' => 6]) ?>
-    <?=$form->field($model, 'file')->widget(FileInput::classname(), [
-        'options' => ['multiple'=>false],
-        'pluginOptions'=>[
-            'initialPreview'=>[
-                $model->file ? '/uploads/info/files/'.$model->file : null,
-            ],
-            'initialPreviewShowDelete' => false,
-            'initialPreviewAsData'=>true,
-            'initialCaption'=>$model->file,
-            'showDrag' => false,
-            'showRemove' => false,
-            'showUpload' => false,
-            'overwriteInitial',
-        ]
-    ]);
-    ?>
 
         <?=$form->field($model, 'image')->widget(FileInput::classname(), [
             'options' => ['multiple'=>false, 'accept' => 'image/*'],

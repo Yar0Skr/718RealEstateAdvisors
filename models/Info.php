@@ -12,10 +12,12 @@ use Yii;
  * @property string|null $short_info
  * @property string|null $text
  * @property string|null $image
- * @property string|null $file
  * @property int $is_delete
  * @property string $created_at
  * @property string $updated_at
+ *
+ * @property InfoImages[] $infoImages
+ * @property InfoMetatags[] $infoMetatags
  */
 class Info extends \yii\db\ActiveRecord
 {
@@ -36,7 +38,7 @@ class Info extends \yii\db\ActiveRecord
             [['text'], 'string'],
             [['is_delete'], 'integer'],
             [['created_at', 'updated_at'], 'safe'],
-            [['header', 'short_info', 'image', 'file'], 'string', 'max' => 255],
+            [['header', 'short_info', 'image'], 'string', 'max' => 255],
         ];
     }
 
@@ -51,10 +53,29 @@ class Info extends \yii\db\ActiveRecord
             'short_info' => 'Short Info',
             'text' => 'Text',
             'image' => 'Image',
-            'file' => 'File',
             'is_delete' => 'Is Delete',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
         ];
+    }
+
+    /**
+     * Gets query for [[InfoImages]].
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getInfoImages()
+    {
+        return $this->hasMany(InfoImages::className(), ['info_id' => 'id']);
+    }
+
+    /**
+     * Gets query for [[InfoMetatags]].
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getInfoMetatags()
+    {
+        return $this->hasMany(InfoMetatags::className(), ['info_id' => 'id']);
     }
 }

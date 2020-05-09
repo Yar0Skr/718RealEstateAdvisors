@@ -2,6 +2,8 @@
 
 namespace app\controllers;
 
+use app\models\InfoImages;
+use app\models\InfoMetatags;
 use Yii;
 use app\models\Info;
 use app\models\InfoSearch;
@@ -53,6 +55,29 @@ class InfoController extends Controller
      */
     public function actionView($id)
     {
+        if(Yii::$app->request->post()){
+            $data = Yii::$app->request->post();
+            $model = new InfoImages();
+            $model->load($data);
+            $image = UploadedFile::getInstance($model, 'image');
+            //image upload
+            if (!empty($image)) {
+                $path = getcwd() . '/uploads/info/owl/';
+                if (!file_exists($path)) {
+                    var_dump(mkdir($path, 0777, true));
+                }
+                $array = explode(".", $image->name);
+                $name = end($array);
+                $model->image = Yii::$app->security->generateRandomString() . ".{$name}";
+                $image->saveAs($path . $model->image);
+                $model->save();
+            } else {
+                $model = new InfoMetatags();
+                $model->load($data);
+                $model->save();
+            }
+        }
+
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
@@ -66,13 +91,12 @@ class InfoController extends Controller
     public function actionCreate()
     {
         $model = new Info();
-
         if(Yii::$app->request->post()){
+            $data = Yii::$app->request->post();
             $model->is_delete = 0;
-            $model->load(Yii::$app->request->post());
+            $model->load($data);
 
             $image = UploadedFile::getInstance($model, 'image');
-            $file = UploadedFile::getInstance($model, 'file');
 
             //image upload
             if (!empty($image)) {
@@ -85,20 +109,11 @@ class InfoController extends Controller
                 $model->image = Yii::$app->security->generateRandomString() . ".{$name}";
                 $image->saveAs($path . $model->image);
             }
-            //file upload
-            if (!empty($file)) {
-                $path = getcwd() . '/uploads/info/files/';
-                if (!file_exists($path)) {
-                    var_dump(mkdir($path, 0777, true));
-                }
-                $array = explode(".", $file->name);
-                $name = end($array);
-                $model->file = Yii::$app->security->generateRandomString() . ".{$name}";
-                $file->saveAs($path . $model->file);
-            }
+
             if ($model->save()) {
                 return $this->redirect(['view', 'id' => $model->id]);
             }
+
         }
 
         return $this->render('create', [
@@ -118,9 +133,7 @@ class InfoController extends Controller
         $model = $this->findModel($id);
         if(Yii::$app->request->post()){
             $oldImageName = $model->image;
-            $oldFileName = $model->file;
             $image = UploadedFile::getInstance($model, 'image');
-            $file = UploadedFile::getInstance($model, 'file');
             $model->load(Yii::$app->request->post());
 
             //Image upload
@@ -140,22 +153,6 @@ class InfoController extends Controller
                 $model->image = $oldImageName;
             }
 
-            //File upload
-            if (!empty($file)) {
-                $path = getcwd() . '/uploads/info/files/';
-                if (!file_exists($path)) {
-                    var_dump(mkdir($path, 0777, true));
-                }
-                if ($oldImageName != null) {
-                    unlink($path . $oldFileName);
-                }
-                $array = explode(".", $file->name);
-                $name = Yii::$app->security->generateRandomString() . '.' . end($array);
-                $file->saveAs($path . $name);
-                $model->file = $name;
-            } else {
-                $model->file = $oldImageName;
-            }
 
             if ($model->save()) {
                 return $this->redirect(['view', 'id' => $model->id]);
@@ -167,10 +164,6 @@ class InfoController extends Controller
         ]);
     }
 
-    public function actionGetFile($path)
-    {
-        return \Yii::$app->response->sendFile($path);
-    }
 
     /**
      * Deletes an existing Info model.

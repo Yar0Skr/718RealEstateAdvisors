@@ -43,7 +43,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             <?php if ($element->image != null){?>
                                 <div style="margin:20px" class="row">
                                     <div class="col-sm-12 col-md-6">
-                                        <div align="right" style="padding-top:20px" class="image">
+                                        <div align="center" style="padding-top:20px" class="image">
                                             <?=Html::img('@web/uploads/info/images/'.$element->image)?>
                                         </div>
                                     </div>

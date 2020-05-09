@@ -33,12 +33,12 @@ AppAsset::register($this);
 </script>
 
 <?php $this->beginBody() ?>
-<div class = "pre-nav" align="center">
+<div class = "pre-nav">
     <div class="flex-nav">
         <a href=<?=Url::home()?>><img src="/img/icons/logo.png" alt=""></a>
     </div>
     <div class="flex-nav hideNav">
-        <div align="middle" class="header-icons">
+        <div align="center" class="header-icons">
             <a href="tel:6462879111"><img src="\img\icons\phone-header.png" alt=""></a>
         </div>
         <div align="center" class="header-icons">
@@ -49,6 +49,19 @@ AppAsset::register($this);
         </div>
     </div>
 
+</div>
+<div class = "pre-nav-bottom showNav">
+    <div class="flex-nav">
+        <div class="header-icons">
+            <a href="tel:6462879111"><img src="\img\icons\phone-header.png" alt=""></a>
+        </div>
+        <div class="header-icons">
+            <a href=""><img src="\img\icons\whatsapp-header.png" alt=""></a>
+        </div>
+        <div class="header-icons">
+            <a href="mailto:info@718rea.com"><img src="\img\icons\mail-header.png" alt=""></a>
+        </div>
+    </div>
 </div>
 <div class="wrap" style="height: auto">
     <?php
