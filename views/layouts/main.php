@@ -118,7 +118,7 @@ AppAsset::register($this);
                 <?php ActiveForm::end(); ?>
             </div>
         </div>
-        <div align="center" class="social smallWidth">
+        <div align="center" class="social">
             <div class="icon-menu"><a href="https://www.facebook.com/realestate718/"><img src="\img\icons\facebook.png" alt=""></a></div>
             <div class="icon-menu"><a href="https://www.instagram.com/718realestateadvisors/"><img src="\img\icons\instagram.png" alt=""></a></div>
             <div class="icon-menu"><a href="tel:6462879111"><img src="\img\icons\phone.png" alt=""></a></div>

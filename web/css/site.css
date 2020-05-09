@@ -128,7 +128,7 @@ body {
     width: auto;
 }
 .image img{
-    width: 300px;
+    width: 400px;
 }
 .process{
     height: auto;
@@ -137,7 +137,9 @@ body {
 .process img {
     width: 100%;
 }
-
+.infoImg img{
+    width: 50%;
+}
 .site-landing{
     margin-bottom: 30px;
 }
@@ -382,7 +384,6 @@ body {
     margin: 20px;
 }
 .social{
-    padding-left: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -503,22 +504,33 @@ a.desc:after {
     }
 
     .pre-nav-bottom {
+        padding-left: 30px;
         display: flex;
-        margin-top: -20px;
+        margin-top: -50px;
     }
 
     .smallWidth img{
         width: 70px;
     }
 
+    .icon-menu{
+        margin-right: 10px;
+    }
+
     .icon-menu img{
-        width: 60px;
-        height: 60px;
+        width: 40px;
+        height: 40px;
     }
 
     .header-icons img{
         width: 60px;
         height: 60px;
+        margin: auto;
     }
 
+    .send-btn{
+        width: 275px;
+        height: 50px;
+        font-size: 10pt;
+    }
 }

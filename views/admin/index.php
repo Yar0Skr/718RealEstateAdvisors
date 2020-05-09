@@ -16,6 +16,8 @@ use yii\helpers\Html;
             <?= Html::a('Messages', ['/messages'], ['class'=>'btn btn-primary']) ?>
             <?= Html::a('Estates', ['/estates'], ['class'=>'btn btn-primary']) ?>
             <?= Html::a('Editor', ['/info'], ['class'=>'btn btn-primary']) ?>
+            <?= Html::a('Owl carousel images', ['/info-images'], ['class'=>'btn btn-primary']) ?>
+            <?= Html::a('Metatags', ['/info-metatags'], ['class'=>'btn btn-primary']) ?>
         </p>
     </div>
 </div>
