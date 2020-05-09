@@ -30,9 +30,7 @@ $this->title = '718 Real Estate Advisors';
     ?>
 
 <div class="item-class"><img src="/img/layouts/header.png" alt="Image 1"></div>
-<div class="item-class"><img src="/img/layouts/header.png" alt="Image 1"></div>
-<div class="item-class"><img src="/img/layouts/header.png" alt="Image 1"></div>
-<div class="item-class"><img src="/img/layouts/header.png" alt="Image 1"></div>
+
     <?php OwlCarouselWidget::end(); ?>
 <?= ModalAlert::widget([
     'popupCssClass' => 'my-custom-class',

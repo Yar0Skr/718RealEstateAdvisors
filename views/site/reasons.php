@@ -27,8 +27,6 @@ $this->params['breadcrumbs'][] = $this->title;
     ]);
     ?>
     <div class="item-class"><img src="/img/layouts/header.png" alt="Image 1"></div>
-    <div class="item-class"><img src="/img/layouts/header.png" alt="Image 1"></div>
-    <div class="item-class"><img src="/img/layouts/header.png" alt="Image 1"></div>
     <?php OwlCarouselWidget::end(); ?>
 </div>
 <div class="Reasons-body">
