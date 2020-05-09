@@ -15,7 +15,7 @@ use yii\web\UploadedFile;
 /**
  * InfoController implements the CRUD actions for Info model.
  */
-class InfoController extends Controller
+class InfoController extends ParentController
 {
     /**
      * {@inheritdoc}

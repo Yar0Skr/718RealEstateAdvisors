@@ -18,7 +18,7 @@ class InfoSearch extends Info
     {
         return [
             [['id', 'is_delete'], 'integer'],
-            [['header', 'short_info', 'text', 'image', 'file', 'created_at', 'updated_at'], 'safe'],
+            [['header', 'short_info', 'text', 'image', 'created_at', 'updated_at'], 'safe'],
         ];
     }
 
@@ -67,8 +67,7 @@ class InfoSearch extends Info
         $query->andFilterWhere(['like', 'header', $this->header])
             ->andFilterWhere(['like', 'short_info', $this->short_info])
             ->andFilterWhere(['like', 'text', $this->text])
-            ->andFilterWhere(['like', 'image', $this->image])
-            ->andFilterWhere(['like', 'file', $this->file]);
+            ->andFilterWhere(['like', 'image', $this->image]);
 
         return $dataProvider;
     }
