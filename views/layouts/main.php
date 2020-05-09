@@ -73,7 +73,8 @@ AppAsset::register($this);
     echo Nav::widget([
         'items' => [
             ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'Common Reasons To Sell Property', 'url' => ['/site/reasons']],
+            //TODO change this url
+            ['label' => 'Common Reasons To Sell Property', 'url' => 'https://718realestateadvisors.com/issues/'],
             ['label' => 'Our process', 'url' => ['/site/process']],
             ['label' => 'Our Services', 'url' => ['/site/services']],
             ['label' => 'FAQ', 'url' => ['/site/about']],
