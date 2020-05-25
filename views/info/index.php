@@ -27,7 +27,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'columns' => [
                 ['class' => 'yii\grid\SerialColumn'],
 
-                'id',
+                'order_number',
                 'header',
                 'short_info',
                 //'text:ntext',
@@ -35,8 +35,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 //'file',
                 //'is_delete',
                 'created_at',
-                //'updated_at',
-
+                //'updated_at'
                 ['class' => 'yii\grid\ActionColumn'],
             ],
         ]); ?>

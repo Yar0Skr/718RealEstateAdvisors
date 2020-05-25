@@ -84,7 +84,7 @@ class SiteController extends Controller
 
     public function actionReasons()
     {
-        $content = Info::find()->all();
+        $content = Info::find()->orderBy('order_number')->all();
         return $this->render('reasons',['content'=>$content]);
     }
 

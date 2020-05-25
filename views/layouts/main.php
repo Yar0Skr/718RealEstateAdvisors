@@ -72,9 +72,8 @@ AppAsset::register($this);
     ]);
     echo Nav::widget([
         'items' => [
-            ['label' => 'Home', 'url' => ['/site/index']],
-            //TODO change this url
-            ['label' => 'Common Reasons To Sell Property', 'url' => 'https://718realestateadvisors.com/issues/'],
+            ['label' => 'Home', 'url' => [Url::to('/site/index')]],
+            ['label' => 'Common Reasons To Sell Property', 'url' => [Url::to('/site/reasons')]],
             ['label' => 'Our process', 'url' => ['/site/process']],
             ['label' => 'Our Services', 'url' => ['/site/services']],
             ['label' => 'FAQ', 'url' => ['/site/about']],
@@ -110,7 +109,7 @@ AppAsset::register($this);
                     ->textInput(['placeholder'=>'Address of property *','style' => 'border-radius:30px'])
                     ->label(false) ?>
                 <?= $form->field($model, 'message')
-                    ->textarea(['placeholder'=>'Message','style' => 'border-radius:30px; width:70%'])
+                    ->textarea(['placeholder'=>'Message','style' => 'border-radius:30px;'])
                     ->label(false) ?>
 
                 <?= Html::submitButton('Send', ['class' => 'btn align-self-center']) ?>

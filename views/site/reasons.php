@@ -9,26 +9,38 @@ use yii\helpers\Url;
 $this->title = 'Common reasons to sell property';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div>
-    <?php
-    OwlCarouselWidget::begin([
-        'container' => 'div',
-        'containerOptions' => [
-            'id' => 'Reasons-body',
-            'class' => 'owl'
-        ],
-        'pluginOptions'    => [
-            'autoplay'          => true,
-            'autoplayTimeout'   => 3000,
-            'items'             => 1,
-            'loop'              => true,
-            'dots' => false,
-        ]
-    ]);
-    ?>
-    <div class="item-class"><img src="/img/layouts/header.png" alt="Image 1"></div>
-    <?php OwlCarouselWidget::end(); ?>
+<style>
+    body{
+        background-color: #ebebeb;
+    }
+</style>
+<div style="padding: 15px" class="container">
+    <div>
+        <?php
+        OwlCarouselWidget::begin([
+            'container' => 'div',
+            'containerOptions' => [
+                'id' => 'Reasons-body',
+                'class' => 'owl'
+            ],
+            'pluginOptions'    => [
+                'autoplay'          => true,
+                'autoplayTimeout'   => 3000,
+                'items'             => 3,
+                'loop'              => true,
+                'dots' => false,
+            ]
+        ]);
+        ?>
+        <div class="item-class"><a href="#"><img src="/img/layouts/1.jpg" alt="Image 1"></a></div>
+        <div class="item-class"><a href="#"><img src="/img/layouts/2.jpg" alt="Image 2"></a></div>
+        <div class="item-class"><a href="#"><img src="/img/layouts/3.jpg" alt="Image 3"></a></div>
+
+
+        <?php OwlCarouselWidget::end(); ?>
+    </div>
 </div>
+
 <div class="Reasons-body">
     <div class="container white">
         <div class="navigaonusing">

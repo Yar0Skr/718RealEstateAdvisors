@@ -29,7 +29,7 @@ $this->title = '718 Real Estate Advisors';
     ]);
     ?>
 
-<div class="item-class"><img src="/img/layouts/header.png" alt="Image 1"></div>
+<div class="item-class"><?=Html::img("@web/img/layouts/header.png")?></div>
 
     <?php OwlCarouselWidget::end(); ?>
 <?= ModalAlert::widget([
@@ -125,5 +125,5 @@ $this->title = '718 Real Estate Advisors';
 
 
 <div align="center" class="process">
-    <img src="/img/layouts/weBuy.png" alt="">
+<?=Html::img("@web/img/layouts/weBuy.png" )?>
 </div>

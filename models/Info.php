@@ -15,6 +15,7 @@ use Yii;
  * @property int $is_delete
  * @property string $created_at
  * @property string $updated_at
+ * @property int|null $order_number
  *
  * @property InfoImages[] $infoImages
  * @property InfoMetatags[] $infoMetatags
@@ -36,7 +37,7 @@ class Info extends \yii\db\ActiveRecord
     {
         return [
             [['text'], 'string'],
-            [['is_delete'], 'integer'],
+            [['is_delete', 'order_number'], 'integer'],
             [['created_at', 'updated_at'], 'safe'],
             [['header', 'short_info', 'image'], 'string', 'max' => 255],
         ];
@@ -56,6 +57,7 @@ class Info extends \yii\db\ActiveRecord
             'is_delete' => 'Is Delete',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
+            'order_number' => 'Order Number',
         ];
     }
 
