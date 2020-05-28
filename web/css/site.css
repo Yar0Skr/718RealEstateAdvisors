@@ -87,7 +87,7 @@ body {
     transition: all 1s;
 }
 .pesontedan input[type=checkbox] + label::after {
-    content: "";
+    content: "+";
 }
 .pesontedan input[type=radio] + label::after {
     content: "\25BC";
@@ -162,7 +162,7 @@ body {
     height:auto;
     padding-top: 65px;
     padding-bottom: 65px;
-    background-image: url("/img/layouts/FAQbg.png");
+    background-image: url("/web/img/layouts/FAQbg.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -294,7 +294,7 @@ body {
     color: white;
     height: 400px;
     width: auto;
-    background-image: url("/img/layouts/weBuy2.png");
+    background-image: url("/web/img/layouts/weBuy2.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -318,7 +318,7 @@ body {
 
 .index-middle{
     height: 400px;
-    background-image: url("/img/index/middle.png");
+    background-image: url("/web/img/index/middle.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -326,7 +326,7 @@ body {
 
 .index-bottom{
     height: 400px;
-    background-image: url("/img/index/bottom.png");
+    background-image: url("/web/img/index/bottom.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -395,7 +395,7 @@ body {
 }
 
 .footer-form div {
-    width: 595px;
+    width: auto;
     height: auto;
 }
 
@@ -494,6 +494,11 @@ a.desc:after {
 }
 
 @media only screen and (max-width: 600px) {
+
+    img {
+        max-width: 100%;
+    }
+
     body{
         overflow-x: hidden;
     }
@@ -525,6 +530,9 @@ a.desc:after {
         font-size: 12pt;
     }
 
+    .pesontedan input[type=checkbox] + label::after {
+        content: "";
+    }
 
     .icon-menu{
         margin-right: 10px;

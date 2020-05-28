@@ -46,6 +46,7 @@ AppAsset::register($this);
 &noscript=1"/>
     </noscript>
     <!-- End Facebook Pixel Code -->
+    <!--<meta content="width=1180" name="viewport" id="viewport"> -->
     <meta charset="<?= Yii::$app->charset ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
