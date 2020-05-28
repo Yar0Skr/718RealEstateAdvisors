@@ -87,7 +87,7 @@ body {
     transition: all 1s;
 }
 .pesontedan input[type=checkbox] + label::after {
-    content: "+";
+    content: "";
 }
 .pesontedan input[type=radio] + label::after {
     content: "\25BC";
@@ -525,9 +525,6 @@ a.desc:after {
         font-size: 12pt;
     }
 
-    .pesontedan input[type=checkbox] + label::after {
-        content: "";
-    }
 
     .icon-menu{
         margin-right: 10px;
