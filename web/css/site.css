@@ -346,11 +346,11 @@ body {
 }
 
 .footer-form input{
-    width: 70%;
+    width: 300px;
 }
 
 .footer-form textarea{
-    width: 70%;
+    width: 300px;
 }
 
 .footer-form h2{
@@ -553,13 +553,6 @@ a.desc:after {
         width: auto;
         height: 50px;
         font-size: 10pt;
-    }
-
-    .footer-form input{
-        width: auto;
-    }
-    .footer-form textarea{
-        width: auto;
     }
 
     .index-bottom, .index-middle {
