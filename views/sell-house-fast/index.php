@@ -29,7 +29,12 @@ $this->title = '718 Real Estate Advisors';
     ]);
     ?>
 
-<div class="item-class"><?=Html::img("@web/img/layouts/header.png")?></div>
+<div class="item-class"><?=Html::img("/web/img/layouts/header1.jpg")?></div>
+<div class="item-class"><?=Html::img("/web/img/layouts/header2.jpg")?></div>
+<div class="item-class"><?=Html::img("/web/img/layouts/header3.jpg")?></div>
+<div class="item-class"><?=Html::img("/web/img/layouts/header4.jpg")?></div>
+<div class="item-class"><?=Html::img("/web/img/layouts/header5.jpg")?></div>
+<div class="item-class"><?=Html::img("/web/img/layouts/header6.jpg")?></div>
 
     <?php OwlCarouselWidget::end(); ?>
 <?= ModalAlert::widget([
@@ -42,7 +47,7 @@ $this->title = '718 Real Estate Advisors';
                 <div>
                     <h2>Watch this short video to learn about us</h2>
                 </div>
-                <div style="height:300px;">
+                <div>
                     <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Pq8lUumT-mE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
@@ -72,7 +77,7 @@ $this->title = '718 Real Estate Advisors';
                 <div>
                     <h2>Get fair cash offer for your house</h2>
                 </div>
-                <div class="index-middle" style="height: 400px">
+                <div class="index-middle">
 
                 </div>
             </div>
@@ -106,7 +111,7 @@ $this->title = '718 Real Estate Advisors';
     <div class="container">
         <div class="row">
             <div style="padding: 20px" class="col-sm-12 col-md-6">
-                <div style="height:400px;" class="index-bottom">
+                <div class="index-bottom">
 
                 </div>
             </div>
@@ -125,5 +130,5 @@ $this->title = '718 Real Estate Advisors';
 
 
 <div align="center" class="process">
-<?=Html::img("@web/img/layouts/weBuy.png" )?>
+<?=Html::img("/web/img/layouts/weBuy.png" )?>
 </div>

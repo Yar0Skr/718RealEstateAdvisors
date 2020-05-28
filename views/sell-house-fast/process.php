@@ -8,10 +8,10 @@ $this->title = 'Our Process';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
     <div class="process">
-        <img src="/img/layouts/process-top.png" alt="">
+        <?=Html::img("/web/img/layouts/process-top.png")?>
     </div>
     <div class="process">
-        <img src="/img/layouts/process-bottom.png" alt="">
+        <?=Html::img("/web/img/layouts/process-bottom.png")?>
     </div>
 
 

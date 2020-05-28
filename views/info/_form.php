@@ -29,7 +29,7 @@ $infoMetaTagsModel = new \app\models\InfoMetatags();
             'options' => ['multiple'=>false, 'accept' => 'image/*'],
             'pluginOptions'=>[
                 'initialPreview'=>[
-                    $model->image ? '/uploads/info/images/'.$model->image : null,
+                    $model->image ? '/web/uploads/info/images/'.$model->image : null,
                 ],
                 'initialPreviewShowDelete' => false,
                 'initialPreviewAsData'=>true,

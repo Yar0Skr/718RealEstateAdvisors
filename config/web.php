@@ -24,7 +24,7 @@ $config = [
             'enableAutoLogin' => true,
         ],
         'errorHandler' => [
-            'errorAction' => 'site/error',
+            'errorAction' => 'sell-house-fast/error',
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
@@ -49,7 +49,7 @@ $config = [
             'showScriptName' => false,
             'enableStrictParsing' => false,
             'rules' => [
-                '/' => 'site/index',
+                '/' => 'sell-house-fast/index',
             ],
         ],
 

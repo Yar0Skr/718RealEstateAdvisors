@@ -32,9 +32,9 @@ $this->params['breadcrumbs'][] = $this->title;
             ]
         ]);
         ?>
-        <div class="item-class"><a href="#"><img src="/img/layouts/1.jpg" alt="Image 1"></a></div>
-        <div class="item-class"><a href="#"><img src="/img/layouts/2.jpg" alt="Image 2"></a></div>
-        <div class="item-class"><a href="#"><img src="/img/layouts/3.jpg" alt="Image 3"></a></div>
+        <div class="item-class"><a href="#"><?=Html::img("/web/img/layouts/1.jpg")?></a></div>
+        <div class="item-class"><a href="#"><?=Html::img("/web/img/layouts/2.jpg")?></a></div>
+        <div class="item-class"><a href="#"><?=Html::img("/web/img/layouts/3.jpg")?></a></div>
 
 
         <?php OwlCarouselWidget::end(); ?>
@@ -54,7 +54,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 <div style="margin:20px" class="row">
                                     <div class="col-sm-12 col-md-6">
                                         <div align="center" style="padding-top:20px" class="image">
-                                            <?=Html::img('@web/uploads/info/images/'.$element->image)?>
+                                            <?=Html::img('/web/uploads/info/images/'.$element->image)?>
                                         </div>
                                     </div>
                                     <div class="col-sm-12 col-md-6">

@@ -104,7 +104,7 @@ foreach ($metaTags as $meta){
         </div>
     </div>
     <div align="center" class="infoImg">
-        <?=Html::img('@web/uploads/info/images/'.$model->image)?>
+        <?=Html::img('/web/uploads/info/images/'.$model->image)?>
     </div>
     <div class="info-body">
         <p><?=$model->text?></p>
@@ -129,7 +129,7 @@ foreach ($metaTags as $meta){
     $images = \app\models\InfoImages::find()->where(['info_id'=>$model->id])->all();
     if(!empty($images)){
         foreach ($images as $image) { ?>
-        <div class="item-class"><?=Html::img('@web/uploads/info/owl/'.$image->image)?></div>
+        <div class="item-class"><?=Html::img('/web/uploads/info/owl/'.$image->image)?></div>
         <?php }
     }
     ?>

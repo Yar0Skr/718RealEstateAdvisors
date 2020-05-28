@@ -36,5 +36,5 @@ $this->params['breadcrumbs'][] = $this->title;
     </div>
 </div>
 <div align="center" class="process">
-    <img src="/img/layouts/weBuy.png" alt="">
+    <?=Html::img("/web/img/layouts/weBuy.png")?>
 </div>

@@ -19,6 +19,14 @@ AppAsset::register($this);
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145164288-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-145164288-2');
+    </script>
     <meta charset="<?= Yii::$app->charset ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,17 +43,17 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 <div class = "pre-nav">
     <div class="flex-nav">
-        <a href=<?=Url::home()?>><img src="/img/icons/logo.png" alt=""></a>
+        <a href=<?=Url::home()?>><?=Html::img("/web/img/icons/logo.png")?></a>
     </div>
     <div class="flex-nav hideNav">
         <div align="center" class="header-icons">
-            <a href="tel:6462879111"><img src="\img\icons\phone-header.png" alt=""></a>
+            <a href="tel:6462879111"><?=Html::img("/web/img/icons/phone-header.png")?></a>
         </div>
         <div align="center" class="header-icons">
-            <a href=""><img src="\img\icons\whatsapp-header.png" alt=""></a>
+            <a href=""><?=Html::img("/web/img/icons/whatsapp-header.png")?></a>
         </div>
         <div align="center" class="header-icons">
-            <a href="mailto:info@718rea.com"><img src="\img\icons\mail-header.png" alt=""></a>
+            <a href="mailto:info@718rea.com"><?=Html::img("/web/img/icons/mail-header.png")?></a>
         </div>
     </div>
 
@@ -53,13 +61,13 @@ AppAsset::register($this);
 <div class = "pre-nav-bottom showNav">
     <div class="flex-nav">
         <div class="header-icons">
-            <a href="tel:6462879111"><img src="\img\icons\phone-header.png" alt=""></a>
+            <a href="tel:6462879111"><?=Html::img("/web/img/icons/phone-header.png")?></a>
         </div>
         <div class="header-icons">
-            <a href=""><img src="\img\icons\whatsapp-header.png" alt=""></a>
+            <a href=""><?=Html::img("/web/img/icons/whatsapp-header.png")?></a>
         </div>
         <div class="header-icons">
-            <a href="mailto:info@718rea.com"><img src="\img\icons\mail-header.png" alt=""></a>
+            <a href="mailto:info@718rea.com"><?=Html::img("/web/img/icons/mail-header.png")?></a>
         </div>
     </div>
 </div>
@@ -72,11 +80,11 @@ AppAsset::register($this);
     ]);
     echo Nav::widget([
         'items' => [
-            ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'Common Reasons To Sell Property', 'url' => ['/site/reasons']],
-            ['label' => 'Our process', 'url' => ['/site/process']],
-            ['label' => 'Our Services', 'url' => ['/site/services']],
-            ['label' => 'FAQ', 'url' => ['/site/about']],
+            ['label' => 'Home', 'url' => [Url::to('/sell-house-fast/index')]],
+            ['label' => 'Common Reasons To Sell Property', 'url' => [Url::to('/sell-house-fast/reasons')]],
+            ['label' => 'Our process', 'url' => ['/sell-house-fast/process']],
+            ['label' => 'Our Services', 'url' => ['/sell-house-fast/services']],
+            ['label' => 'FAQ', 'url' => ['/sell-house-fast/about']],
             ['label' => 'Contact Us', 'url' => [Url::current().'#contact'], 'options'=>['id' => 'smoothScroll']],
         ],
     ]);
@@ -87,12 +95,12 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class ="container">
-        <div align="center" class="social smallWidth">
-            <div class="icon-menu"><a href="https://www.facebook.com/realestate718/"><img src="\img\icons\facebook.png" alt=""></a></div>
-            <div class="icon-menu"><a href="https://www.instagram.com/718realestateadvisors/"><img src="\img\icons\instagram.png" alt=""></a></div>
-            <div class="icon-menu"><a href="tel:6462879111"><img src="\img\icons\phone.png" alt=""></a></div>
-            <div class="icon-menu"><a href=""><img src="\img\icons\whatsapp.png" alt=""></a></div>
-            <div class="icon-menu"><a href="mailto:info@718rea.com"><img src="\img\icons\mail.png" alt=""></a></div>
+        <div align="center" class="social">
+            <div class="icon-menu"><a href="https://www.facebook.com/realestate718/"><?=Html::img("/web/img/icons/facebook.png")?></a></div>
+            <div class="icon-menu"><a href="https://www.instagram.com/718realestateadvisors/"><?=Html::img("/web/img/icons/instagram.png")?></a></div>
+            <div class="icon-menu"><a href="tel:6462879111"><?=Html::img("/web/img/icons/phone.png")?></a></div>
+            <div class="icon-menu"><a href=""><?=Html::img("/web/img/icons/whatsapp.png")?></a></div>
+            <div class="icon-menu"><a href="mailto:info@718rea.com"><?=Html::img("/web/img/icons/mail.png")?></a></div>
         </div>
         <div class="rights">
             © 2020 All rights Reserved. Design by 718 Real Estate Advisors

@@ -18,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
      <div class="row">
          <div class="col-sm-12 col-md-3 services">
              <div>
-                 <img src="\img\icons\services1.png" alt="">
+                 <?=Html::img("/web/img/icons/services1.png")?>
              </div>
              <div>
                 <h4>WE BUY HOUSES ALL CASH</h4>
@@ -31,17 +31,17 @@ $this->params['breadcrumbs'][] = $this->title;
          </div>
          <div class="col-sm-12 col-md-3 services">
              <div>
-                 <img src="\img\icons\services2.png" alt="">
+                 <?=Html::img("/web/img/icons/services2.png")?>
              </div>
              <div>
                  <h4>VARIETY OF PROPERTIES</h4>
                  <p>We purchase a wide range of properties, single-family to multi-family, co-ops and condos, vacant land, and commercial units – we buy them all.</p>
-                 <p>We can help if your property is distressed, and we can assist you with foreclosure solutions. In case there was a death, divorce, or any other family crisis, we can advise on how to proceed in accordance with your specific property.with your specific property.</p>
+                 <p>We can help if your property is distressed, and we can assist you with foreclosure solutions. In case there was a death, divorce, or any other family crisis, we can advise on how to proceed in accordance with your specific property.</p>
              </div>
          </div>
          <div class="col-sm-12 col-md-3 services">
              <div>
-                 <img src="\img\icons\services3.png" alt="">
+                 <?=Html::img("/web/img/icons/services3.png")?>
              </div>
              <div>
                 <h4>NO OBLIGATIONS, NO HASSLE</h4>
@@ -51,7 +51,7 @@ $this->params['breadcrumbs'][] = $this->title;
          </div>
          <div class="col-sm-12 col-md-3 services">
              <div>
-                 <img src="\img\icons\services4.png" alt="">
+                 <?=Html::img("/web/img/icons/services4.png")?>
              </div>
              <div>
                  <h4>WE PAY TOP FINDER'S FEE </h4>

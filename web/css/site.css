@@ -174,7 +174,7 @@ body {
     font-size: 18pt;
     padding-top: 65px;
     padding-bottom: 65px;
-    background-image: url("/img/layouts/Reasons-bg.png");
+    background-image: url("/web/img/layouts/Reasons-bg.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -317,7 +317,7 @@ body {
 }
 
 .index-middle{
-    height: 100%;
+    height: 400px;
     background-image: url("/img/index/middle.png");
     background-position: center;
     background-repeat: no-repeat;
@@ -325,10 +325,11 @@ body {
 }
 
 .index-bottom{
+    height: 400px;
     background-image: url("/img/index/bottom.png");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 .footer {
     height: auto;
@@ -342,8 +343,6 @@ body {
     align-items: center;
     justify-content: center;
     width: auto;
-
-
 }
 
 .footer-form input{
@@ -519,6 +518,17 @@ a.desc:after {
         width: 70px;
     }
 
+    .pesontedan label, .pesontedan-content{
+        font-size: 12pt;
+    }
+    .pesontedan-content p {
+        font-size: 12pt;
+    }
+
+    .pesontedan input[type=checkbox] + label::after {
+        content: "";
+    }
+
     .icon-menu{
         margin-right: 10px;
     }
@@ -535,7 +545,7 @@ a.desc:after {
     }
 
     .send-btn{
-        width: 275px;
+        width: 130px;
         height: 50px;
         font-size: 10pt;
     }
@@ -545,5 +555,14 @@ a.desc:after {
     }
     .footer-form textarea{
         width: auto;
+    }
+
+    .index-bottom, .index-middle {
+        height: 200px;
+        background-size: contain;
+    }
+
+    .infoImg img{
+        width: 90%;
     }
 }
