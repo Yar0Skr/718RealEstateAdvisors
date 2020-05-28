@@ -47,7 +47,7 @@ $this->title = '718 Real Estate Advisors';
                 <div>
                     <h2>Watch this short video to learn about us</h2>
                 </div>
-                <div>
+                <div style="height:300px;">
                     <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Pq8lUumT-mE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
