@@ -73,6 +73,12 @@ class Users extends \yii\db\ActiveRecord implements IdentityInterface
         return static::findOne($id);
     }
 
+    /**
+     * Finds by access token
+     * @param mixed $token
+     * @param null $type
+     * @return array|bool|\yii\db\ActiveRecord|IdentityInterface|null
+     */
     public static function findIdentityByAccessToken($token, $type = null)
     {
         $user = Users::find()
@@ -95,11 +101,21 @@ class Users extends \yii\db\ActiveRecord implements IdentityInterface
         return $this->auth_type;
     }
 
+    /**
+     * Validates auth key
+     * @param string $authKey
+     * @return bool
+     */
     public function validateAuthKey($authKey)
     {
         return $this->getAuthKey() === $authKey;
     }
 
+    /**
+     * Finds by username
+     * @param $username
+     * @return array|bool|\yii\db\ActiveRecord
+     */
     public static function findByUsername($username) {
         $user = Users::find()
             ->where(['username' => $username])
@@ -112,11 +128,19 @@ class Users extends \yii\db\ActiveRecord implements IdentityInterface
         }
     }
 
+    /**
+     * Validates password
+     * @param $password
+     * @return bool
+     */
     public function validatePassword($password) {
         return Yii::$app->getSecurity()
             ->validatePassword($password, $this->password);
     }
-
+    /**
+     * Get user by user id.
+     * @return array|Users $carrier.
+     */
     public static function getAllUsers() {
         return $users = Users::find()
             ->all();
