@@ -15,7 +15,7 @@ use yii\web\UploadedFile;
 /**
  * InfoController implements the CRUD actions for Info model.
  */
-class InfoController extends ParentController
+class BlogController extends ParentController
 {
     /**
      * {@inheritdoc}
@@ -49,11 +49,11 @@ class InfoController extends ParentController
 
     /**
      * Displays a single Info model.
-     * @param integer $id
+     * @param string $urlName
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionView($id)
+    public function actionView($urlName)
     {
         if(Yii::$app->request->post()){
             $data = Yii::$app->request->post();
@@ -79,7 +79,7 @@ class InfoController extends ParentController
         }
 
         return $this->render('view', [
-            'model' => $this->findModel($id),
+            'model' => $this->findModelByUrlName($urlName),
         ]);
     }
 
@@ -189,6 +189,22 @@ class InfoController extends ParentController
     protected function findModel($id)
     {
         if (($model = Info::findOne($id)) !== null) {
+            return $model;
+        }
+
+        throw new NotFoundHttpException('The requested page does not exist.');
+    }
+
+    /**
+     * Finds the Info model based on its primary key value.
+     * If the model is not found, a 404 HTTP exception will be thrown.
+     * @param string $urlName
+     * @return Info the loaded model
+     * @throws NotFoundHttpException if the model cannot be found
+     */
+    protected function findModelByUrlName($urlName)
+    {
+        if (($model = Info::findOne(['url_name'=>$urlName])) !== null) {
             return $model;
         }
 

@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\Faq;
 use app\models\Info;
 use app\models\Messages;
 use Yii;
@@ -74,7 +75,8 @@ class SellHouseFastController extends Controller
 
     public function actionAbout()
     {
-        return $this->render('about');
+        $content = Faq::find()->orderBy('order_number')->all();
+        return $this->render('about',['content'=>$content]);
     }
 
     public function actionServices()

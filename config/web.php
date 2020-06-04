@@ -50,6 +50,7 @@ $config = [
             'enableStrictParsing' => false,
             'rules' => [
                 '/' => 'sell-house-fast/index',
+                'blog/<urlName:\w+>' => 'blog/view',
             ],
         ],
 

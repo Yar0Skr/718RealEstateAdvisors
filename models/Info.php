@@ -16,6 +16,7 @@ use Yii;
  * @property string $created_at
  * @property string $updated_at
  * @property int|null $order_number
+ * @property string|null $url_name
  *
  * @property InfoImages[] $infoImages
  * @property InfoMetatags[] $infoMetatags
@@ -39,7 +40,8 @@ class Info extends \yii\db\ActiveRecord
             [['text'], 'string'],
             [['is_delete', 'order_number'], 'integer'],
             [['created_at', 'updated_at'], 'safe'],
-            [['header', 'short_info', 'image'], 'string', 'max' => 255],
+            [['header', 'short_info', 'image', 'url_name'], 'string', 'max' => 255],
+            [['url_name'], 'unique'],
         ];
     }
 
@@ -58,6 +60,7 @@ class Info extends \yii\db\ActiveRecord
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
             'order_number' => 'Order Number',
+            'url_name' => 'Url Name',
         ];
     }
 

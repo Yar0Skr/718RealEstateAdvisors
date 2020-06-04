@@ -17,6 +17,8 @@ $infoMetaTagsModel = new \app\models\InfoMetatags();
 
     <?php $form = ActiveForm::begin(); ?>
 
+    <?= $form->field($model, 'url_name')->textInput(['maxlength' => true]) ?>
+
     <?= $form->field($model, 'order_number')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'header')->textInput(['maxlength' => true]) ?>

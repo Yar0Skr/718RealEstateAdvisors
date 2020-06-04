@@ -2,7 +2,7 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=127.0.0.1;dbname=718realestateadvisors',
+    'dsn' => 'mysql:host=127.0.0.1;dbname=sevoneg5_718realestateadvisors',
     'username' => 'root',
     'password' => '',
     'charset' => 'utf8',

@@ -63,34 +63,34 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 <div class = "pre-nav">
     <div class="flex-nav">
-        <a href=<?=Url::home()?>><?=Html::img("/web/img/icons/logo.png")?></a>
+        <a href=<?=Url::home()?>><?=Html::img("@web/img/icons/logo.png")?></a>
     </div>
     <div class="flex-nav hideNav">
         <div align="center" class="header-icons">
-            <a href="tel:6462879111"><?=Html::img("/web/img/icons/phone-header.png")?></a>
+            <a href="tel:6462879111"><?=Html::img("@web/img/icons/phone-header.png")?></a>
         </div>
         <div align="center" class="header-icons">
-            <a href=""><?=Html::img("/web/img/icons/whatsapp-header.png")?></a>
+            <a href=""><?=Html::img("@web/img/icons/whatsapp-header.png")?></a>
         </div>
         <div align="center" class="header-icons">
-            <a href="mailto:info@718rea.com"><?=Html::img("/web/img/icons/mail-header.png")?></a>
+            <a href="mailto:info@718rea.com"><?=Html::img("@web/img/icons/mail-header.png")?></a>
         </div>
     </div>
 
 </div>
-<div class = "pre-nav-bottom showNav">
-    <div class="flex-nav">
-        <div class="header-icons">
-            <a href="tel:6462879111"><?=Html::img("/web/img/icons/phone-header.png")?></a>
-        </div>
-        <div class="header-icons">
-            <a href=""><?=Html::img("/web/img/icons/whatsapp-header.png")?></a>
-        </div>
-        <div class="header-icons">
-            <a href="mailto:info@718rea.com"><?=Html::img("/web/img/icons/mail-header.png")?></a>
-        </div>
-    </div>
-</div>
+<!--<div class = "pre-nav-bottom showNav">-->
+<!--    <div class="flex-nav">-->
+<!--        <div class="header-icons">-->
+<!--            <a href="tel:6462879111">--><?//=Html::img("/web/img/icons/phone-header.png")?><!--</a>-->
+<!--        </div>-->
+<!--        <div class="header-icons">-->
+<!--            <a href="">--><?//=Html::img("/web/img/icons/whatsapp-header.png")?><!--</a>-->
+<!--        </div>-->
+<!--        <div class="header-icons">-->
+<!--            <a href="mailto:info@718rea.com">--><?//=Html::img("/web/img/icons/mail-header.png")?><!--</a>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
 <div class="wrap" style="height: auto">
     <?php
     NavBar::begin([

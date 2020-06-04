@@ -28,7 +28,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'autoplayTimeout'   => 3000,
                 'items'             => 3,
                 'loop'              => true,
-                'dots' => false,
+                'dots'              => false,
             ]
         ]);
         ?>
@@ -64,7 +64,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 <div style="margin:20px" class="row">
                                     <div align="center" class="col-12">
                                         <div>
-                                            <a href="<?=Url::toRoute('/info/view?id='.$element->id)?>"><button class="send-btn align-self-center">Read more</button></a>
+                                            <a href="<?=Url::toRoute('/blog/'.$element->url_name)?>"><button class="send-btn align-self-center">Read more</button></a>
                                         </div>
                                     </div>
                                 </div>
@@ -77,7 +77,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 <div style="margin:20px" class="row">
                                     <div align="center" class="col-12">
                                         <div>
-                                            <a href="<?=Url::toRoute('/info/view?id='.$element->id)?>"><button class="send-btn align-self-center">Read more</button></a>
+                                            <a href="<?=Url::toRoute('/blog/'.$element->url_name)?>"><button class="send-btn align-self-center">Read more</button></a>
                                         </div>
                                     </div>
                                 </div>

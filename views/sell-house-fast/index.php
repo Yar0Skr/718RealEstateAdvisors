@@ -13,21 +13,22 @@ $this->title = '718 Real Estate Advisors';
     }
 
 </style>
-    <?php
-    OwlCarouselWidget::begin([
-        'container' => 'div',
-        'containerOptions' => [
-            'id' => 'container-id',
-            'class' => 'owl'
-        ],
-        'pluginOptions'    => [
-            'autoplay'          => true,
-            'autoplayTimeout'   => 3000,
-            'items'             => 1,
-            'loop'              => true,
-        ]
-    ]);
-    ?>
+<?php
+OwlCarouselWidget::begin([
+    'container' => 'div',
+    'containerOptions' => [
+        'id' => 'container-id',
+        'class' => 'owl'
+    ],
+    'pluginOptions'    => [
+        'autoplay'          => true,
+        'autoplayTimeout'   => 3000,
+        'items'             => 1,
+        'loop'              => true,
+        'dots'              => false,
+    ]
+]);
+?>
 
 <div class="item-class"><?=Html::img("/web/img/layouts/header1.jpg")?></div>
 <div class="item-class"><?=Html::img("/web/img/layouts/header2.jpg")?></div>
@@ -36,7 +37,7 @@ $this->title = '718 Real Estate Advisors';
 <div class="item-class"><?=Html::img("/web/img/layouts/header5.jpg")?></div>
 <div class="item-class"><?=Html::img("/web/img/layouts/header6.jpg")?></div>
 
-    <?php OwlCarouselWidget::end(); ?>
+<?php OwlCarouselWidget::end(); ?>
 <?= ModalAlert::widget([
     'popupCssClass' => 'my-custom-class',
 ]) ?>
@@ -47,18 +48,18 @@ $this->title = '718 Real Estate Advisors';
                 <div>
                     <h2>Watch this short video to learn about us</h2>
                 </div>
-                <div style="height:300px;">
+                <div class = "videoDiv">
                     <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Pq8lUumT-mE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
             <div class="col-sm-12 col-md-6">
                 <div>
-                    <h2>Are you looking to sell house fast?</h2>
+                    <h2>Looking to sell a property fast?</h2>
                 </div>
                 <div>
-                    <p>Whether your property is vacant or rented to tenants, paying or non-paying, and whether your house is distressed or in excellent condition.</p>
+                    <p>Whether your property is in excellent condition or barely standing, vacant or rented to tenants, paying rent or non-paying.</p>
                     <br>
-                    <p>We accommodate all your needs and make the process comfortable for you.</p>
+                    <p>We accommodate all your needs and make the selling experience pleasant for you.</p>
                     <br>
                     <br>
                     <a href="tel:6462879111">
@@ -75,7 +76,7 @@ $this->title = '718 Real Estate Advisors';
         <div class="row">
             <div class="col-sm-12 col-md-6">
                 <div>
-                    <h2>Get fair cash offer for your house</h2>
+                    <h2>Get fair cash value for your house</h2>
                 </div>
                 <div class="index-middle">
 
@@ -89,7 +90,7 @@ $this->title = '718 Real Estate Advisors';
                     <ul style=" padding: 0;list-style: none">
                         <li>- Single Family</li>
                         <li>- Multi Family</li>
-                        <li>- Cooperatives</li>
+                        <li>- Mixed Use</li>
                         <li>- Condos</li>
                         <li>- Commercial Units</li>
                         <li>- Vacant Land</li>
@@ -120,7 +121,7 @@ $this->title = '718 Real Estate Advisors';
                 <br>
                 <p>We can help if your property is distressed and we can assist you with foreclosure solutions.</p>
                 <br>
-                <p>In case there was a death, divorce or any other family crisis, we can advice on how to proceed in accordance with your specific property</p>
+                <p>In case there was a death, divorce or any other family crisis, we can advise on how to proceed in accordance with your specific property</p>
                 <br>
                 <p>Avoid the time and money it costs in order to sell your property through an agent. We can help you find an attorney; we can even pay for your closing costs and all other associated fees if you choose to.</p>
             </div>
@@ -130,5 +131,5 @@ $this->title = '718 Real Estate Advisors';
 
 
 <div align="center" class="process">
-<?=Html::img("/web/img/layouts/weBuy.png" )?>
+    <?=Html::img("/web/img/layouts/weBuy.png" )?>
 </div>
