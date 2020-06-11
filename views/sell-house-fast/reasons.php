@@ -57,6 +57,9 @@ $this->params['breadcrumbs'][] = $this->title;
                                             <?=Html::img('/web/uploads/info/images/'.$element->image)?>
                                         </div>
                                     </div>
+                                    <div class="col-sm-12 col-md-6">
+                                        <p><?=$element->short_info?></p>
+                                    </div>
                                 </div>
                                 <div style="margin:20px" class="row">
                                     <div align="center" class="col-12">
