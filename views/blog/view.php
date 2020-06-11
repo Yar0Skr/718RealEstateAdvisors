@@ -114,6 +114,13 @@ preg_match('~>(.*?)<~', $model->text, $output);
     <div class="info-body">
         <p><?=$model->text?></p>
     </div>
+    <?= \ymaker\social\share\widgets\SocialShare::widget([
+        'configurator' => 'socialShare',
+        'url'          => \yii\helpers\Url::to('absolute/route/to/page', true),
+        'title'        => 'Title of the page',
+        'description'  => 'Description of the page...',
+        'imageUrl'     => \yii\helpers\Url::to('absolute/route/to/image.png', true),
+    ]); ?>
 
     <?php
     OwlCarouselWidget::begin([

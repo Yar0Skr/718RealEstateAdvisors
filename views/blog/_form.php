@@ -19,6 +19,12 @@ $infoMetaTagsModel = new \app\models\InfoMetatags();
 
     <?= $form->field($model, 'url_name')->textInput(['maxlength' => true]) ?>
 
+    <?= $form->field($model, 'alt_tag')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'read_time')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'author')->textInput(['maxlength' => true]) ?>
+
     <?= $form->field($model, 'order_number')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'header')->textInput(['maxlength' => true]) ?>
