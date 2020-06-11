@@ -12,6 +12,33 @@ $config = [
         '@npm'   => '@vendor/npm-asset',
     ],
     'components' => [
+        'socialShare' => [
+            'class' => \ymaker\social\share\configurators\Configurator::class,
+            'socialNetworks' => [
+                'facebook' => [
+                    'class' => \ymaker\social\share\drivers\Facebook::class,
+                    'label' => Yii::t('app', 'Facebook'),
+                    'options' => ['class' => 'fb'],
+                ],
+                'twitter' => [
+                    'class' => \ymaker\social\share\drivers\Twitter::class,
+                    'label' => Yii::t('app', 'Twitter'),
+                    'options' => ['class' => 'tw'],
+                    'config' => [
+                        'account' => $params['twitterAccount']
+                    ],
+                ],
+                'googlePlus' => [
+                    'class' => \ymaker\social\share\drivers\GooglePlus::class,
+                    'label' => Yii::t('app', '+Google'),
+                    'options' => ['class' => 'gp'],
+                ],
+                // ...
+            ],
+            'options' => [
+                'class' => 'social-network',
+            ],
+        ],
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'my_super_secret_key',

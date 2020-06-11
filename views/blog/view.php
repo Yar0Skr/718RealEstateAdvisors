@@ -30,7 +30,7 @@ preg_match('~>(.*?)<~', $model->text, $output);
 <div class="container">
     <div class="info-view">
         <div align="center">
-            <h1><?= $output[1] ?></h1>
+            <h1><?= 'a' ?></h1>
                 <?php if(!Yii::$app->user->isGuest){
                 if(Yii::$app->user->identity->auth_type == 1){
                     $uploadOwlModel = new \app\models\InfoImages();
@@ -115,11 +115,11 @@ preg_match('~>(.*?)<~', $model->text, $output);
         <p><?=$model->text?></p>
     </div>
     <?= \ymaker\social\share\widgets\SocialShare::widget([
-        'configurator' => 'socialShare',
-        'url'          => \yii\helpers\Url::to('absolute/route/to/page', true),
-        'title'        => 'Title of the page',
-        'description'  => 'Description of the page...',
-        'imageUrl'     => \yii\helpers\Url::to('absolute/route/to/image.png', true),
+        'configurator'  => 'socialShare',
+        'url'           => Url::current(),
+        'title'         => $model->header,
+        'description'   => $model->short_info,
+        'imageUrl'      => \yii\helpers\Url::to('/web/uploads/info/images/'.$model->image, true),
     ]); ?>
 
     <?php
