@@ -59,7 +59,7 @@ OwlCarouselWidget::begin([
                 <div>
                     <p>Whether your property is in excellent condition or barely standing, vacant or rented to tenants, paying rent or non-paying.</p>
                     <br>
-                    <p>We accommodate all your needs and make the selling experience pleasant for you.</p>
+                    <p>We accommodate all your needs and make the selling experience pleasant.</p>
                     <a href="tel:6462879111">
                         <button class="btn send-btn">Call us for a fair all-cash offer</button>
                     </a>
@@ -116,11 +116,11 @@ OwlCarouselWidget::begin([
             <div class="col-sm-12 col-md-6">
                 <h2>Avoid Foreclosure</h2>
                 <br>
-                <p>We can help if your property is distressed and we can assist you with foreclosure solutions.</p>
+                <p>We can help if your property is distressed, and we can assist you with foreclosure solutions.</p>
                 <br>
-                <p>In case there was a death, divorce or any other family crisis, we can advise on how to proceed in accordance with your specific property</p>
+                <p>In case there was a death, divorce, or any other family crisis, we can advise on how to proceed in accordance with your specific property.</p>
                 <br>
-                <p>Avoid the time and money it costs in order to sell your property through an agent. We can help you find an attorney; we can even pay for your closing costs and all other associated fees if you choose to.</p>
+                <p>Avoid the time and money it costs to sell your property through an agent. We can help you find an attorney; we can even pay for your closing costs and all other associated fees if you choose to.</p>
             </div>
         </div>
     </div>

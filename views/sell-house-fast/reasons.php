@@ -48,7 +48,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <?php foreach ($content as $element){ ?>
                 <div class="pesontedan">
                     <input id="pesontedan-<?=$element->id?>" type="checkbox" name="pesontedans">
-                    <label for="pesontedan-<?=$element->id?>"><?=$element->header?></label>
+                    <label for="pesontedan-<?=$element->id?>"><?=$element->short_info?></label>
                     <div class="pesontedan-content">
                             <?php if ($element->image != null){?>
                                 <div style="margin:20px" class="row">
@@ -56,9 +56,6 @@ $this->params['breadcrumbs'][] = $this->title;
                                         <div align="center" style="padding-top:20px" class="image">
                                             <?=Html::img('/web/uploads/info/images/'.$element->image)?>
                                         </div>
-                                    </div>
-                                    <div class="col-sm-12 col-md-6">
-                                        <p><?=$element->short_info?></p>
                                     </div>
                                 </div>
                                 <div style="margin:20px" class="row">
