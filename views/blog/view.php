@@ -104,7 +104,7 @@ foreach ($metaTags as $meta){
         </div>
     </div>
     <div align="center" class="infoImg">
-        <?=Html::img('@web/uploads/info/images/'.$model->image)?>
+        <?=Html::img('/web/uploads/info/images/'.$model->image)?>
     </div>
     <div class="info-body">
         <p><?=$model->text?></p>

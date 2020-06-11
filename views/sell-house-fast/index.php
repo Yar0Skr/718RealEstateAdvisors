@@ -60,8 +60,6 @@ OwlCarouselWidget::begin([
                     <p>Whether your property is in excellent condition or barely standing, vacant or rented to tenants, paying rent or non-paying.</p>
                     <br>
                     <p>We accommodate all your needs and make the selling experience pleasant for you.</p>
-                    <br>
-                    <br>
                     <a href="tel:6462879111">
                         <button class="btn send-btn">Call us for a fair all-cash offer</button>
                     </a>
@@ -98,7 +96,6 @@ OwlCarouselWidget::begin([
                         <li>WE BUY THEM ALL</li>
                         <li>Anywhere in New York and New Jersey</li>
                     </ul>
-                    <br>
                     <a href="#contact">
                         <button class="btn send-btn">Call or fill out the Form</button>
                     </a>

@@ -12,9 +12,9 @@ $this->params['breadcrumbs'][] = $this->title;
         background-color: #ebebeb;
     }
 </style>
-<div style=" height:auto; padding-top: 60px">
+<div style=" height:auto; padding-top: 20px">
     <div class="container">
-        <div style="color: #014a73;padding-bottom: 60px"align="center">OUR SERVICES</div>
+        <div style="color: #014a73;padding-bottom: 20px"align="center">OUR SERVICES</div>
         <div class="row">
             <div class="col-sm-12 col-md-3 services">
                 <div>

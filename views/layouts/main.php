@@ -13,6 +13,9 @@ use yii\widgets\ActiveForm;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 $model = new \app\models\Messages();
+
+$this->registerMetaTag(['name'=>'ahrefs-site-verification','content'=>'f94cdce171c90f858fc10e7f83686c8725738f31e17cba1f84f57311df1c2266']);
+
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
@@ -63,17 +66,17 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 <div class = "pre-nav">
     <div class="flex-nav">
-        <a href=<?=Url::home()?>><?=Html::img("@web/img/icons/logo.png")?></a>
+        <a href=<?=Url::home()?>><?=Html::img("/web/img/icons/logo.png")?></a>
     </div>
-    <div class="flex-nav hideNav">
+    <div class="flex-nav">
         <div align="center" class="header-icons">
-            <a href="tel:6462879111"><?=Html::img("@web/img/icons/phone-header.png")?></a>
+            <a href="tel:6462879111"><?=Html::img("/web/img/icons/phone-header.png")?></a>
         </div>
         <div align="center" class="header-icons">
-            <a href=""><?=Html::img("@web/img/icons/whatsapp-header.png")?></a>
+            <a href="https://wa.me/16462879111?text=%20Hi%21%20I%20visited%20your%20website%20and%20want%20to%20sell%20my%20property"><?=Html::img("/web/img/icons/whatsapp-header.png")?></a>
         </div>
         <div align="center" class="header-icons">
-            <a href="mailto:info@718rea.com"><?=Html::img("@web/img/icons/mail-header.png")?></a>
+            <a href="mailto:info@718rea.com"><?=Html::img("/web/img/icons/mail-header.png")?></a>
         </div>
     </div>
 
@@ -150,7 +153,7 @@ AppAsset::register($this);
             <div class="icon-menu"><a href="https://www.facebook.com/realestate718/"><?=Html::img("/web/img/icons/facebook.png")?></a></div>
             <div class="icon-menu"><a href="https://www.instagram.com/718realestateadvisors/"><?=Html::img("/web/img/icons/instagram.png")?></a></div>
             <div class="icon-menu"><a href="tel:6462879111"><?=Html::img("/web/img/icons/phone.png")?></a></div>
-            <div class="icon-menu"><a href=""><?=Html::img("/web/img/icons/whatsapp.png")?></a></div>
+            <div class="icon-menu"><a href="https://wa.me/16462879111?text=%20Hi%21%20I%20visited%20your%20website%20and%20want%20to%20sell%20my%20property"><?=Html::img("/web/img/icons/whatsapp.png")?></a></div>
             <div class="icon-menu"><a href="mailto:info@718rea.com"><?=Html::img("/web/img/icons/mail.png")?></a></div>
         </div>
         <div class="rights">

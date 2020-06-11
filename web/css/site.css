@@ -17,6 +17,10 @@ body {
 .visible {
     display: none;
 }
+
+.videoDiv{
+    height:300px;
+}
 .navbar-inverse{
     border:none;
 }
@@ -102,11 +106,13 @@ body {
 .pre-nav{
     font-family: "MazzardH-Regular";
     font-size: 10pt;
-    height: 150px;
+    height: auto;
     width: 100%;
     background-color: #014a73;
     display: flex;
     justify-content: space-between;
+    padding-top:10px;
+    padding-bottom:10px;
 }
 
 .pre-nav-bottom{
@@ -266,7 +272,6 @@ body {
     width: 100%;
     height: auto;
     padding-bottom: 60px;
-    padding-top: 60px;
 }
 
 .white{
@@ -556,6 +561,10 @@ a.desc:after {
         width: 40px;
         height: 40px;
     }
+    
+    .content{
+    padding-bottom: 20px;
+    }
 
     .send-btn{
         width: auto;
@@ -566,6 +575,10 @@ a.desc:after {
     .index-bottom, .index-middle {
         height: 200px;
         background-size: contain;
+    }
+
+    .videoDiv{
+        height:auto;
     }
 
     .infoImg img{

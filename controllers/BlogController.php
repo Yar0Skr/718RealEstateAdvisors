@@ -1,6 +1,7 @@
 <?php
 
 namespace app\controllers;
+use yii\helpers\Url;
 
 use app\models\InfoImages;
 use app\models\InfoMetatags;
@@ -111,7 +112,7 @@ class BlogController extends ParentController
             }
 
             if ($model->save()) {
-                return $this->redirect(['view', 'id' => $model->id]);
+                return $this->redirect(Url::toRoute('/blog/'.$element->url_name));
             }
 
         }
@@ -155,7 +156,7 @@ class BlogController extends ParentController
 
 
             if ($model->save()) {
-                return $this->redirect(['view', 'id' => $model->id]);
+                return $this->redirect(Url::toRoute('/blog/'.$element->url_name));
             }
         }
 

@@ -70,7 +70,7 @@ AppAsset::register($this);
             <a href="tel:6462879111"><?=Html::img("/web/img/icons/phone-header.png")?></a>
         </div>
         <div align="center" class="header-icons">
-            <a href=""><?=Html::img("/web/img/icons/whatsapp-header.png")?></a>
+            <a href="https://wa.me/16462879111?text=%20Hi%21%20I%20visited%20your%20website%20and%20want%20to%20sell%20my%20property"><?=Html::img("/web/img/icons/whatsapp-header.png")?></a>
         </div>
         <div align="center" class="header-icons">
             <a href="mailto:info@718rea.com"><?=Html::img("/web/img/icons/mail-header.png")?></a>
@@ -78,19 +78,7 @@ AppAsset::register($this);
     </div>
 
 </div>
-<div class = "pre-nav-bottom showNav">
-    <div class="flex-nav">
-        <div class="header-icons">
-            <a href="tel:6462879111"><?=Html::img("/web/img/icons/phone-header.png")?></a>
-        </div>
-        <div class="header-icons">
-            <a href=""><?=Html::img("/web/img/icons/whatsapp-header.png")?></a>
-        </div>
-        <div class="header-icons">
-            <a href="mailto:info@718rea.com"><?=Html::img("/web/img/icons/mail-header.png")?></a>
-        </div>
-    </div>
-</div>
+
 <div class="wrap" style="height: auto">
     <?php
     NavBar::begin([
@@ -119,7 +107,7 @@ AppAsset::register($this);
             <div class="icon-menu"><a href="https://www.facebook.com/realestate718/"><?=Html::img("/web/img/icons/facebook.png")?></a></div>
             <div class="icon-menu"><a href="https://www.instagram.com/718realestateadvisors/"><?=Html::img("/web/img/icons/instagram.png")?></a></div>
             <div class="icon-menu"><a href="tel:6462879111"><?=Html::img("/web/img/icons/phone.png")?></a></div>
-            <div class="icon-menu"><a href=""><?=Html::img("/web/img/icons/whatsapp.png")?></a></div>
+            <div class="icon-menu"><a href="https://wa.me/16462879111?text=%20Hi%21%20I%20visited%20your%20website%20and%20want%20to%20sell%20my%20property"><?=Html::img("/web/img/icons/whatsapp.png")?></a></div>
             <div class="icon-menu"><a href="mailto:info@718rea.com"><?=Html::img("/web/img/icons/mail.png")?></a></div>
         </div>
         <div class="rights">

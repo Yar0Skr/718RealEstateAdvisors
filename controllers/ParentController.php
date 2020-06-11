@@ -12,7 +12,7 @@ class ParentController extends Controller
     public function beforeAction($action)
     {
         if (Yii::$app->user->isGuest){
-            if ($action->id == "post-create" || ($action->controller->id == 'info' && $action->id == 'view')) {
+            if ($action->id == "post-create" || ($action->controller->id == 'blog' && $action->id == 'view')) {
                 return parent::beforeAction($action);
             }else{
             return Yii::$app->getResponse()->redirect('/');

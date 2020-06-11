@@ -15,6 +15,7 @@ $config = [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'my_super_secret_key',
+            'baseUrl'=> '',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -50,7 +51,11 @@ $config = [
             'enableStrictParsing' => false,
             'rules' => [
                 '/' => 'sell-house-fast/index',
-                'blog/<urlName:\w+>' => 'blog/view',
+                '/blog/delete' => '/blog/delete',
+                '/blog/index' => '/blog/index',
+                '/blog/update'=>'blog/update',
+                '/blog/create'=>'blog/create',
+                '/blog/<urlName:[a-zA-Z0-9\-_]*>' => 'blog/view',
             ],
         ],
 
