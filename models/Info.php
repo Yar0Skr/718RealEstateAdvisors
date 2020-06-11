@@ -17,6 +17,9 @@ use Yii;
  * @property string $updated_at
  * @property int|null $order_number
  * @property string|null $url_name
+ * @property string|null $alt_tag
+ * @property string|null $read_time
+ * @property string|null $author
  *
  * @property InfoImages[] $infoImages
  * @property InfoMetatags[] $infoMetatags
@@ -40,7 +43,7 @@ class Info extends \yii\db\ActiveRecord
             [['text'], 'string'],
             [['is_delete', 'order_number'], 'integer'],
             [['created_at', 'updated_at'], 'safe'],
-            [['header', 'short_info', 'image', 'url_name'], 'string', 'max' => 255],
+            [['header', 'short_info', 'image', 'url_name', 'alt_tag', 'read_time', 'author'], 'string', 'max' => 255],
             [['url_name'], 'unique'],
         ];
     }
@@ -61,6 +64,9 @@ class Info extends \yii\db\ActiveRecord
             'updated_at' => 'Updated At',
             'order_number' => 'Order Number',
             'url_name' => 'Url Name',
+            'alt_tag' => 'Alt Tag',
+            'read_time' => 'Read Time',
+            'author' => 'Author',
         ];
     }
 
