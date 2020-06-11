@@ -29,7 +29,7 @@ class Faq extends \yii\db\ActiveRecord
     {
         return [
             [['order_number'], 'integer'],
-            [['header', 'short_info'], 'string', 'max' => 255],
+            [['header', 'short_info'], 'string',],
         ];
     }
 

@@ -16,16 +16,16 @@ $this->params['breadcrumbs'][] = $this->title;
                         <input id="pesontedan-<?=$element->id?>" type="checkbox" name="pesontedans">
                         <label for="pesontedan-<?=$element->id?>"><?=$element->header?></label>
                         <div class="pesontedan-content">
-                                <div style="margin:20px" class="row">
-                                    <div class="col-12">
-                                        <p><?=$element->short_info?></p>
-                                    </div>
+                            <div style="margin:20px" class="row">
+                                <div class="col-12">
+                                    <p><?=$element->short_info?></p>
                                 </div>
-                        </div>
+                            </div>
                         </div>
                     </div>
                 <?php } ?>
             </div>
+        </div>
     </div>
 </div>
 

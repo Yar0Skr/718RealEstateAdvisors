@@ -107,7 +107,7 @@ AppAsset::register($this);
             ['label' => 'Common Reasons To Sell Property', 'url' => [Url::to('/sell-house-fast/reasons')]],
             ['label' => 'Our process', 'url' => ['/sell-house-fast/process']],
             ['label' => 'Our Services', 'url' => ['/sell-house-fast/services']],
-            ['label' => 'FAQ', 'url' => ['/sell-house-fast/about']],
+            ['label' => 'FAQ', 'url' => ['/sell-house-fast/frequently-asked-questions']],
             ['label' => 'Contact Us', 'url' => [Url::current().'#contact'], 'options'=>['id' => 'smoothScroll']],
         ],
     ]);

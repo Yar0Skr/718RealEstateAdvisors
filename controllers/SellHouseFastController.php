@@ -73,7 +73,7 @@ class SellHouseFastController extends Controller
     }
 
 
-    public function actionAbout()
+    public function actionFrequentlyAskedQuestions()
     {
         $content = Faq::find()->orderBy('order_number')->all();
         return $this->render('about',['content'=>$content]);
