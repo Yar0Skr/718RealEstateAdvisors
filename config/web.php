@@ -28,11 +28,6 @@ $config = [
                         'account' => $params['twitterAccount']
                     ],
                 ],
-                'googlePlus' => [
-                    'class' => \ymaker\social\share\drivers\GooglePlus::class,
-                    'label' => Yii::t('app', '+Google'),
-                    'options' => ['class' => 'gp'],
-                ],
                 // ...
             ],
             'options' => [
