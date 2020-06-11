@@ -10,6 +10,8 @@ use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Info */
+$prevModel=\app\models\Info::findOne(['id'=>$model->id + 1]);
+$nextModel=\app\models\Info::findOne(['id'=>$model->id + 1]);
 
 $this->title = $model->header;
 $this->params['breadcrumbs'][] = ['label' => 'Infos', 'url' => ['index']];
@@ -21,11 +23,14 @@ foreach ($metaTags as $meta){
 }
 
 \yii\web\YiiAsset::register($this);
+
+preg_match('~>(.*?)<~', $model->text, $output);
 ?>
+
 <div class="container">
     <div class="info-view">
         <div align="center">
-            <h1><?= Html::encode($this->title) ?></h1>
+            <h1><?= $output[1] ?></h1>
                 <?php if(!Yii::$app->user->isGuest){
                 if(Yii::$app->user->identity->auth_type == 1){
                     $uploadOwlModel = new \app\models\InfoImages();

@@ -584,4 +584,10 @@ a.desc:after {
     .infoImg img{
         width: 90%;
     }
+    
+    .FAQ-body{
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    }
 }

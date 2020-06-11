@@ -9,6 +9,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="FAQ-body">
     <div class="container white">
+        <h1 align="center">Frequently Asked Questions</h1>
         <div class="navigaonusing">
             <div class="gaonutosal">
                 <?php foreach ($content as $element){ ?>
