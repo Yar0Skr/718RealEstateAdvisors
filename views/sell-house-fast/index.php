@@ -61,7 +61,7 @@ OwlCarouselWidget::begin([
                     <br>
                     <p>We accommodate all your needs and make the selling experience pleasant.</p>
                     <a href="tel:6462879111">
-                        <button class="btn send-btn">Call us for a fair all-cash offer</button>
+                        <button class="btn homeBtn send-btn">Call us for a fair all-cash offer</button>
                     </a>
                 </div>
             </div>
@@ -97,7 +97,7 @@ OwlCarouselWidget::begin([
                         <li>Anywhere in New York and New Jersey</li>
                     </ul>
                     <a href="#contact">
-                        <button class="btn send-btn">Call or fill out the Form</button>
+                        <button class="btn homeBtn send-btn">Call or fill out the Form</button>
                     </a>
                 </div>
             </div>

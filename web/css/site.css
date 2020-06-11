@@ -114,7 +114,16 @@ body {
     padding-top:10px;
     padding-bottom:10px;
 }
-
+.flexBox{
+    font-family: "MazzardH-Regular";
+    font-size: 10pt;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top:10px;
+    padding-bottom:10px;
+}
 .pre-nav-bottom{
     font-family: "MazzardH-Regular";
     font-size: 10pt;
@@ -187,7 +196,6 @@ body {
 
 .info-body{
     font-family: "MazzardH-Regular";
-    margin: 30px;
     font-size: 18pt;
 }
 
@@ -264,9 +272,9 @@ body {
     background-color: #014a73;
 }
 
-.wrap > .container {
-    padding: 70px 15px 20px;
-}
+/*.wrap > .container {*/
+/*    padding: 70px 15px 20px;*/
+/*}*/
 
 .content{
     width: 100%;
@@ -362,14 +370,17 @@ body {
     color: white;
 }
 .send-btn{
-    margin-top: 15px;
+    width:375px;
     font-family: "MazzardH";
     color: white;
     background-color: #007cff;
     font-size: 16pt;
+    Border-radius:60px;
+}
+
+.homeBtn{
     width: 375px;
     height: 45px;
-    Border-radius:60px;
 }
 
 .footer-form .btn {
@@ -485,6 +496,30 @@ a.desc:after {
     border: none;
 }
 
+.fb{
+    display: inline-block;
+    font-family: "MazzardH";
+    color: white;
+    background-color: #007cff;
+    font-size: 10pt;
+    width: 75px;
+    height: 25px;
+    Border-radius: 60px;
+    margin-right:5px;
+}
+
+.tw{    
+    display: inline-block;
+    font-family: "MazzardH";
+    color: white;
+    background-color: #1da1f2;
+    font-size: 10pt;
+    width: 75px;
+    height: 25px;
+    Border-radius: 60px;
+}
+
+
 @media(max-width:767px) {
     .nav li > form > button.logout {
         display:block;
@@ -547,7 +582,7 @@ a.desc:after {
     .icon-menu{
         margin-right: 10px;
     }
-
+    
     .icon-menu img{
         width: 40px;
         height: 40px;
@@ -566,12 +601,19 @@ a.desc:after {
     padding-bottom: 20px;
     }
 
-    .send-btn{
+    .homeBtn{
         width: auto;
+        height: 45px;
+    }
+    .smallBtn{
+        width: 90px;
         height: 50px;
         font-size: 10pt;
     }
-
+    .navBtn{
+        width:150px;
+        font-size: 10pt;
+    }
     .index-bottom, .index-middle {
         height: 200px;
         background-size: contain;
@@ -582,6 +624,7 @@ a.desc:after {
     }
 
     .infoImg img{
+        margin-top:5px;
         width: 90%;
     }
     

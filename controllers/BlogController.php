@@ -67,9 +67,10 @@ class BlogController extends ParentController
                 if (!file_exists($path)) {
                     var_dump(mkdir($path, 0777, true));
                 }
-                $array = explode(".", $image->name);
-                $name = end($array);
-                $model->image = Yii::$app->security->generateRandomString() . ".{$name}";
+                // $array = explode(".", $image->name);
+                // $name = end($array);
+                $model->image = $image->name;
+                // Yii::$app->security->generateRandomString() . ".{$name}";
                 $image->saveAs($path . $model->image);
                 $model->save();
             } else {
@@ -105,9 +106,10 @@ class BlogController extends ParentController
                 if (!file_exists($path)) {
                     var_dump(mkdir($path, 0777, true));
                 }
-                $array = explode(".", $image->name);
-                $name = end($array);
-                $model->image = Yii::$app->security->generateRandomString() . ".{$name}";
+                // $array = explode(".", $image->name);
+                // $name = end($array);
+                $model->image = $image->name;
+                // Yii::$app->security->generateRandomString() . ".{$name}";
                 $image->saveAs($path . $model->image);
             }
 
@@ -146,8 +148,9 @@ class BlogController extends ParentController
                 if ($oldImageName != null) {
                     unlink($path . $oldImageName);
                 }
-                $array = explode(".", $image->name);
-                $name = Yii::$app->security->generateRandomString() . '.' . end($array);
+                // $array = explode(".", $image->name);
+                $name = $image->name;
+                // Yii::$app->security->generateRandomString() . '.' . end($array);
                 $image->saveAs($path . $name);
                 $model->image = $name;
             } else {

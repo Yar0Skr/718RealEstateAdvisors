@@ -54,30 +54,30 @@ $this->params['breadcrumbs'][] = $this->title;
                                 <div style="margin:20px" class="row">
                                     <div class="col-sm-12 col-md-6">
                                         <div align="center" style="padding-top:20px" class="image">
-                                            <?=Html::img('/web/uploads/info/images/'.$element->image)?>
+                                            <?=Html::img('/web/uploads/info/images/'.$element->image,['alt' => $element->alt_tag])?>
                                         </div>
                                     </div>
                                     <div class="col-sm-12 col-md-6">
-                                        <p><?=$element->short_info?></p>
+                                        <p style="margin-bottom:0px"><?=$element->short_info?></p>
                                     </div>
                                 </div>
                                 <div style="margin:20px" class="row">
                                     <div align="center" class="col-12">
                                         <div>
-                                            <a href="<?=Url::toRoute('/blog/'.$element->url_name)?>"><button class="send-btn align-self-center">Read more</button></a>
+                                            <a href="<?=Url::toRoute('/blog/'.$element->url_name)?>"><button class="send-btn smallBtn">Read more</button></a>
                                         </div>
                                     </div>
                                 </div>
                             <?php } else { ?>
                                 <div style="margin:20px" class="row">
                                     <div class="col-12">
-                                        <p><?=$element->short_info?></p>
+                                        <p style="margin-bottom:0px"><?=$element->short_info?></p>
                                     </div>
                                 </div>
                                 <div style="margin:20px" class="row">
                                     <div align="center" class="col-12">
                                         <div>
-                                            <a href="<?=Url::toRoute('/blog/'.$element->url_name)?>"><button class="send-btn align-self-center">Read more</button></a>
+                                            <a href="<?=Url::toRoute('/blog/'.$element->url_name)?>"><button class="send-btn smallBtn">Read more</button></a>
                                         </div>
                                     </div>
                                 </div>

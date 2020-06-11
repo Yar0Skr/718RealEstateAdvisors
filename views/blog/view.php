@@ -10,7 +10,7 @@ use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Info */
-$prevModel=\app\models\Info::findOne(['id'=>$model->id + 1]);
+$prevModel=\app\models\Info::findOne(['id'=>$model->id - 1]);
 $nextModel=\app\models\Info::findOne(['id'=>$model->id + 1]);
 
 $this->title = $model->header;
@@ -30,7 +30,6 @@ preg_match('~>(.*?)<~', $model->text, $output);
 <div class="container">
     <div class="info-view">
         <div align="center">
-            <h1><?= "a" ?></h1>
                 <?php if(!Yii::$app->user->isGuest){
                 if(Yii::$app->user->identity->auth_type == 1){
                     $uploadOwlModel = new \app\models\InfoImages();
@@ -109,23 +108,29 @@ preg_match('~>(.*?)<~', $model->text, $output);
         </div>
     </div>
     <div align="center" class="infoImg">
-        <?=Html::img('/web/uploads/info/images/'.$model->image)?>
+        <?=Html::img('/web/uploads/info/images/'.$model->image,['alt' => $model->alt_tag])?>
     </div>
-    <div class="info-body">
-        <p><?=$model->text?></p>
-    </div>
-    <div>
-        <p>Share</p>
-
-        <?= \ymaker\social\share\widgets\SocialShare::widget([
+         <div style="margin-top:5px;" class = "flexBox">
+        <div align="center" class = 'flex-nav'>
+                <p>Read time: <?= $model->read_time ?></p>
+                <p>Author: <?= $model->author ?></p>
+        </div>
+        <div align="center" class = 'flex-nav'>
+            <p>Share</p>
+            <?= \ymaker\social\share\widgets\SocialShare::widget([
         'configurator'  => 'socialShare',
         'url'           => Url::base(true),
         'title'         => $model->header,
         'description'   => $model->short_info,
-        'imageUrl'      => Url::to('/web/uploads/info/images/'.$model->image),
-            'containerOptions' => ['tag' => 'div', 'class' => 'social-share'],
-            'linkContainerOptions' => ['tag' => 'button'],
+        'imageUrl'      => Url::to('/web/uploads/info/images/'.$model->image, true),
+            'containerOptions' => ['tag' => ''],
+            'linkContainerOptions' => ['tag' => ''],
     ]); ?>
+        </div>
+    </div>
+   
+    <div class="info-body">
+        <p><?=$model->text?></p>
     </div>
 
 
@@ -155,3 +160,14 @@ preg_match('~>(.*?)<~', $model->text, $output);
 
     <?php OwlCarouselWidget::end(); ?>
 </div>
+        <div align="center">
+            <?php if(!empty($prevModel)){ ?>
+             <a href="<?=Url::toRoute('/blog/'.$prevModel->url_name)?>"><button class="send-btn navBtn"><?= $prevModel->header ?></button></a>
+            <?php } ?>
+        </div>
+        <div align="center">
+         <?php if(!empty($nextModel)){ ?>
+            <a href="<?=Url::toRoute('/blog/'.$nextModel->url_name)?>"><button class="send-btn navBtn"><?= $nextModel->header ?></button></a>
+            <?php } ?>
+        </div>
+
