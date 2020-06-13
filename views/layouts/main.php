@@ -59,10 +59,6 @@ AppAsset::register($this);
 </head>
 <body>
 
-<script type="text/javascript">
-
-</script>
-
 <?php $this->beginBody() ?>
 <div class = "pre-nav">
     <div class="flex-nav">
@@ -94,8 +90,24 @@ AppAsset::register($this);
 <!--        </div>-->
 <!--    </div>-->
 <!--</div>-->
+
 <div class="wrap">
-    <?php
+    <input type="checkbox" id="myNav-toggle" hidden>
+    <nav class="myNav phoneNav">
+        <label for="myNav-toggle" class="myNav-toggle" onclick></label>
+        <h2 class="logo">
+            <a>718REA</a>
+        </h2>
+        <ul>
+            <li><a href="<?= Url::to('/sell-house-fast/index') ?>">Home</a>
+            <li><a href="<?= Url::to('/sell-house-fast/reasons') ?>">Common Reasons To Sell Property</a>
+            <li><a href="<?= Url::to('/sell-house-fast/process') ?>">Our process</a>
+            <li><a href="<?= Url::to('/sell-house-fast/services') ?>">Our Services</a>
+            <li><a href="<?= Url::to('/sell-house-fast/frequently-asked-questions') ?>">FAQ</a>
+            <li><a href="<?= Url::to(Url::current().'#contact') ?>">Contact Us</a>
+        </ul>
+    </nav>
+<?php
     NavBar::begin([
         'options' => [
             'class' => 'navbar-inverse nav',

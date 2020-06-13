@@ -13,20 +13,23 @@ use yii\widgets\ActiveForm;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 $model = new \app\models\Messages();
+
+$this->registerMetaTag(['name'=>'ahrefs-site-verification','content'=>'f94cdce171c90f858fc10e7f83686c8725738f31e17cba1f84f57311df1c2266']);
+
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145164288-2"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+    <!--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145164288-2"></script>-->
+    <!--<script>-->
+    <!--    window.dataLayer = window.dataLayer || [];-->
+    <!--    function gtag(){dataLayer.push(arguments);}-->
+    <!--    gtag('js', new Date());-->
 
-        gtag('config', 'UA-145164288-2');
-    </script>
+    <!--    gtag('config', 'UA-145164288-2');-->
+    <!--</script>-->
     <!-- Facebook Pixel Code -->
     <script>
         !function(f,b,e,v,n,t,s)
@@ -53,19 +56,17 @@ AppAsset::register($this);
     <?php $this->registerCsrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="css/right-nav-style.css">
 </head>
 <body>
-
-<script type="text/javascript">
-
-</script>
 
 <?php $this->beginBody() ?>
 <div class = "pre-nav">
     <div class="flex-nav">
         <a href=<?=Url::home()?>><?=Html::img("/web/img/icons/logo.png")?></a>
     </div>
-    <div class="flex-nav hideNav">
+    <div class="flex-nav">
         <div align="center" class="header-icons">
             <a href="tel:6462879111"><?=Html::img("/web/img/icons/phone-header.png")?></a>
         </div>
@@ -78,25 +79,53 @@ AppAsset::register($this);
     </div>
 
 </div>
+<!--<div class = "pre-nav-bottom showNav">-->
+<!--    <div class="flex-nav">-->
+<!--        <div class="header-icons">-->
+<!--            <a href="tel:6462879111">--><?//=Html::img("/web/img/icons/phone-header.png")?><!--</a>-->
+<!--        </div>-->
+<!--        <div class="header-icons">-->
+<!--            <a href="">--><?//=Html::img("/web/img/icons/whatsapp-header.png")?><!--</a>-->
+<!--        </div>-->
+<!--        <div class="header-icons">-->
+<!--            <a href="mailto:info@718rea.com">--><?//=Html::img("/web/img/icons/mail-header.png")?><!--</a>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
 
-<div class="wrap" style="height: auto">
-    <?php
-    NavBar::begin([
-        'options' => [
-            'class' => 'navbar-inverse nav',
-        ],
-    ]);
-    echo Nav::widget([
-        'items' => [
-            ['label' => 'Home', 'url' => [Url::to('/sell-house-fast/index')]],
-            ['label' => 'Common Reasons To Sell Property', 'url' => [Url::to('/sell-house-fast/reasons')]],
-            ['label' => 'Our process', 'url' => ['/sell-house-fast/process']],
-            ['label' => 'Our Services', 'url' => ['/sell-house-fast/services']],
-            ['label' => 'FAQ', 'url' => ['/sell-house-fast/frequently-asked-questions']],
-            ['label' => 'Contact Us', 'url' => [Url::current().'#contact'], 'options'=>['id' => 'smoothScroll']],
-        ],
-    ]);
-    NavBar::end();
+<div class="wrap">
+    <input type="checkbox" id="nav-toggle" hidden>
+    <nav class="nav">
+        <label for="nav-toggle" class="nav-toggle" onclick></label>
+        <h2 class="">
+            <a>718REA</a>
+        </h2>
+        <ul>
+            <li><a href="<?= Url::to('/sell-house-fast/index') ?>">Home</a>
+            <li><a href="<?= Url::to('/sell-house-fast/reasons') ?>">Common Reasons To Sell Property</a>
+            <li><a href="<?= Url::to('/sell-house-fast/process') ?>">Our process</a>
+            <li><a href="<?= Url::to('/sell-house-fast/services') ?>">Our Services</a>
+            <li><a href="<?= Url::to('/sell-house-fast/frequently-asked-questions') ?>">FAQ</a>
+            <li><a href="<?= Url::to(Url::current().'#contact') ?>">Contact Us</a>
+        </ul>
+    </nav>
+   <?php
+        NavBar::begin([
+            'options' => [
+                'class' => 'navbar-inverse myNav',
+            ],
+        ]);
+        echo Nav::widget([
+            'items' => [
+                ['label' => 'Home', 'url' => [Url::to('/sell-house-fast/index')]],
+                ['label' => 'Common Reasons To Sell Property', 'url' => [Url::to('/sell-house-fast/reasons')]],
+                ['label' => 'Our process', 'url' => ['/sell-house-fast/process']],
+                ['label' => 'Our Services', 'url' => ['/sell-house-fast/services']],
+                ['label' => 'FAQ', 'url' => ['/sell-house-fast/frequently-asked-questions']],
+                ['label' => 'Contact Us', 'url' => [Url::current().'#contact'], 'options'=>['id' => 'smoothScroll']],
+            ],
+        ]);
+        NavBar::end();
     ?>
     <?= $content ?>
 </div>
