@@ -22,14 +22,14 @@ AppAsset::register($this);
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145164288-2"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+    <!--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145164288-2"></script>-->
+    <!--<script>-->
+    <!--    window.dataLayer = window.dataLayer || [];-->
+    <!--    function gtag(){dataLayer.push(arguments);}-->
+    <!--    gtag('js', new Date());-->
 
-        gtag('config', 'UA-145164288-2');
-    </script>
+    <!--    gtag('config', 'UA-145164288-2');-->
+    <!--</script>-->
     <!-- Facebook Pixel Code -->
     <script>
         !function(f,b,e,v,n,t,s)
@@ -94,7 +94,7 @@ AppAsset::register($this);
 <!--        </div>-->
 <!--    </div>-->
 <!--</div>-->
-<div class="wrap" style="height: auto">
+<div class="wrap">
     <?php
     NavBar::begin([
         'options' => [

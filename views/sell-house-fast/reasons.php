@@ -15,6 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
     }
 </style>
 <div style="padding: 15px" class="container">
+    <div align="center"><h1>Reasons To Sell Property</h1></div>
     <div>
         <?php
         OwlCarouselWidget::begin([
@@ -32,9 +33,14 @@ $this->params['breadcrumbs'][] = $this->title;
             ]
         ]);
         ?>
-        <div class="item-class"><a href="#"><?=Html::img("/web/img/layouts/1.jpg")?></a></div>
-        <div class="item-class"><a href="#"><?=Html::img("/web/img/layouts/2.jpg")?></a></div>
-        <div class="item-class"><a href="#"><?=Html::img("/web/img/layouts/3.jpg")?></a></div>
+        <div class="item-class"><a href="<?=Url::toRoute('blog/dealing-with-credit-judgments')?>"><?=Html::img("/web/img/layouts/1.jpg")?></a></div>
+        <div class="item-class"><a href="<?=Url::toRoute('/blog/selling-inherited-property')?>"><?=Html::img("/web/img/layouts/inheritance.jpg")?></a></div>
+        <div class="item-class"><a href="<?=Url::toRoute('/blog/selling-fire-damaged-house')?>"><?=Html::img("/web/img/layouts/damage.jpg")?></a></div>
+        <div class="item-class"><a href="<?=Url::toRoute('/blog/lost-my-job-cant-pay-mortgage')?>"><?=Html::img("/web/img/layouts/afford.jpg")?></a></div>
+        <div class="item-class"><a href="<?=Url::toRoute('/blog/is-your-home-mortgage-underwater')?>"><?=Html::img("/web/img/layouts/negative.jpg")?></a></div>
+        <div class="item-class"><a href="<?=Url::toRoute('/blog/dissolving-real-estate-partnership')?>"><?=Html::img("/web/img/layouts/dysfunctional.jpg")?></a></div>
+        <div class="item-class"><a href="<?=Url::toRoute('blog/sell-house-fast-divorce')?>"><?=Html::img("/web/img/layouts/divorce.jpg")?></a></div>
+        <div class="item-class"><a href="<?=Url::toRoute('/blog/selling-house-that-needs-repairs')?>"><?=Html::img("/web/img/layouts/repairs.jpg")?></a></div>
 
 
         <?php OwlCarouselWidget::end(); ?>

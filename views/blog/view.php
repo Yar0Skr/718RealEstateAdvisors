@@ -130,7 +130,7 @@ preg_match('~>(.*?)<~', $model->text, $output);
     </div>
    
     <div class="info-body">
-        <p><?=$model->text?></p>
+       <?=$model->text?>
     </div>
 
 

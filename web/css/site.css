@@ -53,7 +53,8 @@ body {
     position: relative;
     display: block;
     padding: 0 0 0 1em;
-    line-height: 3;
+    /*line-height:3;*/
+    line-height:1.8;
     cursor: pointer;
     font-size: 18pt;
     border: 1px solid #e7e7e7;
@@ -213,9 +214,9 @@ body {
 .header-icons > p{
     margin-top: 5px;
 }
-.wrap {
-    min-height: 100%;
-}
+/*.wrap {*/
+/*    min-height: 100%;*/
+/*}*/
 
 .services{
     font-family: "MazzardH-Regular";
@@ -627,7 +628,10 @@ a.desc:after {
         margin-top:5px;
         width: 90%;
     }
-    
+    .Reasons-body{
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
     .FAQ-body{
         padding-top: 0px;
         padding-bottom: 0px;
