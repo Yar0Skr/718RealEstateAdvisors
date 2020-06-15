@@ -5,7 +5,7 @@
  * выдвигающаяся по клику слева
  */
 
-.nav {
+.myNav {
     /*  ширна произвольная, не стесняйтесь экспериментировать */
     width: 320px;
     min-width: 320px;
@@ -24,7 +24,7 @@
     -moz-transition: left 0.3s;
     transition: left 0.3s;
     /* определяем цвет фона панели */
-    background: #16a085;
+    background: #007cff;
     /* поверх других элементов */
     z-index: 2000;
 }
@@ -35,7 +35,7 @@
  * тег <label>
  */
 
-.nav-toggle {
+.myNav-toggle {
     /* абсолютно позиционируем */
     position: absolute;
     /* относительно левого края панели */
@@ -68,7 +68,7 @@
  * символ Unicode (TRIGRAM FOR HEAVEN)
 */
 
-.nav-toggle:after {
+.myNav-toggle:after {
     content: '\2630';
     text-decoration: none;
 }
@@ -76,7 +76,7 @@
 
 /* цвет текста при наведении */
 
-.nav-toggle:hover {
+.myNav-toggle:hover {
     color: #f4f4f4;
 }
 
@@ -87,7 +87,7 @@
  * имя селектора атрибут флажка
  */
 
-[id='nav-toggle'] {
+[id='myNav-toggle'] {
     position: absolute;
     display: none;
 }
@@ -99,7 +99,7 @@
  * когда навигация раскрыта, распологаем внутри панели
 */
 
-[id='nav-toggle']:checked ~ .nav > .nav-toggle {
+[id='myNav-toggle']:checked ~ .myNav > .myNav-toggle {
     left: auto;
     right: 2px;
     top: 1em;
@@ -111,7 +111,7 @@
  * используем псевдокласс:checked
  */
 
-[id='nav-toggle']:checked ~ .nav {
+[id='myNav-toggle']:checked ~ .myNav {
     left: 0;
     box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
     -moz-box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
@@ -126,7 +126,7 @@
  * фишка необязательная, на любителя
 */
 
-[id='nav-toggle']:checked ~ main > article {
+[id='myNav-toggle']:checked ~ main > article {
     -webkit-transform: translateX(320px);
     -moz-transform: translateX(320px);
     transform: translateX(320px);
@@ -139,7 +139,7 @@
  * вы можете испльзовать любой другой значок
 */
 
-[id='nav-toggle']:checked ~ .nav > .nav-toggle:after {
+[id='myNav-toggle']:checked ~ .myNav > .myNav-toggle:after {
     content: '\2715';
 }
 
@@ -166,20 +166,12 @@ body {
  */
 
 @media screen and (min-width: 320px) {
-    html,
-    body {
-      margin: 0;
-      overflow-x: hidden;
-    }
+
 }
 
 @media screen and (max-width: 320px) {
-    html,
-    body {
-      margin: 0;
-      overflow-x: hidden;
-    }
-    .nav {
+
+    .myNav {
       width: 100%;
       box-shadow: none
     }
@@ -190,7 +182,7 @@ body {
  * Формируем стиль заголовка (логотип) панели 
 */
 
-.nav h2 {
+.myNav h2 {
     width: 90%;
     padding: 0;
     margin: 10px 0;
@@ -213,7 +205,7 @@ body {
     -webkit-transition: opacity 0.8s, -webkit-transform 0.8s;
 }
 
-.nav h2 a {
+.myNav h2 a {
     color: #dadada;
     text-decoration: none;
     text-transform: uppercase;
@@ -222,7 +214,7 @@ body {
 
 /*плавное появление заголовка (логотипа) при раскрытии панели */
 
-[id='nav-toggle']:checked ~ .nav h2 {
+[id='myNav-toggle']:checked ~ .myNav h2 {
     opacity: 1;
     transform: scale(1, 1);
     -ms-transform: scale(1, 1);
@@ -237,14 +229,14 @@ body {
  * прикрутим трансфомации и плавные переходы
  */
 
-.nav > ul {
+.myNav > ul {
     display: block;
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-.nav > ul > li {
+.myNav > ul > li {
     line-height: 2.5;
     opacity: 0;
     -webkit-transform: translateX(-50%);
@@ -257,7 +249,7 @@ body {
     transition: opacity .5s .1s, transform .5s .1s;
 }
 
-[id='nav-toggle']:checked ~ .nav > ul > li {
+[id='myNav-toggle']:checked ~ .myNav > ul > li {
     opacity: 1;
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
@@ -268,32 +260,32 @@ body {
 
 /* определяем интервалы появления пунктов меню */
 
-.nav > ul > li:nth-child(2) {
+.myNav > ul > li:nth-child(2) {
     -webkit-transition: opacity .5s .2s, -webkit-transform .5s .2s;
     transition: opacity .5s .2s, transform .5s .2s;
 }
 
-.nav > ul > li:nth-child(3) {
+.myNav > ul > li:nth-child(3) {
     -webkit-transition: opacity .5s .3s, -webkit-transform .5s .3s;
     transition: opacity .5s .3s, transform .5s .3s;
 }
 
-.nav > ul > li:nth-child(4) {
+.myNav > ul > li:nth-child(4) {
     -webkit-transition: opacity .5s .4s, -webkit-transform .5s .4s;
     transition: opacity .5s .4s, transform .5s .4s;
 }
 
-.nav > ul > li:nth-child(5) {
+.myNav > ul > li:nth-child(5) {
     -webkit-transition: opacity .5s .5s, -webkit-transform .5s .5s;
     transition: opacity .5s .5s, transform .5s .5s;
 }
 
-.nav > ul > li:nth-child(6) {
+.myNav > ul > li:nth-child(6) {
     -webkit-transition: opacity .5s .6s, -webkit-transform .5s .6s;
     transition: opacity .5s .6s, transform .5s .6s;
 }
 
-.nav > ul > li:nth-child(7) {
+.myNav > ul > li:nth-child(7) {
     -webkit-transition: opacity .5s .7s, -webkit-transform .5s .7s;
     transition: opacity .5s .7s, transform .5s .7s;
 }
@@ -303,7 +295,7 @@ body {
  * оформление ссылок пунктов меню
  */
 
-.nav > ul > li > a {
+.myNav > ul > li > a {
     display: inline-block;
     position: relative;
     padding: 0;
@@ -324,8 +316,8 @@ body {
  * состояние ссылок меню при наведении
  */
 
-.nav > ul > li > a:hover,
-.nav > ul > li > a:focus {
+.myNav > ul > li > a:hover,
+.myNav > ul > li > a:focus {
     color: white;
     padding-left: 15px;
 }
@@ -335,7 +327,7 @@ body {
  * линия подчеркивания ссылок меню
  */
 
-.nav > ul > li > a:before {
+.myNav > ul > li > a:before {
     content: '';
     display: block;
     position: absolute;
@@ -347,7 +339,7 @@ body {
     transition: width 0s ease;
 }
 
-.nav > ul > li > a:after {
+.myNav > ul > li > a:after {
     content: '';
     display: block;
     position: absolute;
@@ -366,14 +358,14 @@ body {
  * ссылок при наведении
  */
 
-.nav > ul > li > a:hover:before {
+.myNav > ul > li > a:hover:before {
     width: 0%;
     background: #3bc1a0;
     -webkit-transition: width .5s ease;
     transition: width .5s ease;
 }
 
-.nav > ul > li > a:hover:after {
+.myNav > ul > li > a:hover:after {
     width: 0%;
     background: transparent;
     -webkit-transition: width 0s ease;

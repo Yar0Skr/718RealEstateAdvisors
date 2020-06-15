@@ -166,19 +166,11 @@ body {
  */
 
 @media screen and (min-width: 320px) {
-    html,
-    body {
-      margin: 0;
-      overflow-x: hidden;
-    }
+
 }
 
 @media screen and (max-width: 320px) {
-    html,
-    body {
-      margin: 0;
-      overflow-x: hidden;
-    }
+
     .myNav {
       width: 100%;
       box-shadow: none

@@ -53,8 +53,7 @@ body {
     position: relative;
     display: block;
     padding: 0 0 0 1em;
-    /*line-height:3;*/
-    line-height:1.8;
+    line-height:3;
     cursor: pointer;
     font-size: 18pt;
     border: 1px solid #e7e7e7;
@@ -649,6 +648,10 @@ hr {
     .pesontedan-content p {
         font-size: 12pt;
     }
+    .pesontedan label {
+    line-height:1.8;
+    }
+
 
     .pesontedan input[type=checkbox] + label::after {
         content: "";
