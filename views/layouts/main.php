@@ -112,7 +112,7 @@ AppAsset::register($this);
     NavBar::end();
     ?>
 
-    <div class="navbar" >
+    <div class="navbar prePhoneNav" >
         <input type="checkbox" id="myNav-toggle" hidden>
         <nav class="myNav phoneNav">
             <label for="myNav-toggle" class="myNav-toggle" onclick></label>

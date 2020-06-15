@@ -237,7 +237,7 @@ body {
     background-color: #007cff;
 }
 
-.phoneNav{
+.phoneNav, .prePhoneNav{
     display: none;
 }
 
@@ -536,7 +536,9 @@ a.desc:after {
     .nav {
         display: none;
     }
-
+    .prePhoneNav{
+        display: block;
+    }
     .phoneNav{
         display: inline-table;
     }
