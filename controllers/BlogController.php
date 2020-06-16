@@ -114,7 +114,7 @@ class BlogController extends ParentController
             }
 
             if ($model->save()) {
-                return $this->redirect(Url::toRoute('/blog/'.$element->url_name));
+                return $this->redirect(Url::toRoute('/blog/'.$model->url_name));
             }
 
         }
@@ -159,7 +159,7 @@ class BlogController extends ParentController
 
 
             if ($model->save()) {
-                return $this->redirect(Url::toRoute('/blog/'.$element->url_name));
+                return $this->redirect(Url::toRoute('/blog/'.$model->url_name));
             }
         }
 

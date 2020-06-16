@@ -2,6 +2,7 @@
 
 /* @var $this yii\web\View */
 
+use toriphes\lazyload\LazyLoad;
 use yii\helpers\Html;
 
 $this->title = 'Our Services';
@@ -18,7 +19,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="row">
             <div class="col-sm-12 col-md-3 services">
                 <div>
-                    <?=Html::img("/web/img/icons/services1.png")?>
+                    <?=LazyLoad::widget(['src'=>'/web/img/icons/services1.png'])?>
                 </div>
                 <div>
                     <h4>LOOKING TO SELL A PROPERTY FAST?</h4>
@@ -31,7 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
             </div>
             <div class="col-sm-12 col-md-3 services">
                 <div>
-                    <?=Html::img("/web/img/icons/services2.png")?>
+                    <?=LazyLoad::widget(['src'=>'/web/img/icons/services2.png'])?>
                 </div>
                 <div>
                     <h4>VARIETY OF PROPERTIES</h4>
@@ -41,7 +42,7 @@ $this->params['breadcrumbs'][] = $this->title;
             </div>
             <div class="col-sm-12 col-md-3 services">
                 <div>
-                    <?=Html::img("/web/img/icons/services3.png")?>
+                    <?=LazyLoad::widget(['src'=>'/web/img/icons/services3.png'])?>
                 </div>
                 <div>
                     <h4>NO OBLIGATIONS, NO HASSLE</h4>
@@ -51,7 +52,7 @@ $this->params['breadcrumbs'][] = $this->title;
             </div>
             <div class="col-sm-12 col-md-3 services">
                 <div>
-                    <?=Html::img("/web/img/icons/services4.png")?>
+                    <?=LazyLoad::widget(['src'=>'/web/img/icons/services4.png'])?>
                 </div>
                 <div>
                     <h4>WE PAY TOP FINDER'S FEE </h4>

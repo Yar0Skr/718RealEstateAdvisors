@@ -3,6 +3,7 @@
 /* @var $this yii\web\View */
 /* @var $content \app\models\Info */
 use kv4nt\owlcarousel\OwlCarouselWidget;
+use toriphes\lazyload\LazyLoad;
 use yii\helpers\Html;
 use yii\helpers\Url;
 
@@ -33,14 +34,30 @@ $this->params['breadcrumbs'][] = $this->title;
             ]
         ]);
         ?>
-        <div class="item-class"><a href="<?=Url::toRoute('blog/dealing-with-credit-judgments')?>"><?=Html::img("/web/img/layouts/1.jpg")?></a></div>
-        <div class="item-class"><a href="<?=Url::toRoute('/blog/selling-inherited-property')?>"><?=Html::img("/web/img/layouts/inheritance.jpg")?></a></div>
-        <div class="item-class"><a href="<?=Url::toRoute('/blog/selling-fire-damaged-house')?>"><?=Html::img("/web/img/layouts/damage.jpg")?></a></div>
-        <div class="item-class"><a href="<?=Url::toRoute('/blog/lost-my-job-cant-pay-mortgage')?>"><?=Html::img("/web/img/layouts/afford.jpg")?></a></div>
-        <div class="item-class"><a href="<?=Url::toRoute('/blog/is-your-home-mortgage-underwater')?>"><?=Html::img("/web/img/layouts/negative.jpg")?></a></div>
-        <div class="item-class"><a href="<?=Url::toRoute('/blog/dissolving-real-estate-partnership')?>"><?=Html::img("/web/img/layouts/dysfunctional.jpg")?></a></div>
-        <div class="item-class"><a href="<?=Url::toRoute('blog/sell-house-fast-divorce')?>"><?=Html::img("/web/img/layouts/divorce.jpg")?></a></div>
-        <div class="item-class"><a href="<?=Url::toRoute('/blog/selling-house-that-needs-repairs')?>"><?=Html::img("/web/img/layouts/repairs.jpg")?></a></div>
+        <div class="item-class"><a href="<?=Url::toRoute('blog/dealing-with-credit-judgments')?>">
+                <?=LazyLoad::widget(['src'=>'/web/img/layouts/1.jpg'])?>
+                </a></div>
+        <div class="item-class"><a href="<?=Url::toRoute('/blog/selling-inherited-property')?>">
+                <?=LazyLoad::widget(['src'=>'/web/img/layouts/inheritance.jpg'])?>
+                </a></div>
+        <div class="item-class"><a href="<?=Url::toRoute('/blog/selling-fire-damaged-house')?>">
+                <?=LazyLoad::widget(['src'=>'/web/img/layouts/damage.jpg'])?>
+                </a></div>
+        <div class="item-class"><a href="<?=Url::toRoute('/blog/lost-my-job-cant-pay-mortgage')?>">
+                <?=LazyLoad::widget(['src'=>'/web/img/layouts/afford.jpg'])?>
+                </a></div>
+        <div class="item-class"><a href="<?=Url::toRoute('/blog/is-your-home-mortgage-underwater')?>">
+                <?=LazyLoad::widget(['src'=>'/web/img/layouts/negative.jpg'])?>
+                </a></div>
+        <div class="item-class"><a href="<?=Url::toRoute('/blog/dissolving-real-estate-partnership')?>">
+                <?=LazyLoad::widget(['src'=>'/web/img/layouts/dysfunctional.jpg'])?>
+                </a></div>
+        <div class="item-class"><a href="<?=Url::toRoute('blog/sell-house-fast-divorce')?>">
+                <?=LazyLoad::widget(['src'=>'/web/img/layouts/divorce.jpg'])?>
+                </a></div>
+        <div class="item-class"><a href="<?=Url::toRoute('/blog/selling-house-that-needs-repairs')?>">
+                <?=LazyLoad::widget(['src'=>'/web/img/layouts/repairs.jpg'])?>
+            </a></div>
 
 
         <?php OwlCarouselWidget::end(); ?>
@@ -60,7 +77,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 <div style="margin:20px" class="row">
                                     <div class="col-sm-12 col-md-6">
                                         <div align="center" style="padding-top:20px" class="image">
-                                            <?=Html::img('/web/uploads/info/images/'.$element->image,['alt' => $element->alt_tag])?>
+                                            <?=LazyLoad::widget(['src'=>'/web/uploads/info/images/'.$element->image, 'options'=>['alt'=>$element->alt_tag]])?>
                                         </div>
                                     </div>
                                     <div class="col-sm-12 col-md-6">
