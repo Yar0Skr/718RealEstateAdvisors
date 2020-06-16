@@ -4,7 +4,7 @@
 use yii\helpers\Html;
 
 ?>
-<div align="center">
+<div class="min-height-500" align="center">
     <h1>Admin panel</h1>
     <div>
         <p>

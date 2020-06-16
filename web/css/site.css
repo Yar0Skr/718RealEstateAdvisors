@@ -287,6 +287,10 @@ body {
     padding-bottom: 60px;
 }
 
+.min-height-500{
+    min-height: 500px;
+}
+
 .white{
     background-color: #ffffff ;
 }

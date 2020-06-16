@@ -107,31 +107,34 @@ preg_match('~>(.*?)<~', $model->text, $output);
 
         </div>
     </div>
-    <div align="center" class="infoImg">
-        <?=Html::img('/web/uploads/info/images/'.$model->image,['alt' => $model->alt_tag])?>
-    </div>
-         <div style="margin-top:5px;" class = "flexBox">
-        <div align="center" class = 'flex-nav'>
+    <div class="min-height-500">
+        <div align="center" class="infoImg">
+            <?=Html::img('/web/uploads/info/images/'.$model->image,['alt' => $model->alt_tag])?>
+        </div>
+        <div style="margin-top:5px;" class = "flexBox">
+            <div align="center" class = 'flex-nav'>
                 <p>Read time: <?= $model->read_time ?></p>
                 <p>Author: <?= $model->author ?></p>
+            </div>
+            <div align="center" class = 'flex-nav'>
+                <p>Share</p>
+                <?= \ymaker\social\share\widgets\SocialShare::widget([
+                    'configurator'  => 'socialShare',
+                    'url'           => Url::base(true),
+                    'title'         => $model->header,
+                    'description'   => $model->short_info,
+                    'imageUrl'      => Url::to('/web/uploads/info/images/'.$model->image, true),
+                    'containerOptions' => ['tag' => ''],
+                    'linkContainerOptions' => ['tag' => ''],
+                ]); ?>
+            </div>
         </div>
-        <div align="center" class = 'flex-nav'>
-            <p>Share</p>
-            <?= \ymaker\social\share\widgets\SocialShare::widget([
-        'configurator'  => 'socialShare',
-        'url'           => Url::base(true),
-        'title'         => $model->header,
-        'description'   => $model->short_info,
-        'imageUrl'      => Url::to('/web/uploads/info/images/'.$model->image, true),
-            'containerOptions' => ['tag' => ''],
-            'linkContainerOptions' => ['tag' => ''],
-    ]); ?>
+
+        <div class="info-body">
+            <?=$model->text?>
         </div>
     </div>
-   
-    <div class="info-body">
-       <?=$model->text?>
-    </div>
+
 
 
     <?php
