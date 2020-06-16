@@ -35,29 +35,29 @@ $this->params['breadcrumbs'][] = $this->title;
         ]);
         ?>
         <div class="item-class"><a href="<?=Url::toRoute('blog/dealing-with-credit-judgments')?>">
-                <?=LazyLoad::widget(['src'=>'/web/img/layouts/1.jpg'])?>
-                </a></div>
+
+                <?=Html::img("/web/img/layouts/1.jpg")?></a></div>
         <div class="item-class"><a href="<?=Url::toRoute('/blog/selling-inherited-property')?>">
-                <?=LazyLoad::widget(['src'=>'/web/img/layouts/inheritance.jpg'])?>
-                </a></div>
+
+                <?=Html::img("/web/img/layouts/inheritance.jpg")?></a></div>
         <div class="item-class"><a href="<?=Url::toRoute('/blog/selling-fire-damaged-house')?>">
-                <?=LazyLoad::widget(['src'=>'/web/img/layouts/damage.jpg'])?>
-                </a></div>
+
+                <?=Html::img("/web/img/layouts/damage.jpg")?></a></div>
         <div class="item-class"><a href="<?=Url::toRoute('/blog/lost-my-job-cant-pay-mortgage')?>">
-                <?=LazyLoad::widget(['src'=>'/web/img/layouts/afford.jpg'])?>
-                </a></div>
+
+                <?=Html::img("/web/img/layouts/afford.jpg")?></a></div>
         <div class="item-class"><a href="<?=Url::toRoute('/blog/is-your-home-mortgage-underwater')?>">
-                <?=LazyLoad::widget(['src'=>'/web/img/layouts/negative.jpg'])?>
-                </a></div>
+
+                <?=Html::img("/web/img/layouts/negative.jpg")?></a></div>
         <div class="item-class"><a href="<?=Url::toRoute('/blog/dissolving-real-estate-partnership')?>">
-                <?=LazyLoad::widget(['src'=>'/web/img/layouts/dysfunctional.jpg'])?>
-                </a></div>
+
+                <?=Html::img("/web/img/layouts/dysfunctional.jpg")?></a></div>
         <div class="item-class"><a href="<?=Url::toRoute('blog/sell-house-fast-divorce')?>">
-                <?=LazyLoad::widget(['src'=>'/web/img/layouts/divorce.jpg'])?>
-                </a></div>
+
+                <?=Html::img("/web/img/layouts/divorce.jpg")?></a></div>
         <div class="item-class"><a href="<?=Url::toRoute('/blog/selling-house-that-needs-repairs')?>">
-                <?=LazyLoad::widget(['src'=>'/web/img/layouts/repairs.jpg'])?>
-            </a></div>
+
+                <?=Html::img("/web/img/layouts/repairs.jpg")?></a></div>
 
 
         <?php OwlCarouselWidget::end(); ?>
