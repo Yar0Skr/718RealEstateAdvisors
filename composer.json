@@ -22,7 +22,8 @@
         "pa3py6aka/yii2-modal-alert-widget": "^1.3",
         "kartik-v/yii2-widget-fileinput": "dev-master",
         "yiimaker/yii2-social-share": "^2.3",
-        "kartik-v/yii2-widget-sidenav": "@dev"
+        "kartik-v/yii2-widget-sidenav": "@dev",
+        "toriphes/yii2-widget-lazyload": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",

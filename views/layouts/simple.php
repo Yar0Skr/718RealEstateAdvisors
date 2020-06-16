@@ -56,8 +56,6 @@ AppAsset::register($this);
     <?php $this->registerCsrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
-    <link rel="shortcut icon" href="favicon.ico" />
-    <link rel="stylesheet" href="css/right-nav-style.css">
 </head>
 <body>
 
@@ -94,39 +92,41 @@ AppAsset::register($this);
 <!--</div>-->
 
 <div class="wrap">
-    <input type="checkbox" id="nav-toggle" hidden>
-    <nav class="nav">
-        <label for="nav-toggle" class="nav-toggle" onclick></label>
-        <h2 class="">
-            <a>718REA</a>
-        </h2>
-        <ul>
-            <li><a href="<?= Url::to('/sell-house-fast/index') ?>">Home</a>
-            <li><a href="<?= Url::to('/sell-house-fast/reasons') ?>">Common Reasons To Sell Property</a>
-            <li><a href="<?= Url::to('/sell-house-fast/process') ?>">Our process</a>
-            <li><a href="<?= Url::to('/sell-house-fast/services') ?>">Our Services</a>
-            <li><a href="<?= Url::to('/sell-house-fast/frequently-asked-questions') ?>">FAQ</a>
-            <li><a href="<?= Url::to(Url::current().'#contact') ?>">Contact Us</a>
-        </ul>
-    </nav>
-   <?php
-        NavBar::begin([
-            'options' => [
-                'class' => 'navbar-inverse myNav',
-            ],
-        ]);
-        echo Nav::widget([
-            'items' => [
-                ['label' => 'Home', 'url' => [Url::to('/sell-house-fast/index')]],
-                ['label' => 'Common Reasons To Sell Property', 'url' => [Url::to('/sell-house-fast/reasons')]],
-                ['label' => 'Our process', 'url' => ['/sell-house-fast/process']],
-                ['label' => 'Our Services', 'url' => ['/sell-house-fast/services']],
-                ['label' => 'FAQ', 'url' => ['/sell-house-fast/frequently-asked-questions']],
-                ['label' => 'Contact Us', 'url' => [Url::current().'#contact'], 'options'=>['id' => 'smoothScroll']],
-            ],
-        ]);
-        NavBar::end();
+
+    <?php
+    NavBar::begin([
+        'options' => [
+            'class' => 'navbar-inverse nav',
+        ],
+    ]);
+    echo Nav::widget([
+        'items' => [
+            ['label' => 'Home', 'url' => [Url::to('/sell-house-fast/index')]],
+            ['label' => 'Common Reasons To Sell Property', 'url' => [Url::to('/sell-house-fast/reasons')]],
+            ['label' => 'Our process', 'url' => ['/sell-house-fast/process']],
+            ['label' => 'Our Services', 'url' => ['/sell-house-fast/services']],
+            ['label' => 'FAQ', 'url' => ['/sell-house-fast/frequently-asked-questions']],
+            ['label' => 'Contact Us', 'url' => [Url::current().'#contact'], 'options'=>['id' => 'smoothScroll']],
+        ],
+    ]);
+    NavBar::end();
     ?>
+
+    <div class="navbar prePhoneNav" >
+        <input type="checkbox" id="myNav-toggle" hidden>
+        <nav class="myNav phoneNav">
+            <label for="myNav-toggle" class="myNav-toggle" onclick></label>
+            <ul>
+                <li><a href="<?= Url::to('/sell-house-fast/index') ?>">Home</a>
+                <li><a href="<?= Url::to('/sell-house-fast/reasons') ?>">Common Reasons To Sell Property</a>
+                <li><a href="<?= Url::to('/sell-house-fast/process') ?>">Our Process</a>
+                <li><a href="<?= Url::to('/sell-house-fast/services') ?>">Our Services</a>
+                <li><a href="<?= Url::to('/sell-house-fast/frequently-asked-questions') ?>">FAQ</a>
+                <li><a href="<?= Url::to(Url::current().'#contact') ?>" id="navClose">Contact Us</a>
+            </ul>
+        </nav>
+    </div>
+
     <?= $content ?>
 </div>
 
