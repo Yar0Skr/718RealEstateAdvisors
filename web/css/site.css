@@ -367,16 +367,18 @@ body {
 }
 
 .footer-form input{
-    width: 300px;
+    width: 600px;
 }
 
 .footer-form textarea{
-    width: 300px;
+    width: 600px;
+    height: 100px;
 }
 
-.footer-form h2{
-    font-size: 32pt;
+.footer-form h2 {
+    font-size: 25pt;
     color: white;
+    margin-bottom: 35px;
 }
 .send-btn{
     width:375px;
@@ -621,6 +623,14 @@ hr {
 }
 
 @media only screen and (max-width: 600px) {
+
+    .footer-form input{
+        width: 300px;
+    }
+
+    .footer-form textarea{
+        width: 300px;
+    }
 
     img {
         max-width: 100%;
