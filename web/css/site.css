@@ -538,6 +538,9 @@ a.desc:after {
     }
     .prePhoneNav{
         display: block;
+        position: sticky;
+        z-index: 1999;
+        top: 0px;
     }
     .phoneNav{
         display: inline-table;
