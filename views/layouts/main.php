@@ -116,16 +116,13 @@ AppAsset::register($this);
         <input type="checkbox" id="myNav-toggle" hidden>
         <nav class="myNav phoneNav">
             <label for="myNav-toggle" class="myNav-toggle" onclick></label>
-            <h2 class="logo">
-                <a>718REA</a>
-            </h2>
             <ul>
                 <li><a href="<?= Url::to('/sell-house-fast/index') ?>">Home</a>
                 <li><a href="<?= Url::to('/sell-house-fast/reasons') ?>">Common Reasons To Sell Property</a>
-                <li><a href="<?= Url::to('/sell-house-fast/process') ?>">Our process</a>
+                <li><a href="<?= Url::to('/sell-house-fast/process') ?>">Our Process</a>
                 <li><a href="<?= Url::to('/sell-house-fast/services') ?>">Our Services</a>
                 <li><a href="<?= Url::to('/sell-house-fast/frequently-asked-questions') ?>">FAQ</a>
-                <li><a href="<?= Url::to(Url::current().'#contact') ?>">Contact Us</a>
+                <li><a href="<?= Url::to(Url::current().'#contact') ?>" id="navClose">Contact Us</a>
             </ul>
         </nav>
     </div>
