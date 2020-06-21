@@ -34,30 +34,76 @@ $this->params['breadcrumbs'][] = $this->title;
             ]
         ]);
         ?>
+        <div class="item-class"><a href="<?=Url::toRoute('blog/selling-house-that-needs-repairs')?>">
+                <?=Html::img("/web/img/layouts/Emergency Repairs.jpg", 
+                ['alt' => 'Emergency Repairs'])?></a></div>
+                
+        <div class="item-class"><a href="<?=Url::toRoute('blog/selling-inherited-property')?>">
+                <?=Html::img("/web/img/layouts/EstateProbateInheritance.jpg", 
+                ['alt' => 'Estate Probate Inheritance'])?></a></div>
+                
+        <div class="item-class"><a href="<?=Url::toRoute('blog/selling-fire-damaged-house')?>">
+                <?=Html::img("/web/img/layouts/FireWater Damage.jpg", 
+                ['alt' => 'Fire/Water Damage'])?></a></div>
+                
+        <div class="item-class"><a href="<?=Url::toRoute('blog/faced-with-a-foreclosure')?>">
+                <?=Html::img("/web/img/layouts/Foreclosure.jpg", 
+                ['alt' => 'Foreclosure'])?></a></div>
+                
+                
+        <div class="item-class"><a href="<?=Url::toRoute('blog/truggling-with-guardianship')?>">
+                <?=Html::img("/web/img/layouts/Guardianship.jpg", 
+                ['alt' => 'Guardianship'])?></a></div>
+                
+                
+        <div class="item-class"><a href="<?=Url::toRoute('blog/how-to-sell-an-ugly-house')?>">
+                <?=Html::img("/web/img/layouts/HPD Zombie Homes Initiative.jpg", ['alt' => 'HPD Zombie Homes Initiative'])?></a></div>
+                
         <div class="item-class"><a href="<?=Url::toRoute('blog/dealing-with-credit-judgments')?>">
+                <?=Html::img("/web/img/layouts/Judgement.jpg", 
+                ['alt' => 'Judgement'])?></a></div>
+                
+        <div class="item-class"><a href="<?=Url::toRoute('blog/need-to-sell-house-quickly')?>">
+                <?=Html::img("/web/img/layouts/Need to Sell Quickly for Personal Reasons.jpg", 
+                ['alt' => 'Need to Sell Quickly for Personal Reasons'])?></a></div>
+                
+        <div class="item-class"><a href="<?=Url::toRoute('blog/is-your-home-mortgage-underwater')?>">
+                <?=Html::img("/web/img/layouts/Negative Equity.jpg", 
+                ['alt' => 'Negative Equity'])?></a></div>
+                
+        <div class="item-class"><a href="<?=Url::toRoute('blog/dealing-with-problem-tenants')?>">
+                <?=Html::img("/web/img/layouts/Problem Tenants.jpg", 
+                ['alt' => 'Problem Tenants'])?></a></div>
+                
+        <div class="item-class"><a href="<?=Url::toRoute('blog/selling-house-in-disrepair')?>">
+                <?=Html::img("/web/img/layouts/Property In Disrepair.jpg", 
+                ['alt' => 'Property In Disrepair'])?></a></div>
+                
+        <div class="item-class"><a href="<?=Url::toRoute('blog/sell-house-fast-from-distance')?>">
+                <?=Html::img("/web/img/layouts/Relocation.jpg", 
+                ['alt' => 'Relocation'])?></a></div>
+                
+        <div class="item-class"><a href="<?=Url::toRoute('blog/how-to-sell-house-with-reverse-mortgage')?>">
+                <?=Html::img("/web/img/layouts/Reverse Mortgage.jpg", 
+                ['alt' => 'Reverse Mortgage'])?></a></div>
+                
+        <div class="item-class"><a href="<?=Url::toRoute('blog/short-sale-avoid-foreclosure')?>">
+                <?=Html::img("/web/img/layouts/Short Sale.jpg", 
+                ['alt' => 'Short Sale'])?></a></div>
+                
+        <div class="item-class"><a href="<?=Url::toRoute('blog/troubled-investment-property-what-is-the-best-solution')?>">
+                <?=Html::img("/web/img/layouts/Troubled Investment Property.jpg", 
+                ['alt' => 'Troubled Investment Property'])?></a></div>
+                
+        <div class="item-class"><a href="<?=Url::toRoute('blog/unwanted-property-selling-house-left-in-will')?>">
+                <?=Html::img("/web/img/layouts/Unwanted Property On Your Name.jpg", 
+                ['alt' => 'Unwanted Property On Your Name'])?></a></div>
+                
+        <div class="item-class"><a href="<?=Url::toRoute('blog/facing-auction-sale-due-to-mortgage-foreclosure')?>">
+                <?=Html::img("/web/img/layouts/Upcoming Auction.jpg", 
+                ['alt' => 'Upcoming Auction'])?></a></div>
 
-                <?=Html::img("/web/img/layouts/1.jpg")?></a></div>
-        <div class="item-class"><a href="<?=Url::toRoute('/blog/selling-inherited-property')?>">
 
-                <?=Html::img("/web/img/layouts/inheritance.jpg")?></a></div>
-        <div class="item-class"><a href="<?=Url::toRoute('/blog/selling-fire-damaged-house')?>">
-
-                <?=Html::img("/web/img/layouts/damage.jpg")?></a></div>
-        <div class="item-class"><a href="<?=Url::toRoute('/blog/lost-my-job-cant-pay-mortgage')?>">
-
-                <?=Html::img("/web/img/layouts/afford.jpg")?></a></div>
-        <div class="item-class"><a href="<?=Url::toRoute('/blog/is-your-home-mortgage-underwater')?>">
-
-                <?=Html::img("/web/img/layouts/negative.jpg")?></a></div>
-        <div class="item-class"><a href="<?=Url::toRoute('/blog/dissolving-real-estate-partnership')?>">
-
-                <?=Html::img("/web/img/layouts/dysfunctional.jpg")?></a></div>
-        <div class="item-class"><a href="<?=Url::toRoute('blog/sell-house-fast-divorce')?>">
-
-                <?=Html::img("/web/img/layouts/divorce.jpg")?></a></div>
-        <div class="item-class"><a href="<?=Url::toRoute('/blog/selling-house-that-needs-repairs')?>">
-
-                <?=Html::img("/web/img/layouts/repairs.jpg")?></a></div>
 
 
         <?php OwlCarouselWidget::end(); ?>

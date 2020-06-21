@@ -14,14 +14,14 @@ $this->params['breadcrumbs'][] = $this->title;
     }
 </style>
 <div style=" height:auto; padding-top: 20px">
-    <div class="container">
+    <div style="margin-bottom:20px" class="container bigServices">
         <div style="color: #014a73;padding-bottom: 20px"align="center"><h1>OUR SERVICES</h1></div>
         <div class="row">
             <div class="col-sm-12 col-md-3 services">
                 <div>
                     <?=LazyLoad::widget(['src'=>'/web/img/icons/services1.png'])?>
                 </div>
-                <div>
+                <div class = "smallServices">
                     <h4>LOOKING TO SELL A PROPERTY FAST?</h4>
                     <p>Sell your house within days, any condition.</p>
                     <p> Whether your property is in excellent condition or barely standing, vacant or rented to tenants, paying rent or non-paying. </p>
@@ -34,7 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <div>
                     <?=LazyLoad::widget(['src'=>'/web/img/icons/services2.png'])?>
                 </div>
-                <div>
+                <div class = "smallServices">
                     <h4>VARIETY OF PROPERTIES</h4>
                     <p>We purchase a wide range of properties, single-family to multi-family, co-ops and condos, vacant land, and commercial units – we buy them all.</p>
                     <p>We can help if your property is distressed, and we can assist you with foreclosure solutions. In case there was a death, divorce, or any other family crisis, we can advise on how to proceed in accordance with your specific property.</p>
@@ -44,17 +44,18 @@ $this->params['breadcrumbs'][] = $this->title;
                 <div>
                     <?=LazyLoad::widget(['src'=>'/web/img/icons/services3.png'])?>
                 </div>
-                <div>
-                    <h4>NO OBLIGATIONS, NO HASSLE</h4>
-                    <p>Save money and don’t pay commissions to brokers. Also, eliminate spending money making repairs to your home.</p>
-                    <p>Avoid the time and money it costs to sell your property through an agent. We can help you find an attorney; we can even pay for your closing costs and all other associated fees if you choose to.</p>
+                <div class = "smallServices">
+                    <h4>DONT SPEND A DIME</h4>
+                    <p>When you work with us, there are no brokers to be paid, which means all the money goes in your pocket. It also means that you won’t be waiting for months until a real estate agent finds you a buyer that can afford the property.</p>
+                    <p>We’re not scared of an ugly house, so you never have to spend money on improvements.</p>
+                    <p>We can help you find an attorney if you don’t have one and need someone trustworthy to represent you.</p>
                 </div>
             </div>
             <div class="col-sm-12 col-md-3 services">
                 <div>
                     <?=LazyLoad::widget(['src'=>'/web/img/icons/services4.png'])?>
                 </div>
-                <div>
+                <div class = "smallServices">
                     <h4>WE PAY TOP FINDER'S FEE </h4>
                     <p>We pay commissions to anybody who finds us a house to buy, whether you are an agent, an attorney, a friend, or just a guy who wavered across a for sale sign.</p>
                     <p>We will pay you the top finder’s fee if we purchase the property you introduced us to.</p>

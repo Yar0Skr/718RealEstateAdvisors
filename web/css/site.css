@@ -17,7 +17,9 @@ body {
 .visible {
     display: none;
 }
-
+.bigServices{
+    background: #ffffff;
+}
 .videoDiv{
     height:300px;
 }
@@ -550,6 +552,17 @@ a.desc:after {
     }
     .phoneNav{
         display: inline-table;
+    }
+    
+    .bigServices{
+        background:#ebebeb;
+    }
+    
+    .smallServices{
+        margin-top:10px;
+        margin-bottom:10px;
+        padding:10px;
+        background: #ffffff;
     }
 }
 
