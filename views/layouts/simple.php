@@ -126,8 +126,9 @@ AppAsset::register($this);
             </ul>
         </nav>
     </div>
-
+<div style="min-height: 500px">
     <?= $content ?>
+</div>
 </div>
 
 <footer class="footer">

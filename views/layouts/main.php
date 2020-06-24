@@ -2,7 +2,6 @@
 
 /* @var $this \yii\web\View */
 /* @var $content string */
-
 use app\widgets\Alert;
 use yii\bootstrap\Modal;
 use yii\helpers\Html;

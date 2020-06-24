@@ -5,6 +5,7 @@ namespace app\controllers;
 use app\models\Faq;
 use app\models\Info;
 use app\models\Messages;
+use app\models\MetaLayout;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -57,6 +58,18 @@ class SellHouseFastController extends Controller
         ];
     }
 
+    public function addMetaTag($metaTagArray){
+        if (!empty($metaTagArray)){
+            foreach ($metaTagArray as $metaTag){
+                \Yii::$app->view->registerMetaTag([
+                    'name' => $metaTag->name,
+                    'content' => $metaTag->content
+                ]);
+            }
+        }
+
+    }
+
     /**
      * Displays homepage.
      *
@@ -64,6 +77,8 @@ class SellHouseFastController extends Controller
      */
     public function actionIndex()
     {
+        $metaArray = MetaLayout::find()->where(['page_id'=>1])->all();
+        $this->addMetaTag($metaArray);
         return $this->render('index');
     }
 
@@ -75,23 +90,31 @@ class SellHouseFastController extends Controller
 
     public function actionFrequentlyAskedQuestions()
     {
+        $metaArray = MetaLayout::find()->where(['page_id'=>5])->all();
+        $this->addMetaTag($metaArray);
         $content = Faq::find()->orderBy('order_number')->all();
         return $this->render('about',['content'=>$content]);
     }
 
     public function actionServices()
     {
+        $metaArray = MetaLayout::find()->where(['page_id'=>4])->all();
+        $this->addMetaTag($metaArray);
         return $this->render('services');
     }
 
     public function actionReasons()
     {
+        $metaArray = MetaLayout::find()->where(['page_id'=>2])->all();
+        $this->addMetaTag($metaArray);
         $content = Info::find()->orderBy('order_number')->all();
         return $this->render('reasons',['content'=>$content]);
     }
 
     public function actionProcess()
     {
+        $metaArray = MetaLayout::find()->where(['page_id'=>3])->all();
+        $this->addMetaTag($metaArray);
         return $this->render('process');
     }
 
@@ -129,21 +152,21 @@ class SellHouseFastController extends Controller
         return $this->goHome();
     }
 
-    /**
-     * Displays contact page.
-     *
-     * @return Response|string
-     */
-    public function actionContact()
-    {
-        $model = new ContactForm();
-        if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
-            Yii::$app->session->setFlash('contactFormSubmitted');
-
-            return $this->refresh();
-        }
-        return $this->render('contact', [
-            'model' => $model,
-        ]);
-    }
+//    /**
+//     * Displays contact page.
+//     *
+//     * @return Response|string
+//     */
+//    public function actionContact()
+//    {
+//        $model = new ContactForm();
+//        if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
+//            Yii::$app->session->setFlash('contactFormSubmitted');
+//
+//            return $this->refresh();
+//        }
+//        return $this->render('contact', [
+//            'model' => $model,
+//        ]);
+//    }
 }

@@ -3,13 +3,13 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Messages */
+/* @var $model app\models\MetaLayout */
 
-$this->title = 'Create Messages';
-$this->params['breadcrumbs'][] = ['label' => 'Messages', 'url' => ['index']];
+$this->title = 'Create Meta Layout';
+$this->params['breadcrumbs'][] = ['label' => 'Meta Layouts', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="container  messages-create">
+<div class="container meta-layout-create">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

@@ -10,7 +10,7 @@ use yii\grid\GridView;
 $this->title = 'Messages';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="messages-index">
+<div class="container messages-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
