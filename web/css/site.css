@@ -34,13 +34,13 @@ body {
 .gaonutosal {
     float: left;
     width: 100%;
-    padding: 0 1em;
+    /*padding: 0 1em;*/
     overflow-x: hidden;
 }
 
 .pesontedan {
     justify-content: left;
-    margin-bottom: 1px;
+    /*margin-bottom: 1px;*/
     overflow: hidden;
 }
 
@@ -286,7 +286,7 @@ body {
 .content{
     width: 100%;
     height: auto;
-    padding-bottom: 60px;
+    padding-bottom: 25px;
 }
 
 .min-height-500{

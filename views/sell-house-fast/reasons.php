@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     }
 </style>
 <div style="padding: 15px" class="container">
-    <div align="center"><h1>Reasons To Sell Property</h1></div>
+    <div align="center"><h1>Common Reasons To Sell Property</h1></div>
     <div>
         <?php
         OwlCarouselWidget::begin([

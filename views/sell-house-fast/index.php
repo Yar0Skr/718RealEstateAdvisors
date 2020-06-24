@@ -60,9 +60,14 @@ OwlCarouselWidget::begin([
                     <p>Whether your property is in excellent condition or barely standing, vacant or rented to tenants, paying rent or non-paying.</p>
                     <br>
                     <p>We accommodate all your needs and make the selling experience pleasant.</p>
-                    <a href="tel:6462879111">
+                    <br>
+                    <br>
+                    <div align="center">
+                        <a href="tel:6462879111">
                         <button class="btn homeBtn send-btn">Call us for a fair all-cash offer</button>
                     </a>
+                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -96,9 +101,12 @@ OwlCarouselWidget::begin([
                         <li>WE BUY THEM ALL</li>
                         <li>Anywhere in New York and New Jersey</li>
                     </ul>
-                    <a href="#contact">
+                    <br>
+                    <div align="center">
+                       <a href="#contact">
                         <button class="btn homeBtn send-btn">Call or fill out the Form</button>
-                    </a>
+                    </a> 
+                    </div>
                 </div>
             </div>
         </div>

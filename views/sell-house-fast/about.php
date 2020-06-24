@@ -15,9 +15,9 @@ $this->params['breadcrumbs'][] = $this->title;
                 <?php foreach ($content as $element){ ?>
                     <div class="pesontedan">
                         <input id="pesontedan-<?=$element->id?>" type="checkbox" name="pesontedans">
-                        <label for="pesontedan-<?=$element->id?>"><?=$element->header?></label>
-                        <div class="pesontedan-content">
-                            <div style="margin:20px" class="row">
+                        <label class="white" for="pesontedan-<?=$element->id?>"><?=$element->header?></label>
+                        <div class="pesontedan-content gray">
+                            <div class="white" style="margin:20px" class="row">
                                 <div class="col-12">
                                     <p><?=$element->short_info?></p>
                                 </div>
