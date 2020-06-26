@@ -50,7 +50,7 @@ OwlCarouselWidget::begin([
                     <h2 style="margin-top:auto">to learn about us</h2>
                 </div>
                 <div class = "videoDiv">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Pq8lUumT-mE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <?=Html::img("@web/img/index/thumbnail.jpg",['alt' => "Press here to load video"])?>
                 </div>
             </div>
             <div style="" class="col-sm-12 col-md-6 indexBtnContainer-top">

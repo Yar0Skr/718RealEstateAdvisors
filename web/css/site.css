@@ -362,7 +362,11 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
+.videoDiv img {
+    height: 300px;
+    width: 555px;
+    cursor: pointer;
+}
 .index-bottom{
     height: 400px;
     background-image: url("/web/img/index/bottom.png");
