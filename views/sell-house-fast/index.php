@@ -46,28 +46,26 @@ OwlCarouselWidget::begin([
         <div class="row">
             <div class="col-sm-12 col-md-6">
                 <div>
-                    <h2>Watch this short video to learn about us</h2>
+                    <h2 style="margin-top:40px">Watch this short video</h2> 
+                    <h2 style="margin-top:auto">to learn about us</h2>
                 </div>
                 <div class = "videoDiv">
                     <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Pq8lUumT-mE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-6">
+            <div style="" class="col-sm-12 col-md-6 indexBtnContainer-top">
                 <div>
-                    <h2>Looking to sell a property fast?</h2>
+                    <h2 style="margin-top:40px">Looking to sell a property fast?</h2>
                 </div>
                 <div>
                     <p>Whether your property is in excellent condition or barely standing, vacant or rented to tenants, paying rent or non-paying.</p>
                     <br>
                     <p>We accommodate all your needs and make the selling experience pleasant.</p>
-                    <br>
-                    <br>
-                    <div align="center">
-                        <a href="tel:6462879111">
+                </div>
+                <div class="btnAbsolute" align="center">
+                    <a href="tel:6462879111">
                         <button class="btn homeBtn send-btn">Call us for a fair all-cash offer</button>
                     </a>
-                    </div>
-                    
                 </div>
             </div>
         </div>
@@ -85,7 +83,7 @@ OwlCarouselWidget::begin([
 
                 </div>
             </div>
-            <div class="col-sm-12 col-md-6">
+            <div style="" class="col-sm-12 col-md-6 indexBtnContainer-bottom">
                 <div>
                     <h2>We purchase a wide range of properties:</h2>
                 </div>
@@ -101,12 +99,12 @@ OwlCarouselWidget::begin([
                         <li>WE BUY THEM ALL</li>
                         <li>Anywhere in New York and New Jersey</li>
                     </ul>
-                    <br>
-                    <div align="center">
-                       <a href="#contact">
+                    
+                </div>
+                <div class="btnAbsolute" align="center">
+                    <a href="#contact">
                         <button class="btn homeBtn send-btn">Call or fill out the Form</button>
                     </a> 
-                    </div>
                 </div>
             </div>
         </div>

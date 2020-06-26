@@ -23,6 +23,22 @@ body {
 .videoDiv{
     height:300px;
 }
+
+.indexBtnContainer-top{
+    min-height:434px;
+    position:relative;
+}
+
+.indexBtnContainer-bottom{
+    min-height:470px;
+    position:relative;
+}
+
+.btnAbsolute{
+    position:absolute;
+    bottom:0;
+}
+
 .navbar-inverse{
     border:none;
 }
@@ -636,6 +652,23 @@ hr {
 }
 
 @media only screen and (max-width: 600px) {
+    
+    .indexBtnContainer-top{
+    min-height:auto;
+    }
+    
+    .btnAbsolute{
+        position:unset;
+    }
+    
+    .send-btn{
+        font-size:12pt;
+    }
+    
+    .indexBtnContainer-bottom{
+        min-height:auto;
+    }
+
 
     .footer-form input{
         width: 300px;
