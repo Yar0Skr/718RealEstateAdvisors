@@ -243,7 +243,7 @@ function buttonConfig() {
 
 function submitData() {
     jQuery('.mm-finish-btn').on('click', function() {
-        window.location.replace("https://718realestateadvisors.com");
+        // window.location.replace("https://718realestateadvisors.com");
     });
 }
 

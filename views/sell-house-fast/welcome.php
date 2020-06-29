@@ -3,7 +3,9 @@
 /* @var $this yii\web\View */
 /* @var $form yii\bootstrap\ActiveForm */
 
+use yii\bootstrap\Modal;
 use yii\helpers\Html;
+use yii\widgets\ActiveForm;
 
 $this->title = 'Welcome to 718 Real Estate Advisors';
 $this->params['breadcrumbs'][] = $this->title;
@@ -139,7 +141,41 @@ $this->params['breadcrumbs'][] = $this->title;
                         <button disabled="true">Next</button>
                     </div>
                     <div class="mm-finish-btn">
-                        <button>Submit</button>
+                        <?php
+                        Modal::begin([
+                            'header' => '<h2>Estate info</h2>',
+                            'toggleButton' => [
+                                'label' => 'Submit',
+                                'tag' => 'button',
+                                'class' => 'mm-finish-btn',
+                            ],
+                        ]);
+                        ?>
+                        <?php $form = ActiveForm::begin([
+                            'id' => 'contact-form',
+                        ]); ?>
+                        <div align="center">
+                            <p>Name</p>
+                            <input type="text">
+                            <br>
+                            <p>Email</p>
+                            <input type="email">
+                            <br>
+                            <p>Address</p>
+                            <input type="text">
+                            <div class="form-group">
+                                <?= Html::submitButton('Submit', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
+                            </div>
+                        </div>
+
+
+
+
+                        <?php ActiveForm::end(); ?>
+
+                        <?php Modal::end(); ?>
+                        </p>
+
                     </div>
                 </div>
             </div>
