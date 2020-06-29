@@ -7,34 +7,142 @@ use yii\helpers\Html;
 
 $this->title = 'Welcome to 718 Real Estate Advisors';
 $this->params['breadcrumbs'][] = $this->title;
+
 ?>
-<style>
-    body{
-        background-color: #ebebeb;
-    }
-
-</style>
+<!-- multistep form -->
 <div class="container">
-    <div align="center" class="site-landing">
-        <h1><?= Html::encode($this->title) ?></h1>
-        <br>
-        <div>
-            <iframe width="900px", height="440px" src="https://www.youtube.com/embed/Pq8lUumT-mE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div>
-            <h2>About us</h2>
-            <p style="font-family: 'MazzardH-Regular'">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Curabitur vitae nunc sed velit dignissim sodales ut eu. Arcu risus quis varius quam quisque id diam vel. In fermentum posuere urna nec tincidunt praesent semper. Purus in mollis nunc sed id semper. Feugiat in ante metus dictum at. Eget felis eget nunc lobortis mattis aliquam faucibus purus in. Vitae congue mauris rhoncus aenean vel. Felis eget velit aliquet sagittis id consectetur purus ut faucibus. Cum sociis natoque penatibus et magnis dis parturient montes nascetur. Risus nec feugiat in fermentum. Lacus laoreet non curabitur gravida arcu. Ut enim blandit volutpat maecenas volutpat. Odio morbi quis commodo odio aenean sed adipiscing diam. Nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper. Sed sed risus pretium quam vulputate. Aliquam eleifend mi in nulla posuere sollicitudin aliquam. Id leo in vitae turpis massa.
+    <div class="col-sm-12">
+        <div class="mm-survey">
 
-                Tincidunt augue interdum velit euismod in. Ultricies mi eget mauris pharetra et ultrices neque ornare. Scelerisque varius morbi enim nunc faucibus a pellentesque sit. Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Nec feugiat nisl pretium fusce id velit. Faucibus vitae aliquet nec ullamcorper. Nulla posuere sollicitudin aliquam ultrices sagittis orci a scelerisque. Egestas pretium aenean pharetra magna. Duis tristique sollicitudin nibh sit amet commodo. Euismod elementum nisi quis eleifend quam adipiscing vitae. Mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Ultrices vitae auctor eu augue. Nam at lectus urna duis convallis convallis tellus. Orci dapibus ultrices in iaculis. Odio pellentesque diam volutpat commodo sed.
+            <div class="mm-survey-progress">
+                <div class="mm-survey-progress-bar mm-progress"></div>
+            </div>
 
-                Volutpat commodo sed egestas egestas fringilla phasellus faucibus scelerisque eleifend. Porttitor lacus luctus accumsan tortor posuere ac ut consequat. Proin fermentum leo vel orci porta non pulvinar. Vestibulum sed arcu non odio euismod lacinia at quis risus. Quam pellentesque nec nam aliquam. Ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim. Sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum. Scelerisque eleifend donec pretium vulputate sapien nec sagittis. Ipsum nunc aliquet bibendum enim facilisis. Sed risus ultricies tristique nulla aliquet enim tortor at. Ultrices tincidunt arcu non sodales neque sodales. Quisque non tellus orci ac auctor augue mauris augue. Massa id neque aliquam vestibulum morbi blandit. Nunc sed velit dignissim sodales ut eu sem. Mattis aliquam faucibus purus in massa tempor. Augue lacus viverra vitae congue eu. Id ornare arcu odio ut sem nulla pharetra diam sit.</p>
-            <a href="#contact">
-                <button class="btn send-btn">Contact Us</button>
-            </a>
+            <div class="mm-survey-bottom">
+                <div class="mm-survey-container">
+
+                    <div class="mm-survey-page active" data-page="1">
+                        <div class="mm-survery-content">
+                            <div class="mm-survey-question">
+                                <p>Question 1</p>
+                            </div>
+                            <div class="mm-survey-item">
+                                <input type="radio" id="radio01" data-item="1" name="radio1" value="red" />
+                                <label for="radio01"><span></span><p>a</p></label>
+                            </div>
+                            <div class="mm-survey-item">
+                                <input type="radio" id="radio02" data-item="1" name="radio1" value="blue" />
+                                <label for="radio02"><span></span><p>b</p></label>
+                            </div>
+                            <div class="mm-survey-item">
+                                <input type="radio" id="radio03" data-item="1" name="radio1" value="green" />
+                                <label for="radio03"><span></span><p>c</p></label>
+                            </div>
+                            <div class="mm-survey-item">
+                                <input type="radio" id="radio04" data-item="1" name="radio1" value="purple" />
+                                <label for="radio04"><span></span><p>d</p></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mm-survey-page" data-page="2">
+                        <div class="mm-survery-content">
+                            <div class="mm-survey-question">
+                                <p>Question 2</p>
+                            </div>
+                            <div class="mm-survey-item">
+                                <input type="radio" id="radio05" data-item="2" name="radio2" value="honda" />
+                                <label for="radio05"><span></span><p>a</p></label>
+                            </div>
+                            <div class="mm-survey-item">
+                                <input type="radio" id="radio06" data-item="2" name="radio2" value="ford" />
+                                <label for="radio06"><span></span><p>b</p></label>
+                            </div>
+                            <div class="mm-survey-item">
+                                <input type="radio" id="radio07" data-item="2" name="radio2" value="mercedes" />
+                                <label for="radio07"><span></span><p>c</p></label>
+                            </div>
+                            <div class="mm-survey-item">
+                                <input type="radio" id="radio08" data-item="2" name="radio2" value="ferrari" />
+                                <label for="radio08"><span></span><p>d</p></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mm-survey-page" data-page="3">
+                        <div class="mm-survery-content">
+                            <div class="mm-survey-question">
+                                <p>Question 3</p>
+                            </div>
+                            <div class="mm-survey-item">
+                                <input type="radio" id="radio09" data-item="3" name="radio3" value="3" />
+                                <label for="radio09"><span></span><p>a</p></label>
+                            </div>
+                            <div class="mm-survey-item">
+                                <input type="radio" id="radio10" data-item="3" name="radio3" value="4" />
+                                <label for="radio10"><span></span><p>b</p></label>
+                            </div>
+                            <div class="mm-survey-item">
+                                <input type="radio" id="radio11" data-item="3" name="radio3" value="3.41" />
+                                <label for="radio11"><span></span><p>c</p></label>
+                            </div>
+                            <div class="mm-survey-item">
+                                <input type="radio" id="radio12" data-item="3" name="radio3" value="3.14" />
+                                <label for="radio12"><span></span><p>d</p></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mm-survey-page" data-page="4">
+                        <div class="mm-survery-content">
+                            <div class="mm-survey-question">
+                                <p>Question 4</p>
+                            </div>
+                            <div class="mm-survey-item">
+                                <input type="radio" id="radio13" data-item="4" name="radio4" value="1" />
+                                <label for="radio13"><span></span><p>a</p></label>
+                            </div>
+                            <div class="mm-survey-item">
+                                <input type="radio" id="radio14" data-item="4" name="radio4" value="2" />
+                                <label for="radio14"><span></span><p>b</p></label>
+                            </div>
+                            <div class="mm-survey-item">
+                                <input type="radio" id="radio15" data-item="4" name="radio4" value="3" />
+                                <label for="radio15"><span></span><p>c</p></label>
+                            </div>
+                            <div class="mm-survey-item">
+                                <input type="radio" id="radio16" data-item="4" name="radio4" value="4" />
+                                <label for="radio16"><span></span><p>d</p></label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="mm-survey-page" data-page="5">
+                        <div class="mm-survery-content">
+
+                        </div>
+                    </div>
+                    <div class="mm-survey-page" data-page="6">
+                        <div class="mm-survery-content">
+
+                        </div>
+                    </div>
+                    <div class="mm-survey-page" data-page="7">
+                        <div class="mm-survery-content">
+
+                        </div>
+                    </div> -->
+
+                </div>
+
+                <div class="mm-survey-controller">
+                    <div class="mm-prev-btn">
+                        <button>Prev</button>
+                    </div>
+                    <div class="mm-next-btn">
+                        <button disabled="true">Next</button>
+                    </div>
+                    <div class="mm-finish-btn">
+                        <button>Submit</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-<div align="center" class="process">
-    <?=Html::img("/web/img/layouts/weBuy.png")?>
 </div>

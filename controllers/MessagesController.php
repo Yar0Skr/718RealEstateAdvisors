@@ -99,7 +99,7 @@ class MessagesController extends ParentController
                  Address: '.$model->client_address.'. 
                  Message: '.$model->message;
             if ($model->save()) {
-                mail('info@718rea.com','Estate Advisors Form №'.$model->id,$message);
+//                mail('info@718rea.com','Estate Advisors Form №'.$model->id,$message);
                 return $this->render('success');
             } else {
                 return $this->render('error');

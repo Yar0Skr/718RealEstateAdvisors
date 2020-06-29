@@ -84,6 +84,7 @@ class SellHouseFastController extends Controller
 
     public function actionWelcome()
     {
+        
         return $this->render('welcome');
     }
 
