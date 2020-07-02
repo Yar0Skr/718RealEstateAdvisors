@@ -5,7 +5,11 @@ $('#navClose').on('click',function () {
 $('.videoDiv').on('click',function (e) {
     $(this).html('<iframe width="100%" height="100%" src="https://www.youtube.com/embed/Pq8lUumT-mE?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
 })
-jQuery('.mm-prev-btn').hide();
+$('.mm-prev-btn').hide();
+
+$('input[type="radio"]').on('click',function(){
+  $('.mm-next-btn').click();
+});
 
 var x;
 var count;
@@ -16,7 +20,6 @@ var z = [];
 init();
 getCurrentSlide();
 goToNext();
-goToPrev();
 getCount();
 // checkStatus();
 // buttonConfig();
@@ -27,12 +30,12 @@ goBack();
 
 function init() {
 
-    jQuery('.mm-survey-container .mm-survey-page').each(function() {
+    $('.mm-survey-container .mm-survey-page').each(function() {
 
         var item;
         var page;
 
-        item = jQuery(this);
+        item = $(this);
         page = item.data('page');
 
         item.addClass('mm-page-'+page);
@@ -44,77 +47,51 @@ function init() {
 
 function getCount() {
 
-    count = jQuery('.mm-survey-page').length;
+    count = $('.mm-survey-page').length;
     return count;
 
 }
 
 function goToNext() {
 
-    jQuery('.mm-next-btn').on('click', function() {
-        goToSlide(x);
+    $('.mm-next-btn').on('click', function() {
         getCount();
-        current = x + 1;
+        current = x+1;
         var g = current/count;
         buildProgress(g);
         var y = (count + 1);
-        getButtons();
-        jQuery('.mm-survey-page').removeClass('active');
-        jQuery('.mm-page-'+current).addClass('active');
+        // getButtons();
+        $('.mm-survey-page').removeClass('active');
+        $('.mm-page-'+current).addClass('active');
         getCurrentSlide();
         checkStatus();
-        if( jQuery('.mm-page-'+count).hasClass('active') ){
-            if( jQuery('.mm-page-'+count).hasClass('pass') ) {
-                jQuery('.mm-finish-btn').addClass('active');
+        if( $('.mm-page-'+count).hasClass('active') ){
+            if( $('.mm-page-'+y).hasClass('pass') ) {
+                $('.mm-finish-btn').addClass('active');
             }
             else {
-                jQuery('.mm-page-'+count+' .mm-survery-content .mm-survey-item').on('click', function() {
-                    jQuery('.mm-finish-btn').addClass('active');
+                $('.mm-page-'+count+' .mm-survery-content .mm-survey-item').on('click', function() {
+                    $('.mm-survey').css('display',"none");
+                    $('.mm-finish-btn').addClass('active');
+                    
                 });
             }
         }
         else {
-            jQuery('.mm-finish-btn').removeClass('active');
-            if( jQuery('.mm-page-'+current).hasClass('pass') ) {
-                jQuery('.mm-survey-container').addClass('good');
-                jQuery('.mm-survey').addClass('okay');
+            $('.mm-finish-btn').removeClass('active');
+            if( $('.mm-page-'+current).hasClass('pass') ) {
+                $('.mm-survey-container').addClass('good');
+                $('.mm-survey').addClass('okay');
             }
             else {
-                jQuery('.mm-survey-container').removeClass('good');
-                jQuery('.mm-survey').removeClass('okay');
+                $('.mm-survey-container').removeClass('good');
+                $('.mm-survey').removeClass('okay');
             }
         }
-        buttonConfig();
+     return;
+
     });
-
-}
-
-function goToPrev() {
-
-    jQuery('.mm-prev-btn').on('click', function() {
-        goToSlide(x);
-        getCount();
-        current = (x - 1);
-        var g = current/count;
-        buildProgress(g);
-        var y = count;
-        getButtons();
-        jQuery('.mm-survey-page').removeClass('active');
-        jQuery('.mm-page-'+current).addClass('active');
-        getCurrentSlide();
-        checkStatus();
-        jQuery('.mm-finish-btn').removeClass('active');
-        if( jQuery('.mm-page-'+current).hasClass('pass') ) {
-            jQuery('.mm-survey-container').addClass('good');
-            jQuery('.mm-survey').addClass('okay');
-        }
-        else {
-            jQuery('.mm-survey-container').removeClass('good');
-            jQuery('.mm-survey').removeClass('okay');
-        }
-        buttonConfig();
-    });
-
+     return;
 }
 
 function buildProgress(g) {
@@ -126,25 +103,24 @@ function buildProgress(g) {
         g = 1;
     }
     g = g * 100;
-    jQuery('.mm-survey-progress-bar').css({ 'width' : g+'%' });
+    $('.mm-survey-progress-bar').css({ 'width' : g+'%' });
 
 }
 
 function goToSlide(x) {
-
     return x;
 
 }
 
 function getCurrentSlide() {
 
-    jQuery('.mm-survey-page').each(function() {
+    $('.mm-survey-page').each(function() {
 
         var item;
 
-        item = jQuery(this);
+        item = $(this);
 
-        if( jQuery(item).hasClass('active') ) {
+        if( $(item).hasClass('active') ) {
             x = item.data('page');
         }
         else {
@@ -163,27 +139,27 @@ function getButtons() {
         current = y;
     }
     if(current === count) {
-        jQuery('.mm-next-btn').hide();
+        $('.mm-next-btn').hide();
     }
     else if(current === 1) {
-        jQuery('.mm-prev-btn').hide();
+        $('.mm-prev-btn').hide();
     }
     else {
-        jQuery('.mm-next-btn').show();
-        jQuery('.mm-prev-btn').show();
+        $('.mm-next-btn').show();
+        $('.mm-prev-btn').show();
     }
 
 }
 
-jQuery('.mm-survey-q li input').each(function() {
+$('.mm-survey-q li input').each(function() {
 
     var item;
-    item = jQuery(this);
+    item = $(this);
 
-    jQuery(item).on('click', function() {
-        if( jQuery('input:checked').length > 0 ) {
+    $(item).on('click', function() {
+        if( $('input:checked').length > 0 ) {
             // console.log(item.val());
-            jQuery('label').parent().removeClass('active');
+            $('label').parent().removeClass('active');
             item.closest( 'li' ).addClass('active');
         }
         else {
@@ -194,62 +170,62 @@ jQuery('.mm-survey-q li input').each(function() {
 });
 
 percent = (x/count) * 100;
-jQuery('.mm-survey-progress-bar').css({ 'width' : percent+'%' });
+$('.mm-survey-progress-bar').css({ 'width' : percent+'%' });
 
 function checkStatus() {
-    jQuery('.mm-survery-content .mm-survey-item').on('click', function() {
+    $('.mm-survery-content .mm-survey-item').on('click', function() {
         var item;
-        item = jQuery(this);
+        item = $(this);
         item.closest('.mm-survey-page').addClass('pass');
     });
 }
 
 function buildStatus() {
-    jQuery('.mm-survery-content .mm-survey-item').on('click', function() {
+    $('.mm-survey-item').on('click', function() {
         var item;
-        item = jQuery(this);
+        item = $(this);
         item.addClass('bingo');
         item.closest('.mm-survey-page').addClass('pass');
-        jQuery('.mm-survey-container').addClass('good');
+        $('.mm-survey-container').addClass('good');
     });
 }
 
 function deliverStatus() {
-    jQuery('.mm-survey-item').on('click', function() {
-        if( jQuery('.mm-survey-container').hasClass('good') ){
-            jQuery('.mm-survey').addClass('okay');
+    $('.mm-survey-item').on('click', function() {
+        if( $('.mm-survey-container').hasClass('good') ){
+            $('.mm-survey').addClass('okay');
         }
         else {
-            jQuery('.mm-survey').removeClass('okay');
+            $('.mm-survey').removeClass('okay');
         }
         buttonConfig();
     });
 }
 
 function lastPage() {
-    if( jQuery('.mm-next-btn').hasClass('cool') ) {
+    if( $('.mm-next-btn').hasClass('cool') ) {
         alert('cool');
     }
 }
 
 function buttonConfig() {
-    if( jQuery('.mm-survey').hasClass('okay') ) {
-        jQuery('.mm-next-btn button').prop('disabled', false);
+    if( $('.mm-survey').hasClass('okay') ) {
+        $('.mm-next-btn button').prop('disabled', false);
     }
     else {
-        jQuery('.mm-next-btn button').prop('disabled', true);
+        $('.mm-next-btn button').prop('disabled', true);
     }
 }
 
 function submitData() {
-    jQuery('.mm-finish-btn').on('click', function() {
+    $('.mm-finish-btn').on('click', function() {
         // window.location.replace("https://718realestateadvisors.com");
     });
 }
 
 function goBack() {
-    jQuery('.mm-back-btn').on('click', function() {
-        jQuery('.mm-survey-bottom').slideDown();
-        jQuery('.mm-survey-results').slideUp();
+    $('.mm-back-btn').on('click', function() {
+        $('.mm-survey-bottom').slideDown();
+        $('.mm-survey-results').slideUp();
     });
 }

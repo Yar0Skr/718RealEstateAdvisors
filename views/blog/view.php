@@ -10,8 +10,6 @@ use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Info */
-$prevModel=\app\models\Info::findOne(['id'=>$model->id - 1]);
-$nextModel=\app\models\Info::findOne(['id'=>$model->id + 1]);
 
 $this->title = $model->header;
 $this->params['breadcrumbs'][] = ['label' => 'Infos', 'url' => ['index']];
@@ -163,14 +161,167 @@ preg_match('~>(.*?)<~', $model->text, $output);
 
     <?php OwlCarouselWidget::end(); ?>
 </div>
-        <div align="center">
-            <?php if(!empty($prevModel)){ ?>
-             <a href="<?=Url::toRoute('/blog/'.$prevModel->url_name)?>"><button class="send-btn navBtn"><?= $prevModel->header ?></button></a>
-            <?php } ?>
+<div align="center" class="blogLogo">
+    <?=Html::img("/web/img/icons/Logo for Google.png")?>
+    <h2>Want To Sell House Fast?</h2>
+    <p>Get a Fair $ALL CASH$ Offer, Takes Less Than 30 Seconds...<p>
+</div>
+
+<div class="container">
+    <div class="col-sm-12">
+        <div class="mm-survey">
+
+            <div class="mm-survey-progress">
+                <div class="mm-survey-progress-bar mm-progress"></div>
+            </div>
+
+            <div class="mm-survey-bottom">
+                <div class="mm-survey-container">
+
+                    <div class="mm-survey-page active" data-page="1">
+                        <div class="mm-survery-content">
+                            <div class="mm-survey-question">
+                                <p>When Would You Like To Sell Your House?</p>
+                            </div>
+                            <div class="a mm-survey-item">
+                                <input type="radio" id="radio01" data-item="1" name="radio1" value="red" />
+                                <label for="radio01"><span></span><p>ASAP</p></label>
+                            </div>
+                            <div class="mm-survey-item">
+                                <input type="radio" id="radio02" data-item="1" name="radio1" value="blue" />
+                                <label for="radio02"><span></span><p>Within a Month</p></label>
+                            </div>
+                            <div class="mm-survey-item">
+                                <input type="radio" id="radio03" data-item="1" name="radio1" value="green" />
+                                <label for="radio03"><span></span><p>Within 3 Months</p></label>
+                            </div>
+                            <div class="mm-survey-item">
+                                <input type="radio" id="radio04" data-item="1" name="radio1" value="purple" />
+                                <label for="radio04"><span></span><p>Didn't Decide</p></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mm-survey-page" data-page="2">
+                        <div class="mm-survery-content">
+                            <div class="mm-survey-question">
+                                <p>Do You Own a Property?</p>
+                            </div>
+                            <div class="mm-survey-item">
+                                <input type="radio" id="radio05" data-item="2" name="radio2" value="honda" />
+                                <label for="radio05"><span></span><p>Yes, I'm The Homeowner</p></label>
+                            </div>
+                            <div class="mm-survey-item">
+                                <input type="radio" id="radio06" data-item="2" name="radio2" value="ford" />
+                                <label for="radio06"><span></span><p>No, a Different Person</p></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mm-survey-page" data-page="3">
+                        <div class="mm-survery-content">
+                            <div class="mm-survey-question">
+                                <p>Reason To Sell</p>
+                            </div>
+                            <div class="a mm-survey-item">
+                                <input type="radio" id="radio09" data-item="3" name="radio3" value="3" />
+                                <label for="radio09"><span></span><p>Foreclosure</p></label>
+                            </div>
+                            <div class="mm-survey-item">
+                                <input type="radio" id="radio10" data-item="3" name="radio3" value="4" />
+                                <label for="radio10"><span></span><p>Divorce</p></label>
+                            </div>
+                            <div class="mm-survey-item">
+                                <input type="radio" id="radio11" data-item="3" name="radio3" value="3.41" />
+                                <label for="radio11"><span></span><p>Relocation</p></label>
+                            </div>
+                            <div class="mm-survey-item">
+                                <input type="radio" id="radio12" data-item="3" name="radio3" value="3.14" />
+                                <label for="radio12"><span></span><p>Inheritance</p></label>
+                            </div>
+                            <div class="mm-survey-item">
+                                <input type="radio" id="radio13" data-item="3" name="radio4" value="3.14" />
+                                <label for="radio12"><span></span><p>Property In Disrepair</p></label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="mm-survey-page" data-page="5">
+                        <div class="mm-survery-content">
+
+                        </div>
+                    </div>
+                    <div class="mm-survey-page" data-page="6">
+                        <div class="mm-survery-content">
+
+                        </div>
+                    </div>
+                    <div class="mm-survey-page" data-page="7">
+                        <div class="mm-survery-content">
+
+                        </div>
+                    </div> -->
+
+                    </div>
+                </div>
+            </div>
         </div>
-        <div align="center">
-         <?php if(!empty($nextModel)){ ?>
-            <a href="<?=Url::toRoute('/blog/'.$nextModel->url_name)?>"><button class="send-btn navBtn"><?= $nextModel->header ?></button></a>
-            <?php } ?>
-        </div>
+    </div>
+    <div align="center">
+                    <div class="mm-prev-btn">
+                        <button style="display:none">Prev</button>
+                    </div>
+                    <div class="mm-next-btn">
+                        <button style="display:none">Next</button>
+                    </div>
+                    <div class="mm-finish-btn">
+                        <?php
+                        Modal::begin([
+                            'header' => '<h2 align="center">Where Should We Send Your 100% Cash Offer?</h2>',
+                            'toggleButton' => [
+                                'label' => 'Submit',
+                                'tag' => 'button',
+                                'class' => 'btn mm-finish-btn',
+                            ],
+                        ]);
+                        ?>
+                        <?php $form = ActiveForm::begin([
+                            'action' => Url::toRoute('messages/send-mail')
+                        ]); ?>
+                        <div align="center">
+                                <p>Full Name</p>
+                            <input class="form-control" name="name" type="text">
+                            <br>
+                            <p>Phone Number</p>
+                            <input class="form-control" name="phone" type="text">
+                            <br>
+                            <p>Best Email Address</p>
+                            <input class="form-control" name="mail" type="email">
+                            <br>
+                            <p>Your Property Address</p>
+                            <input class="form-control" name="address" type="text">
+                            <br>
+                            <p>ZIP Code</p>
+                            <input class="form-control" name="zip" type="text">
+                            <br>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary">Yes, Send My $Cash Offer$</button>
+                            </div>
+
+                            <p><b>Privacy Policy:</b> We Respect Your Privacy 100%. We Need Your Contact Info To Send Important Details About Your House Price</p>
+                        </div>
+
+
+
+
+                        <?php ActiveForm::end(); ?>
+
+                        <?php Modal::end(); ?>
+                        </p>
+
+                    </div>
+</div>
+
+<h2 align = "center">Questions?</h2>
+<h3 align = "center">Complete The Short Survey & We'll Call You Back</h3>
+<h4 align = "center">We Buy Houses "As-Is"</h4>
+<br>
+
 

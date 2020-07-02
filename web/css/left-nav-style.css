@@ -156,9 +156,7 @@ body {
 }
 
 @-webkit-keyframes bugfix {
-    to {
-      padding: 0;
-    }
+
 }
 
 

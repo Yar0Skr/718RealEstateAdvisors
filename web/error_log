@@ -46,3 +46,749 @@
 [04-Jun-2020 10:56:21 America/Boise] PHP Warning:  require(/home1/sevoneg5/public_html/web/../vendor/autoload.php): failed to open stream: No such file or directory in /home1/sevoneg5/public_html/web/index.php on line 7
 [04-Jun-2020 10:56:21 America/Boise] PHP Warning:  require(/home1/sevoneg5/public_html/web/../vendor/autoload.php): failed to open stream: No such file or directory in /home1/sevoneg5/public_html/web/index.php on line 7
 [04-Jun-2020 10:56:21 America/Boise] PHP Fatal error:  require(): Failed opening required '/home1/sevoneg5/public_html/web/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home1/sevoneg5/public_html/web/index.php on line 7
+[29-Jun-2020 12:35:40 America/Boise] An Error occurred while handling another error:
+PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Connection.php:705
+Stack trace:
+#0 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Connection.php(705): PDO->__construct('mysql:host=127....', 'root', '', NULL)
+#1 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Connection.php(626): yii\db\Connection->createPdoInstance()
+#2 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Connection.php(1022): yii\db\Connection->open()
+#3 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Connection.php(1009): yii\db\Connection->getMasterPdo()
+#4 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Command.php(255): yii\db\Connection->getSlavePdo()
+#5 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Command.php(1154): yii\db\Command->prepare(true)
+#6 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Command.php(401): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#8 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Schema.php(754): yii\db\mysql\Schema->loadTableSchema('messages')
+#10 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Schema.php(193): yii\db\Schema->getTableMetadata('messages', 'schema', false)
+#11 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(435): yii\db\Schema->getTableSchema('messages')
+#12 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(469): yii\db\ActiveRecord::getTableSchema()
+#13 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(500): yii\db\ActiveRecord->attributes()
+#14 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(291): yii\db\BaseActiveRecord->hasAttribute('client_name')
+#15 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/helpers/BaseHtml.php(2233): yii\db\BaseActiveRecord->__get('client_name')
+#16 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/helpers/BaseHtml.php(1353): yii\helpers\BaseHtml::getAttributeValue(Object(app\models\Messages), 'client_name')
+#17 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/helpers/BaseHtml.php(1407): yii\helpers\BaseHtml::activeInput('text', Object(app\models\Messages), 'client_name', Array)
+#18 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/widgets/ActiveField.php(407): yii\helpers\BaseHtml::activeTextInput(Object(app\models\Messages), 'client_name', Array)
+#19 /home1/sevoneg5/public_html/views/layouts/main.php(144): yii\widgets\ActiveField->textInput(Array)
+#20 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home1/sevoneg5...')
+#21 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home1/sevoneg5...', Array)
+#22 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Controller.php(401): yii\base\View->renderFile('/home1/sevoneg5...', Array, Object(app\controllers\SellHouseFastController))
+#23 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Controller.php(387): yii\base\Controller->renderContent('<div class="con...')
+#24 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#25 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#26 [internal function]: yii\web\ErrorAction->run()
+#27 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#28 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\Action->runWithParams(Array)
+#29 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#30 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('sell-house-fast...')
+#31 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#32 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#33 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Connection.php:637
+Stack trace:
+#0 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Connection.php(1022): yii\db\Connection->open()
+#1 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Connection.php(1009): yii\db\Connection->getMasterPdo()
+#2 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Command.php(255): yii\db\Connection->getSlavePdo()
+#3 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Command.php(1154): yii\db\Command->prepare(true)
+#4 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Command.php(401): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#6 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Schema.php(754): yii\db\mysql\Schema->loadTableSchema('messages')
+#8 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Schema.php(193): yii\db\Schema->getTableMetadata('messages', 'schema', false)
+#9 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(435): yii\db\Schema->getTableSchema('messages')
+#10 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(469): yii\db\ActiveRecord::getTableSchema()
+#11 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(500): yii\db\ActiveRecord->attributes()
+#12 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(291): yii\db\BaseActiveRecord->hasAttribute('client_name')
+#13 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/helpers/BaseHtml.php(2233): yii\db\BaseActiveRecord->__get('client_name')
+#14 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/helpers/BaseHtml.php(1353): yii\helpers\BaseHtml::getAttributeValue(Object(app\models\Messages), 'client_name')
+#15 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/helpers/BaseHtml.php(1407): yii\helpers\BaseHtml::activeInput('text', Object(app\models\Messages), 'client_name', Array)
+#16 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/widgets/ActiveField.php(407): yii\helpers\BaseHtml::activeTextInput(Object(app\models\Messages), 'client_name', Array)
+#17 /home1/sevoneg5/public_html/views/layouts/main.php(144): yii\widgets\ActiveField->textInput(Array)
+#18 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home1/sevoneg5...')
+#19 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home1/sevoneg5...', Array)
+#20 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Controller.php(401): yii\base\View->renderFile('/home1/sevoneg5...', Array, Object(app\controllers\SellHouseFastController))
+#21 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Controller.php(387): yii\base\Controller->renderContent('<div class="con...')
+#22 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#23 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#24 [internal function]: yii\web\ErrorAction->run()
+#25 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#26 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\Action->runWithParams(Array)
+#27 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#28 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('sell-house-fast...')
+#29 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#30 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#31 {main}
+Additional Information:
+
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "robots.txt". in /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('robots.txt', Array)
+#1 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home1/sevoneg5/public_html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home1/sevoneg5/public_html/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home1/sevoneg5/public_html/web/index.php(12): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'CONTEXT_DOCUMENT_ROOT' => '/home1/sevoneg5/public_html',
+    'CONTEXT_PREFIX' => '',
+    'DOCUMENT_ROOT' => '/home1/sevoneg5/public_html',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'HTTPS' => 'on',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'en,zh;q=0.1',
+    'HTTP_CONNECTION' => 'Close',
+    'HTTP_HOST' => '718realestateadvisor.com',
+    'HTTP_USER_AGENT' => '(compatible;PetalBot;+https://aspiegel.com/petalbot)',
+    'HTTP_X_HTTPS' => '1',
+    'PATH' => '/bin:/usr/bin',
+    'PHP_INI_SCAN_DIR' => '/opt/cpanel/ea-php70/root/etc:/opt/cpanel/ea-php70/root/etc/php.d:.',
+    'QUERY_STRING' => '',
+    'REDIRECT_HTTPS' => 'on',
+    'REDIRECT_SCRIPT_URI' => 'https://718realestateadvisor.com/robots.txt',
+    'REDIRECT_SCRIPT_URL' => '/robots.txt',
+    'REDIRECT_SSL_TLS_SNI' => '718realestateadvisor.com',
+    'REDIRECT_STATUS' => '200',
+    'REDIRECT_UNIQUE_ID' => 'Xvo0ex0UEkHLtpLH9ZK4lgAAANM',
+    'REDIRECT_URL' => '/robots.txt',
+    'REMOTE_ADDR' => '114.119.161.194',
+    'REMOTE_PORT' => '24894',
+    'REQUEST_METHOD' => 'GET',
+    'REQUEST_SCHEME' => 'https',
+    'REQUEST_URI' => '/robots.txt',
+    'SCRIPT_FILENAME' => '/home1/sevoneg5/public_html/web/index.php',
+    'SCRIPT_NAME' => '/web/index.php',
+    'SCRIPT_URI' => 'https://718realestateadvisor.com/robots.txt',
+    'SCRIPT_URL' => '/robots.txt',
+    'SERVER_ADDR' => '162.241.219.209',
+    'SERVER_ADMIN' => 'webmaster@718realestateadvisors.com',
+    'SERVER_NAME' => '718realestateadvisor.com',
+    'SERVER_PORT' => '443',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SSL_TLS_SNI' => '718realestateadvisor.com',
+    'UNIQUE_ID' => 'Xvo0ex0UEkHLtpLH9ZK4lgAAANM',
+    'PHP_SELF' => '/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1593455740.1759040355682373046875,
+    'REQUEST_TIME' => 1593455740,
+    'argv' => [],
+    'argc' => 0,
+]
+[29-Jun-2020 12:40:30 America/Boise] An Error occurred while handling another error:
+PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Connection.php:705
+Stack trace:
+#0 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Connection.php(705): PDO->__construct('mysql:host=127....', 'root', '', NULL)
+#1 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Connection.php(626): yii\db\Connection->createPdoInstance()
+#2 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Connection.php(1022): yii\db\Connection->open()
+#3 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Connection.php(1009): yii\db\Connection->getMasterPdo()
+#4 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Command.php(255): yii\db\Connection->getSlavePdo()
+#5 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Command.php(1154): yii\db\Command->prepare(true)
+#6 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Command.php(401): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#8 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Schema.php(754): yii\db\mysql\Schema->loadTableSchema('messages')
+#10 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Schema.php(193): yii\db\Schema->getTableMetadata('messages', 'schema', false)
+#11 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(435): yii\db\Schema->getTableSchema('messages')
+#12 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(469): yii\db\ActiveRecord::getTableSchema()
+#13 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(500): yii\db\ActiveRecord->attributes()
+#14 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(291): yii\db\BaseActiveRecord->hasAttribute('client_name')
+#15 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/helpers/BaseHtml.php(2233): yii\db\BaseActiveRecord->__get('client_name')
+#16 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/helpers/BaseHtml.php(1353): yii\helpers\BaseHtml::getAttributeValue(Object(app\models\Messages), 'client_name')
+#17 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/helpers/BaseHtml.php(1407): yii\helpers\BaseHtml::activeInput('text', Object(app\models\Messages), 'client_name', Array)
+#18 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/widgets/ActiveField.php(407): yii\helpers\BaseHtml::activeTextInput(Object(app\models\Messages), 'client_name', Array)
+#19 /home1/sevoneg5/public_html/views/layouts/main.php(144): yii\widgets\ActiveField->textInput(Array)
+#20 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home1/sevoneg5...')
+#21 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home1/sevoneg5...', Array)
+#22 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Controller.php(401): yii\base\View->renderFile('/home1/sevoneg5...', Array, Object(app\controllers\SellHouseFastController))
+#23 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Controller.php(387): yii\base\Controller->renderContent('<div class="con...')
+#24 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#25 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#26 [internal function]: yii\web\ErrorAction->run()
+#27 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#28 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\Action->runWithParams(Array)
+#29 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#30 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('sell-house-fast...')
+#31 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#32 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#33 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Connection.php:637
+Stack trace:
+#0 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Connection.php(1022): yii\db\Connection->open()
+#1 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Connection.php(1009): yii\db\Connection->getMasterPdo()
+#2 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Command.php(255): yii\db\Connection->getSlavePdo()
+#3 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Command.php(1154): yii\db\Command->prepare(true)
+#4 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Command.php(401): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#6 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Schema.php(754): yii\db\mysql\Schema->loadTableSchema('messages')
+#8 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Schema.php(193): yii\db\Schema->getTableMetadata('messages', 'schema', false)
+#9 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(435): yii\db\Schema->getTableSchema('messages')
+#10 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(469): yii\db\ActiveRecord::getTableSchema()
+#11 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(500): yii\db\ActiveRecord->attributes()
+#12 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(291): yii\db\BaseActiveRecord->hasAttribute('client_name')
+#13 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/helpers/BaseHtml.php(2233): yii\db\BaseActiveRecord->__get('client_name')
+#14 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/helpers/BaseHtml.php(1353): yii\helpers\BaseHtml::getAttributeValue(Object(app\models\Messages), 'client_name')
+#15 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/helpers/BaseHtml.php(1407): yii\helpers\BaseHtml::activeInput('text', Object(app\models\Messages), 'client_name', Array)
+#16 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/widgets/ActiveField.php(407): yii\helpers\BaseHtml::activeTextInput(Object(app\models\Messages), 'client_name', Array)
+#17 /home1/sevoneg5/public_html/views/layouts/main.php(144): yii\widgets\ActiveField->textInput(Array)
+#18 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home1/sevoneg5...')
+#19 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home1/sevoneg5...', Array)
+#20 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Controller.php(401): yii\base\View->renderFile('/home1/sevoneg5...', Array, Object(app\controllers\SellHouseFastController))
+#21 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Controller.php(387): yii\base\Controller->renderContent('<div class="con...')
+#22 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#23 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#24 [internal function]: yii\web\ErrorAction->run()
+#25 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#26 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\Action->runWithParams(Array)
+#27 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#28 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('sell-house-fast...')
+#29 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#30 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#31 {main}
+Additional Information:
+
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('favicon.ico', Array)
+#1 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home1/sevoneg5/public_html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home1/sevoneg5/public_html/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home1/sevoneg5/public_html/web/index.php(12): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'CONTEXT_DOCUMENT_ROOT' => '/home1/sevoneg5/public_html',
+    'CONTEXT_PREFIX' => '',
+    'DOCUMENT_ROOT' => '/home1/sevoneg5/public_html',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'H2PUSH' => 'on',
+    'H2_PUSH' => 'on',
+    'H2_PUSHED' => '',
+    'H2_PUSHED_ON' => '',
+    'H2_STREAM_ID' => '',
+    'H2_STREAM_TAG' => '000',
+    'HTTP2' => 'on',
+    'HTTPS' => 'on',
+    'HTTP_ACCEPT' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,uk;q=0.6',
+    'HTTP_COOKIE' => '_ga=GA1.2.1292567868.1580238585; hubspotutk=91888257da62f1c135bb35146c5388ec; __hstc=208387021.91888257da62f1c135bb35146c5388ec.1580238612092.1583505728335.1583888345125.15; _fbp=fb.1.1590702752843.1228547838; PHPSESSID=0g1nb24hu48qnepjtreji9dh73; _csrf=12b9f565300d8c164b2b109aa33ee4d6d968bf2870aa5a0b8cf1e7ca3ce42116a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22RQizJIaZYpqFRuWvRxfEAouaPZ-W2u4N%22%3B%7D',
+    'HTTP_HOST' => '718realestateadvisors.com',
+    'HTTP_REFERER' => 'https://718realestateadvisors.com/sell-house-fast/welcome',
+    'HTTP_SEC_FETCH_DEST' => 'image',
+    'HTTP_SEC_FETCH_MODE' => 'no-cors',
+    'HTTP_SEC_FETCH_SITE' => 'same-origin',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 8.0.0; SM-G950F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36',
+    'HTTP_X_HTTPS' => '1',
+    'PATH' => '/bin:/usr/bin',
+    'PHP_INI_SCAN_DIR' => '/opt/cpanel/ea-php70/root/etc:/opt/cpanel/ea-php70/root/etc/php.d:.',
+    'QUERY_STRING' => '',
+    'REDIRECT_H2PUSH' => 'on',
+    'REDIRECT_H2_PUSH' => 'on',
+    'REDIRECT_H2_PUSHED' => '',
+    'REDIRECT_H2_PUSHED_ON' => '',
+    'REDIRECT_H2_STREAM_ID' => '',
+    'REDIRECT_H2_STREAM_TAG' => '000',
+    'REDIRECT_HTTP2' => 'on',
+    'REDIRECT_HTTPS' => 'on',
+    'REDIRECT_SCRIPT_URI' => 'https://718realestateadvisors.com/favicon.ico',
+    'REDIRECT_SCRIPT_URL' => '/favicon.ico',
+    'REDIRECT_SSL_TLS_SNI' => '718realestateadvisors.com',
+    'REDIRECT_STATUS' => '200',
+    'REDIRECT_UNIQUE_ID' => 'Xvo1nlkJsmJ273TS2lN6fwACNQ0',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_ADDR' => '70.23.93.127',
+    'REMOTE_PORT' => '53178',
+    'REQUEST_METHOD' => 'GET',
+    'REQUEST_SCHEME' => 'https',
+    'REQUEST_URI' => '/favicon.ico',
+    'SCRIPT_FILENAME' => '/home1/sevoneg5/public_html/web/index.php',
+    'SCRIPT_NAME' => '/web/index.php',
+    'SCRIPT_URI' => 'https://718realestateadvisors.com/favicon.ico',
+    'SCRIPT_URL' => '/favicon.ico',
+    'SERVER_ADDR' => '162.241.219.209',
+    'SERVER_ADMIN' => 'webmaster@718realestateadvisors.com',
+    'SERVER_NAME' => '718realestateadvisors.com',
+    'SERVER_PORT' => '443',
+    'SERVER_PROTOCOL' => 'HTTP/2.0',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SSL_TLS_SNI' => '718realestateadvisors.com',
+    'UNIQUE_ID' => 'Xvo1nlkJsmJ273TS2lN6fwACNQ0',
+    'PHP_SELF' => '/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1593456030.9383490085601806640625,
+    'REQUEST_TIME' => 1593456030,
+    'argv' => [],
+    'argc' => 0,
+]
+[29-Jun-2020 12:40:33 America/Boise] An Error occurred while handling another error:
+PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Connection.php:705
+Stack trace:
+#0 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Connection.php(705): PDO->__construct('mysql:host=127....', 'root', '', NULL)
+#1 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Connection.php(626): yii\db\Connection->createPdoInstance()
+#2 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Connection.php(1022): yii\db\Connection->open()
+#3 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Connection.php(1009): yii\db\Connection->getMasterPdo()
+#4 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Command.php(255): yii\db\Connection->getSlavePdo()
+#5 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Command.php(1154): yii\db\Command->prepare(true)
+#6 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Command.php(401): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#8 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Schema.php(754): yii\db\mysql\Schema->loadTableSchema('messages')
+#10 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Schema.php(193): yii\db\Schema->getTableMetadata('messages', 'schema', false)
+#11 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(435): yii\db\Schema->getTableSchema('messages')
+#12 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(469): yii\db\ActiveRecord::getTableSchema()
+#13 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(500): yii\db\ActiveRecord->attributes()
+#14 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(291): yii\db\BaseActiveRecord->hasAttribute('client_name')
+#15 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/helpers/BaseHtml.php(2233): yii\db\BaseActiveRecord->__get('client_name')
+#16 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/helpers/BaseHtml.php(1353): yii\helpers\BaseHtml::getAttributeValue(Object(app\models\Messages), 'client_name')
+#17 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/helpers/BaseHtml.php(1407): yii\helpers\BaseHtml::activeInput('text', Object(app\models\Messages), 'client_name', Array)
+#18 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/widgets/ActiveField.php(407): yii\helpers\BaseHtml::activeTextInput(Object(app\models\Messages), 'client_name', Array)
+#19 /home1/sevoneg5/public_html/views/layouts/main.php(144): yii\widgets\ActiveField->textInput(Array)
+#20 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home1/sevoneg5...')
+#21 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home1/sevoneg5...', Array)
+#22 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Controller.php(401): yii\base\View->renderFile('/home1/sevoneg5...', Array, Object(app\controllers\SellHouseFastController))
+#23 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Controller.php(387): yii\base\Controller->renderContent('<div class="con...')
+#24 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#25 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#26 [internal function]: yii\web\ErrorAction->run()
+#27 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#28 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\Action->runWithParams(Array)
+#29 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#30 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('sell-house-fast...')
+#31 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#32 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#33 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Connection.php:637
+Stack trace:
+#0 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Connection.php(1022): yii\db\Connection->open()
+#1 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Connection.php(1009): yii\db\Connection->getMasterPdo()
+#2 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Command.php(255): yii\db\Connection->getSlavePdo()
+#3 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Command.php(1154): yii\db\Command->prepare(true)
+#4 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Command.php(401): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#6 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Schema.php(754): yii\db\mysql\Schema->loadTableSchema('messages')
+#8 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Schema.php(193): yii\db\Schema->getTableMetadata('messages', 'schema', false)
+#9 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(435): yii\db\Schema->getTableSchema('messages')
+#10 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(469): yii\db\ActiveRecord::getTableSchema()
+#11 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(500): yii\db\ActiveRecord->attributes()
+#12 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(291): yii\db\BaseActiveRecord->hasAttribute('client_name')
+#13 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/helpers/BaseHtml.php(2233): yii\db\BaseActiveRecord->__get('client_name')
+#14 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/helpers/BaseHtml.php(1353): yii\helpers\BaseHtml::getAttributeValue(Object(app\models\Messages), 'client_name')
+#15 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/helpers/BaseHtml.php(1407): yii\helpers\BaseHtml::activeInput('text', Object(app\models\Messages), 'client_name', Array)
+#16 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/widgets/ActiveField.php(407): yii\helpers\BaseHtml::activeTextInput(Object(app\models\Messages), 'client_name', Array)
+#17 /home1/sevoneg5/public_html/views/layouts/main.php(144): yii\widgets\ActiveField->textInput(Array)
+#18 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home1/sevoneg5...')
+#19 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home1/sevoneg5...', Array)
+#20 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Controller.php(401): yii\base\View->renderFile('/home1/sevoneg5...', Array, Object(app\controllers\SellHouseFastController))
+#21 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Controller.php(387): yii\base\Controller->renderContent('<div class="con...')
+#22 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#23 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#24 [internal function]: yii\web\ErrorAction->run()
+#25 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#26 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\Action->runWithParams(Array)
+#27 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#28 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('sell-house-fast...')
+#29 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#30 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#31 {main}
+Additional Information:
+
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('favicon.ico', Array)
+#1 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home1/sevoneg5/public_html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home1/sevoneg5/public_html/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home1/sevoneg5/public_html/web/index.php(12): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'CONTEXT_DOCUMENT_ROOT' => '/home1/sevoneg5/public_html',
+    'CONTEXT_PREFIX' => '',
+    'DOCUMENT_ROOT' => '/home1/sevoneg5/public_html',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'H2PUSH' => 'on',
+    'H2_PUSH' => 'on',
+    'H2_PUSHED' => '',
+    'H2_PUSHED_ON' => '',
+    'H2_STREAM_ID' => '',
+    'H2_STREAM_TAG' => '000',
+    'HTTP2' => 'on',
+    'HTTPS' => 'on',
+    'HTTP_ACCEPT' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,uk;q=0.6',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_COOKIE' => '_ga=GA1.2.1292567868.1580238585; hubspotutk=91888257da62f1c135bb35146c5388ec; __hstc=208387021.91888257da62f1c135bb35146c5388ec.1580238612092.1583505728335.1583888345125.15; _fbp=fb.1.1590702752843.1228547838; PHPSESSID=0g1nb24hu48qnepjtreji9dh73; _csrf=12b9f565300d8c164b2b109aa33ee4d6d968bf2870aa5a0b8cf1e7ca3ce42116a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22RQizJIaZYpqFRuWvRxfEAouaPZ-W2u4N%22%3B%7D',
+    'HTTP_HOST' => '718realestateadvisors.com',
+    'HTTP_PRAGMA' => 'no-cache',
+    'HTTP_REFERER' => 'https://718realestateadvisors.com/sell-house-fast/welcome',
+    'HTTP_SEC_FETCH_DEST' => 'image',
+    'HTTP_SEC_FETCH_MODE' => 'no-cors',
+    'HTTP_SEC_FETCH_SITE' => 'same-origin',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 8.0.0; SM-G950F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36',
+    'HTTP_X_HTTPS' => '1',
+    'PATH' => '/bin:/usr/bin',
+    'PHP_INI_SCAN_DIR' => '/opt/cpanel/ea-php70/root/etc:/opt/cpanel/ea-php70/root/etc/php.d:.',
+    'QUERY_STRING' => '',
+    'REDIRECT_H2PUSH' => 'on',
+    'REDIRECT_H2_PUSH' => 'on',
+    'REDIRECT_H2_PUSHED' => '',
+    'REDIRECT_H2_PUSHED_ON' => '',
+    'REDIRECT_H2_STREAM_ID' => '',
+    'REDIRECT_H2_STREAM_TAG' => '000',
+    'REDIRECT_HTTP2' => 'on',
+    'REDIRECT_HTTPS' => 'on',
+    'REDIRECT_SCRIPT_URI' => 'https://718realestateadvisors.com/favicon.ico',
+    'REDIRECT_SCRIPT_URL' => '/favicon.ico',
+    'REDIRECT_SSL_TLS_SNI' => '718realestateadvisors.com',
+    'REDIRECT_STATUS' => '200',
+    'REDIRECT_UNIQUE_ID' => 'Xvo1oFkJsmJ273TS2lN6mgACNQ0',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_ADDR' => '70.23.93.127',
+    'REMOTE_PORT' => '53178',
+    'REQUEST_METHOD' => 'GET',
+    'REQUEST_SCHEME' => 'https',
+    'REQUEST_URI' => '/favicon.ico',
+    'SCRIPT_FILENAME' => '/home1/sevoneg5/public_html/web/index.php',
+    'SCRIPT_NAME' => '/web/index.php',
+    'SCRIPT_URI' => 'https://718realestateadvisors.com/favicon.ico',
+    'SCRIPT_URL' => '/favicon.ico',
+    'SERVER_ADDR' => '162.241.219.209',
+    'SERVER_ADMIN' => 'webmaster@718realestateadvisors.com',
+    'SERVER_NAME' => '718realestateadvisors.com',
+    'SERVER_PORT' => '443',
+    'SERVER_PROTOCOL' => 'HTTP/2.0',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SSL_TLS_SNI' => '718realestateadvisors.com',
+    'UNIQUE_ID' => 'Xvo1oFkJsmJ273TS2lN6mgACNQ0',
+    'PHP_SELF' => '/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1593456033.1798610687255859375,
+    'REQUEST_TIME' => 1593456033,
+    'argv' => [],
+    'argc' => 0,
+]
+[29-Jun-2020 12:40:36 America/Boise] An Error occurred while handling another error:
+PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Connection.php:705
+Stack trace:
+#0 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Connection.php(705): PDO->__construct('mysql:host=127....', 'root', '', NULL)
+#1 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Connection.php(626): yii\db\Connection->createPdoInstance()
+#2 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Connection.php(1022): yii\db\Connection->open()
+#3 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Connection.php(1009): yii\db\Connection->getMasterPdo()
+#4 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Command.php(255): yii\db\Connection->getSlavePdo()
+#5 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Command.php(1154): yii\db\Command->prepare(true)
+#6 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Command.php(401): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#8 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Schema.php(754): yii\db\mysql\Schema->loadTableSchema('messages')
+#10 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Schema.php(193): yii\db\Schema->getTableMetadata('messages', 'schema', false)
+#11 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(435): yii\db\Schema->getTableSchema('messages')
+#12 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(469): yii\db\ActiveRecord::getTableSchema()
+#13 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(500): yii\db\ActiveRecord->attributes()
+#14 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(291): yii\db\BaseActiveRecord->hasAttribute('client_name')
+#15 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/helpers/BaseHtml.php(2233): yii\db\BaseActiveRecord->__get('client_name')
+#16 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/helpers/BaseHtml.php(1353): yii\helpers\BaseHtml::getAttributeValue(Object(app\models\Messages), 'client_name')
+#17 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/helpers/BaseHtml.php(1407): yii\helpers\BaseHtml::activeInput('text', Object(app\models\Messages), 'client_name', Array)
+#18 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/widgets/ActiveField.php(407): yii\helpers\BaseHtml::activeTextInput(Object(app\models\Messages), 'client_name', Array)
+#19 /home1/sevoneg5/public_html/views/layouts/main.php(144): yii\widgets\ActiveField->textInput(Array)
+#20 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home1/sevoneg5...')
+#21 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home1/sevoneg5...', Array)
+#22 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Controller.php(401): yii\base\View->renderFile('/home1/sevoneg5...', Array, Object(app\controllers\SellHouseFastController))
+#23 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Controller.php(387): yii\base\Controller->renderContent('<div class="con...')
+#24 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#25 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#26 [internal function]: yii\web\ErrorAction->run()
+#27 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#28 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\Action->runWithParams(Array)
+#29 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#30 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('sell-house-fast...')
+#31 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#32 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#33 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Connection.php:637
+Stack trace:
+#0 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Connection.php(1022): yii\db\Connection->open()
+#1 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Connection.php(1009): yii\db\Connection->getMasterPdo()
+#2 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Command.php(255): yii\db\Connection->getSlavePdo()
+#3 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Command.php(1154): yii\db\Command->prepare(true)
+#4 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Command.php(401): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#6 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Schema.php(754): yii\db\mysql\Schema->loadTableSchema('messages')
+#8 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Schema.php(193): yii\db\Schema->getTableMetadata('messages', 'schema', false)
+#9 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(435): yii\db\Schema->getTableSchema('messages')
+#10 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(469): yii\db\ActiveRecord::getTableSchema()
+#11 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(500): yii\db\ActiveRecord->attributes()
+#12 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(291): yii\db\BaseActiveRecord->hasAttribute('client_name')
+#13 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/helpers/BaseHtml.php(2233): yii\db\BaseActiveRecord->__get('client_name')
+#14 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/helpers/BaseHtml.php(1353): yii\helpers\BaseHtml::getAttributeValue(Object(app\models\Messages), 'client_name')
+#15 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/helpers/BaseHtml.php(1407): yii\helpers\BaseHtml::activeInput('text', Object(app\models\Messages), 'client_name', Array)
+#16 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/widgets/ActiveField.php(407): yii\helpers\BaseHtml::activeTextInput(Object(app\models\Messages), 'client_name', Array)
+#17 /home1/sevoneg5/public_html/views/layouts/main.php(144): yii\widgets\ActiveField->textInput(Array)
+#18 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home1/sevoneg5...')
+#19 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home1/sevoneg5...', Array)
+#20 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Controller.php(401): yii\base\View->renderFile('/home1/sevoneg5...', Array, Object(app\controllers\SellHouseFastController))
+#21 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Controller.php(387): yii\base\Controller->renderContent('<div class="con...')
+#22 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#23 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#24 [internal function]: yii\web\ErrorAction->run()
+#25 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#26 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\Action->runWithParams(Array)
+#27 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#28 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('sell-house-fast...')
+#29 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#30 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#31 {main}
+Additional Information:
+
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('favicon.ico', Array)
+#1 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home1/sevoneg5/public_html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home1/sevoneg5/public_html/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home1/sevoneg5/public_html/web/index.php(12): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'CONTEXT_DOCUMENT_ROOT' => '/home1/sevoneg5/public_html',
+    'CONTEXT_PREFIX' => '',
+    'DOCUMENT_ROOT' => '/home1/sevoneg5/public_html',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'H2PUSH' => 'on',
+    'H2_PUSH' => 'on',
+    'H2_PUSHED' => '',
+    'H2_PUSHED_ON' => '',
+    'H2_STREAM_ID' => '',
+    'H2_STREAM_TAG' => '000',
+    'HTTP2' => 'on',
+    'HTTPS' => 'on',
+    'HTTP_ACCEPT' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,uk;q=0.6',
+    'HTTP_COOKIE' => '_ga=GA1.2.1292567868.1580238585; hubspotutk=91888257da62f1c135bb35146c5388ec; __hstc=208387021.91888257da62f1c135bb35146c5388ec.1580238612092.1583505728335.1583888345125.15; _fbp=fb.1.1590702752843.1228547838; PHPSESSID=0g1nb24hu48qnepjtreji9dh73; _csrf=12b9f565300d8c164b2b109aa33ee4d6d968bf2870aa5a0b8cf1e7ca3ce42116a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22RQizJIaZYpqFRuWvRxfEAouaPZ-W2u4N%22%3B%7D',
+    'HTTP_HOST' => '718realestateadvisors.com',
+    'HTTP_REFERER' => 'https://718realestateadvisors.com/sell-house-fast/welcome',
+    'HTTP_SEC_FETCH_DEST' => 'image',
+    'HTTP_SEC_FETCH_MODE' => 'no-cors',
+    'HTTP_SEC_FETCH_SITE' => 'same-origin',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 8.0.0; SM-G950F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36',
+    'HTTP_X_HTTPS' => '1',
+    'PATH' => '/bin:/usr/bin',
+    'PHP_INI_SCAN_DIR' => '/opt/cpanel/ea-php70/root/etc:/opt/cpanel/ea-php70/root/etc/php.d:.',
+    'QUERY_STRING' => '',
+    'REDIRECT_H2PUSH' => 'on',
+    'REDIRECT_H2_PUSH' => 'on',
+    'REDIRECT_H2_PUSHED' => '',
+    'REDIRECT_H2_PUSHED_ON' => '',
+    'REDIRECT_H2_STREAM_ID' => '',
+    'REDIRECT_H2_STREAM_TAG' => '000',
+    'REDIRECT_HTTP2' => 'on',
+    'REDIRECT_HTTPS' => 'on',
+    'REDIRECT_SCRIPT_URI' => 'https://718realestateadvisors.com/favicon.ico',
+    'REDIRECT_SCRIPT_URL' => '/favicon.ico',
+    'REDIRECT_SSL_TLS_SNI' => '718realestateadvisors.com',
+    'REDIRECT_STATUS' => '200',
+    'REDIRECT_UNIQUE_ID' => 'Xvo1pFkJsmJ273TS2lN6tAACNQ0',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_ADDR' => '70.23.93.127',
+    'REMOTE_PORT' => '53178',
+    'REQUEST_METHOD' => 'GET',
+    'REQUEST_SCHEME' => 'https',
+    'REQUEST_URI' => '/favicon.ico',
+    'SCRIPT_FILENAME' => '/home1/sevoneg5/public_html/web/index.php',
+    'SCRIPT_NAME' => '/web/index.php',
+    'SCRIPT_URI' => 'https://718realestateadvisors.com/favicon.ico',
+    'SCRIPT_URL' => '/favicon.ico',
+    'SERVER_ADDR' => '162.241.219.209',
+    'SERVER_ADMIN' => 'webmaster@718realestateadvisors.com',
+    'SERVER_NAME' => '718realestateadvisors.com',
+    'SERVER_PORT' => '443',
+    'SERVER_PROTOCOL' => 'HTTP/2.0',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SSL_TLS_SNI' => '718realestateadvisors.com',
+    'UNIQUE_ID' => 'Xvo1pFkJsmJ273TS2lN6tAACNQ0',
+    'PHP_SELF' => '/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1593456036.792973041534423828125,
+    'REQUEST_TIME' => 1593456036,
+    'argv' => [],
+    'argc' => 0,
+]
+[29-Jun-2020 12:40:38 America/Boise] An Error occurred while handling another error:
+PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Connection.php:705
+Stack trace:
+#0 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Connection.php(705): PDO->__construct('mysql:host=127....', 'root', '', NULL)
+#1 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Connection.php(626): yii\db\Connection->createPdoInstance()
+#2 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Connection.php(1022): yii\db\Connection->open()
+#3 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Connection.php(1009): yii\db\Connection->getMasterPdo()
+#4 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Command.php(255): yii\db\Connection->getSlavePdo()
+#5 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Command.php(1154): yii\db\Command->prepare(true)
+#6 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Command.php(401): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#8 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Schema.php(754): yii\db\mysql\Schema->loadTableSchema('messages')
+#10 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Schema.php(193): yii\db\Schema->getTableMetadata('messages', 'schema', false)
+#11 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(435): yii\db\Schema->getTableSchema('messages')
+#12 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(469): yii\db\ActiveRecord::getTableSchema()
+#13 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(500): yii\db\ActiveRecord->attributes()
+#14 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(291): yii\db\BaseActiveRecord->hasAttribute('client_name')
+#15 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/helpers/BaseHtml.php(2233): yii\db\BaseActiveRecord->__get('client_name')
+#16 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/helpers/BaseHtml.php(1353): yii\helpers\BaseHtml::getAttributeValue(Object(app\models\Messages), 'client_name')
+#17 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/helpers/BaseHtml.php(1407): yii\helpers\BaseHtml::activeInput('text', Object(app\models\Messages), 'client_name', Array)
+#18 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/widgets/ActiveField.php(407): yii\helpers\BaseHtml::activeTextInput(Object(app\models\Messages), 'client_name', Array)
+#19 /home1/sevoneg5/public_html/views/layouts/main.php(144): yii\widgets\ActiveField->textInput(Array)
+#20 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home1/sevoneg5...')
+#21 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home1/sevoneg5...', Array)
+#22 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Controller.php(401): yii\base\View->renderFile('/home1/sevoneg5...', Array, Object(app\controllers\SellHouseFastController))
+#23 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Controller.php(387): yii\base\Controller->renderContent('<div class="con...')
+#24 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#25 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#26 [internal function]: yii\web\ErrorAction->run()
+#27 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#28 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\Action->runWithParams(Array)
+#29 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#30 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('sell-house-fast...')
+#31 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#32 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#33 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Connection.php:637
+Stack trace:
+#0 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Connection.php(1022): yii\db\Connection->open()
+#1 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Connection.php(1009): yii\db\Connection->getMasterPdo()
+#2 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Command.php(255): yii\db\Connection->getSlavePdo()
+#3 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Command.php(1154): yii\db\Command->prepare(true)
+#4 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Command.php(401): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#6 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Schema.php(754): yii\db\mysql\Schema->loadTableSchema('messages')
+#8 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/Schema.php(193): yii\db\Schema->getTableMetadata('messages', 'schema', false)
+#9 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(435): yii\db\Schema->getTableSchema('messages')
+#10 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(469): yii\db\ActiveRecord::getTableSchema()
+#11 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(500): yii\db\ActiveRecord->attributes()
+#12 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(291): yii\db\BaseActiveRecord->hasAttribute('client_name')
+#13 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/helpers/BaseHtml.php(2233): yii\db\BaseActiveRecord->__get('client_name')
+#14 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/helpers/BaseHtml.php(1353): yii\helpers\BaseHtml::getAttributeValue(Object(app\models\Messages), 'client_name')
+#15 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/helpers/BaseHtml.php(1407): yii\helpers\BaseHtml::activeInput('text', Object(app\models\Messages), 'client_name', Array)
+#16 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/widgets/ActiveField.php(407): yii\helpers\BaseHtml::activeTextInput(Object(app\models\Messages), 'client_name', Array)
+#17 /home1/sevoneg5/public_html/views/layouts/main.php(144): yii\widgets\ActiveField->textInput(Array)
+#18 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home1/sevoneg5...')
+#19 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home1/sevoneg5...', Array)
+#20 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Controller.php(401): yii\base\View->renderFile('/home1/sevoneg5...', Array, Object(app\controllers\SellHouseFastController))
+#21 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Controller.php(387): yii\base\Controller->renderContent('<div class="con...')
+#22 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#23 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#24 [internal function]: yii\web\ErrorAction->run()
+#25 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#26 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\Action->runWithParams(Array)
+#27 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#28 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('sell-house-fast...')
+#29 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#30 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#31 {main}
+Additional Information:
+
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('favicon.ico', Array)
+#1 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home1/sevoneg5/public_html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home1/sevoneg5/public_html/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home1/sevoneg5/public_html/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home1/sevoneg5/public_html/web/index.php(12): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'CONTEXT_DOCUMENT_ROOT' => '/home1/sevoneg5/public_html',
+    'CONTEXT_PREFIX' => '',
+    'DOCUMENT_ROOT' => '/home1/sevoneg5/public_html',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'H2PUSH' => 'on',
+    'H2_PUSH' => 'on',
+    'H2_PUSHED' => '',
+    'H2_PUSHED_ON' => '',
+    'H2_STREAM_ID' => '',
+    'H2_STREAM_TAG' => '000',
+    'HTTP2' => 'on',
+    'HTTPS' => 'on',
+    'HTTP_ACCEPT' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,uk;q=0.6',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_COOKIE' => '_ga=GA1.2.1292567868.1580238585; hubspotutk=91888257da62f1c135bb35146c5388ec; __hstc=208387021.91888257da62f1c135bb35146c5388ec.1580238612092.1583505728335.1583888345125.15; _fbp=fb.1.1590702752843.1228547838; PHPSESSID=0g1nb24hu48qnepjtreji9dh73; _csrf=12b9f565300d8c164b2b109aa33ee4d6d968bf2870aa5a0b8cf1e7ca3ce42116a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22RQizJIaZYpqFRuWvRxfEAouaPZ-W2u4N%22%3B%7D',
+    'HTTP_HOST' => '718realestateadvisors.com',
+    'HTTP_PRAGMA' => 'no-cache',
+    'HTTP_REFERER' => 'https://718realestateadvisors.com/sell-house-fast/welcome',
+    'HTTP_SEC_FETCH_DEST' => 'image',
+    'HTTP_SEC_FETCH_MODE' => 'no-cors',
+    'HTTP_SEC_FETCH_SITE' => 'same-origin',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 8.0.0; SM-G950F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36',
+    'HTTP_X_HTTPS' => '1',
+    'PATH' => '/bin:/usr/bin',
+    'PHP_INI_SCAN_DIR' => '/opt/cpanel/ea-php70/root/etc:/opt/cpanel/ea-php70/root/etc/php.d:.',
+    'QUERY_STRING' => '',
+    'REDIRECT_H2PUSH' => 'on',
+    'REDIRECT_H2_PUSH' => 'on',
+    'REDIRECT_H2_PUSHED' => '',
+    'REDIRECT_H2_PUSHED_ON' => '',
+    'REDIRECT_H2_STREAM_ID' => '',
+    'REDIRECT_H2_STREAM_TAG' => '000',
+    'REDIRECT_HTTP2' => 'on',
+    'REDIRECT_HTTPS' => 'on',
+    'REDIRECT_SCRIPT_URI' => 'https://718realestateadvisors.com/favicon.ico',
+    'REDIRECT_SCRIPT_URL' => '/favicon.ico',
+    'REDIRECT_SSL_TLS_SNI' => '718realestateadvisors.com',
+    'REDIRECT_STATUS' => '200',
+    'REDIRECT_UNIQUE_ID' => 'Xvo1plkJsmJ273TS2lN6xgACNQ0',
+    'REDIRECT_URL' => '/favicon.ico',
+    'REMOTE_ADDR' => '70.23.93.127',
+    'REMOTE_PORT' => '53178',
+    'REQUEST_METHOD' => 'GET',
+    'REQUEST_SCHEME' => 'https',
+    'REQUEST_URI' => '/favicon.ico',
+    'SCRIPT_FILENAME' => '/home1/sevoneg5/public_html/web/index.php',
+    'SCRIPT_NAME' => '/web/index.php',
+    'SCRIPT_URI' => 'https://718realestateadvisors.com/favicon.ico',
+    'SCRIPT_URL' => '/favicon.ico',
+    'SERVER_ADDR' => '162.241.219.209',
+    'SERVER_ADMIN' => 'webmaster@718realestateadvisors.com',
+    'SERVER_NAME' => '718realestateadvisors.com',
+    'SERVER_PORT' => '443',
+    'SERVER_PROTOCOL' => 'HTTP/2.0',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SSL_TLS_SNI' => '718realestateadvisors.com',
+    'UNIQUE_ID' => 'Xvo1plkJsmJ273TS2lN6xgACNQ0',
+    'PHP_SELF' => '/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1593456038.527123928070068359375,
+    'REQUEST_TIME' => 1593456038,
+    'argv' => [],
+    'argc' => 0,
+]

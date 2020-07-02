@@ -123,7 +123,7 @@ body {
 
 .pre-nav{
     font-family: "MazzardH-Regular";
-    font-size: 10pt;
+    font-size: 12pt;
     height: auto;
     width: 100%;
     background-color: #014a73;
@@ -500,7 +500,9 @@ a.desc:after {
 .sort-ordinal a.asc:after {
     content: "\e155";
 }
-
+.blogLogo img{
+    height:150px;
+}
 .sort-ordinal a.desc:after {
     content: "\e156";
 }
@@ -694,7 +696,7 @@ hr {
         font-size: 15pt;
     }
     p,li{
-        font-size: 10pt;
+        font-size: 12pt;
     }
 
     /*.nav{*/
@@ -721,6 +723,9 @@ hr {
     line-height:1.8;
     }
 
+    .topPadding{
+        top:15px;
+    }
 
     .pesontedan input[type=checkbox] + label::after {
         content: "";
@@ -755,11 +760,11 @@ hr {
     .smallBtn{
         width: 90px;
         height: 50px;
-        font-size: 10pt;
+        font-size: 12pt;
     }
     .navBtn{
         width:150px;
-        font-size: 10pt;
+        font-size: 12pt;
     }
     .index-bottom, .index-middle {
         height: 200px;
@@ -767,7 +772,10 @@ hr {
     }
 
     .videoDiv{
-        height:auto;
+        height:150px;
+    }
+    .videoDiv img{
+        height:180px;
     }
 
     .infoImg img{

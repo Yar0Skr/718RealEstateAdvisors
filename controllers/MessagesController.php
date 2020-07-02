@@ -86,6 +86,26 @@ class MessagesController extends ParentController
             'model' => $model,
         ]);
     }
+    
+    public function actionSendMail(){
+        if (Yii::$app->request->post()) {
+            $data=Yii::$app->request->post();
+        }
+        try{
+            $message=
+                'Name: '.$data['name'].'. 
+                 Phone number: '.$data['phone'].'. 
+                 Email: '.$data['email'].'. 
+                 Address: '.$data['address'].'. 
+                 ZIP-code: '.$data['zip'];
+            mail('info@718rea.com','Estate Advisors Blog Form',$message);
+                return $this->render('success');
+        }
+        catch(Exception $ex){
+                return $this->render('error');
+        }
+    }
+    
     public function actionPostCreate()
     {
         if (Yii::$app->request->post()) {
@@ -99,7 +119,7 @@ class MessagesController extends ParentController
                  Address: '.$model->client_address.'. 
                  Message: '.$model->message;
             if ($model->save()) {
-//                mail('info@718rea.com','Estate Advisors Form №'.$model->id,$message);
+               mail('info@718rea.com','Estate Advisors Form №'.$model->id,$message);
                 return $this->render('success');
             } else {
                 return $this->render('error');

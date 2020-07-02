@@ -34,6 +34,27 @@ $this->params['breadcrumbs'][] = $this->title;
             ]
         ]);
         ?>
+        
+        <div class="item-class"><a href="<?=Url::toRoute('blog/selling-home-with-hpd-violations')?>">
+                <?=Html::img("/web/img/layouts/HPD Building Department Violations.jpg", 
+                ['alt' => 'HPD Building Department Violations'])?></a></div>
+        
+        <div class="item-class"><a href="<?=Url::toRoute('blog/the-ideal-strategy-to-deal-with-hpd-alternative-enforcement-program')?>">
+                <?=Html::img("/web/img/layouts/AlternativeEnforcementProgram-min.jpg", 
+                ['alt' => 'Alternative Enforcement Program'])?></a></div>
+                
+        <div class="item-class"><a href="<?=Url::toRoute('blog/lost-my-job-cant-pay-mortgage')?>">
+                <?=Html::img("/web/img/layouts/Can't Afford Mortgage Payments.jpg", 
+                ['alt' => "Can't Afford Mortgage Payments"])?></a></div>
+                
+        <div class="item-class"><a href="<?=Url::toRoute('blog/sell-house-fast-divorce')?>">
+                <?=Html::img("/web/img/layouts/Divorce.jpg", 
+                ['alt' => 'Divorce'])?></a></div>
+                
+        <div class="item-class"><a href="<?=Url::toRoute('blog/dissolving-real-estate-partnership')?>">
+                <?=Html::img("/web/img/layouts/Dysfunctional Partnership.jpg", 
+                ['alt' => 'Dysfunctional Partnership'])?></a></div>
+        
         <div class="item-class"><a href="<?=Url::toRoute('blog/selling-house-that-needs-repairs')?>">
                 <?=Html::img("/web/img/layouts/Emergency Repairs.jpg", 
                 ['alt' => 'Emergency Repairs'])?></a></div>
@@ -51,7 +72,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 ['alt' => 'Foreclosure'])?></a></div>
                 
                 
-        <div class="item-class"><a href="<?=Url::toRoute('blog/truggling-with-guardianship')?>">
+        <div class="item-class"><a href="<?=Url::toRoute('blog/struggling-with-guardianship')?>">
                 <?=Html::img("/web/img/layouts/Guardianship.jpg", 
                 ['alt' => 'Guardianship'])?></a></div>
                 
