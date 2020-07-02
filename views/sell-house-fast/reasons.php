@@ -23,7 +23,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'container' => 'div',
             'containerOptions' => [
                 'id' => 'Reasons-body',
-                'class' => 'lazyOwl'
+                'class' => 'owl'
             ],
             'pluginOptions'    => [
                 'autoplay'          => true,
@@ -31,6 +31,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 'items'             => 3,
                 'loop'              => true,
                 'dots'              => false,
+                'lazyLoad'          => true,
+                'lazyLoadEager'     => 2,
             ]
         ]);
         ?>
