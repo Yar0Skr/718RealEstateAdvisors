@@ -14,7 +14,7 @@ use app\assets\AppAsset;
 $model = new \app\models\Messages();
 
 $this->registerMetaTag(['name'=>'ahrefs-site-verification','content'=>'f94cdce171c90f858fc10e7f83686c8725738f31e17cba1f84f57311df1c2266']);
-
+$this->registerLinkTag(['rel' => 'canonical', 'href' => Url::canonical()]);
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
