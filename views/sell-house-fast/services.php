@@ -19,7 +19,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="row">
             <div class="col-sm-12 col-md-3 services">
                 <div>
-                    <?=LazyLoad::widget(['src'=>'/web/img/icons/services1.png'])?>
+                    <?=LazyLoad::widget(['src'=>'/web/img/icons/services1.png','options'=>['alt' => "Looking to sell a property fast?"]])?>
                 </div>
                 <div class = "smallServices">
                     <h4>LOOKING TO SELL A PROPERTY FAST?</h4>
@@ -32,7 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
             </div>
             <div class="col-sm-12 col-md-3 services">
                 <div>
-                    <?=LazyLoad::widget(['src'=>'/web/img/icons/services2.png'])?>
+                    <?=LazyLoad::widget(['src'=>'/web/img/icons/services2.png','options'=>['alt' => "Variety of properties"]])?>
                 </div>
                 <div class = "smallServices">
                     <h4>VARIETY OF PROPERTIES</h4>
@@ -42,7 +42,7 @@ $this->params['breadcrumbs'][] = $this->title;
             </div>
             <div class="col-sm-12 col-md-3 services">
                 <div>
-                    <?=LazyLoad::widget(['src'=>'/web/img/icons/services3.png'])?>
+                    <?=LazyLoad::widget(['src'=>'/web/img/icons/services3.png','options'=>['alt' => "Don't spend a dime"]])?>
                 </div>
                 <div class = "smallServices">
                     <h4>DONT SPEND A DIME</h4>
@@ -53,7 +53,7 @@ $this->params['breadcrumbs'][] = $this->title;
             </div>
             <div class="col-sm-12 col-md-3 services">
                 <div>
-                    <?=LazyLoad::widget(['src'=>'/web/img/icons/services4.png'])?>
+                    <?=LazyLoad::widget(['src'=>'/web/img/icons/services4.png','options'=>['alt' => "We pay top finders fee"]])?>
                 </div>
                 <div class = "smallServices">
                     <h4>WE PAY TOP FINDER'S FEE </h4>

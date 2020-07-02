@@ -134,5 +134,5 @@ OwlCarouselWidget::begin([
 
 
 <div align="center" class="process">
-    <?=Html::img("/web/img/layouts/weBuy.png" )?>
+    <?=Html::img("/web/img/layouts/weBuy.png",['alt' => "We buy houses in Brooklyn, Queens, Manhattan, Staten Island, Bronx, Nassau Country, New Jersey"] )?>
 </div>

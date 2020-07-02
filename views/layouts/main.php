@@ -61,17 +61,17 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 <div class = "pre-nav">
     <div class="flex-nav">
-        <a href=<?=Url::home()?>><?=Html::img("/web/img/icons/logo.png")?></a>
+        <a href=<?=Url::home()?>><?=Html::img("/web/img/icons/logo.png",['alt' => "Logo"])?></a>
     </div>
     <div class="flex-nav">
         <div align="center" class="header-icons">
-            <a href="tel:6462879111"><?=Html::img("/web/img/icons/phone-header.png")?></a>
+            <a href="tel:6462879111"><?=Html::img("/web/img/icons/phone-header.png",['alt' => "Call us"])?></a>
         </div>
         <div align="center" class="header-icons">
-            <a href="https://wa.me/16462879111?text=%20Hi%21%20I%20visited%20your%20website%20and%20want%20to%20sell%20my%20property"><?=Html::img("/web/img/icons/whatsapp-header.png")?></a>
+            <a href="https://wa.me/16462879111?text=%20Hi%21%20I%20visited%20your%20website%20and%20want%20to%20sell%20my%20property"><?=Html::img("/web/img/icons/whatsapp-header.png",['alt' => "WhatsApp"])?></a>
         </div>
         <div align="center" class="header-icons">
-            <a href="mailto:info@718rea.com"><?=Html::img("/web/img/icons/mail-header.png")?></a>
+            <a href="mailto:info@718rea.com"><?=Html::img("/web/img/icons/mail-header.png",['alt' => "Mail us"])?></a>
         </div>
     </div>
 
