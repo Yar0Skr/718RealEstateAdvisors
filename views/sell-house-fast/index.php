@@ -26,6 +26,8 @@ OwlCarouselWidget::begin([
         'items'             => 1,
         'loop'              => true,
         'dots'              => false,
+        'lazyLoad'          => true,
+        'lazyLoadEager'     => 2,
     ]
 ]);
 ?>
