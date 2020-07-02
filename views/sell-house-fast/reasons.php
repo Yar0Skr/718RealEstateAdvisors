@@ -23,7 +23,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'container' => 'div',
             'containerOptions' => [
                 'id' => 'Reasons-body',
-                'class' => 'owl'
+                'class' => 'lazyOwl'
             ],
             'pluginOptions'    => [
                 'autoplay'          => true,
@@ -34,7 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ]
         ]);
         ?>
-        
+
         <div class="item-class"><a href="<?=Url::toRoute('blog/selling-home-with-hpd-violations')?>">
                 <?=Html::img("/web/img/layouts/HPD Building Department Violations.jpg",
                 ['alt' => 'HPD Building Department Violations'])?></a></div>
