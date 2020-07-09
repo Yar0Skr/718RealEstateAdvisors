@@ -1,11 +1,16 @@
 <?php
 
 /* @var $this yii\web\View */
+/* @var $title \app\models\LayoutTitle */
 
 use toriphes\lazyload\LazyLoad;
 use yii\helpers\Html;
 
-$this->title = 'Our Services';
+if (!empty($title)){
+    $this->title = $title->title;
+} else {
+    $this->title = 'Our Services';
+}
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <style>

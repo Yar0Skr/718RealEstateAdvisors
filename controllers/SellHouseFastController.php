@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use app\models\Faq;
 use app\models\Info;
+use app\models\LayoutTitle;
 use app\models\Messages;
 use app\models\MetaLayout;
 use Yii;
@@ -78,8 +79,9 @@ class SellHouseFastController extends Controller
     public function actionIndex()
     {
         $metaArray = MetaLayout::find()->where(['page_id'=>1])->all();
+        $title = LayoutTitle::findOne(['page_id'=>1]);
         $this->addMetaTag($metaArray);
-        return $this->render('index');
+        return $this->render('index', ['title'=>$title]);
     }
 
     public function actionWelcome()
@@ -92,31 +94,38 @@ class SellHouseFastController extends Controller
     public function actionFrequentlyAskedQuestions()
     {
         $metaArray = MetaLayout::find()->where(['page_id'=>5])->all();
+        $title = LayoutTitle::findOne(['page_id'=>5]);
         $this->addMetaTag($metaArray);
         $content = Faq::find()->orderBy('order_number')->all();
-        return $this->render('about',['content'=>$content]);
+        return $this->render('about',['content'=>$content,'title'=>$title]);
     }
 
     public function actionServices()
     {
         $metaArray = MetaLayout::find()->where(['page_id'=>4])->all();
+        $title = LayoutTitle::findOne(['page_id'=>4]);
+
         $this->addMetaTag($metaArray);
-        return $this->render('services');
+        return $this->render('services',['title'=>$title]);
     }
 
     public function actionReasons()
     {
         $metaArray = MetaLayout::find()->where(['page_id'=>2])->all();
+        $title = LayoutTitle::findOne(['page_id'=>2]);
+
         $this->addMetaTag($metaArray);
         $content = Info::find()->orderBy('order_number')->all();
-        return $this->render('reasons',['content'=>$content]);
+        return $this->render('reasons',['content'=>$content,'title'=>$title]);
     }
 
     public function actionProcess()
     {
         $metaArray = MetaLayout::find()->where(['page_id'=>3])->all();
+        $title = LayoutTitle::findOne(['page_id'=>3]);
+
         $this->addMetaTag($metaArray);
-        return $this->render('process');
+        return $this->render('process',['title'=>$title]);
     }
 
     /**

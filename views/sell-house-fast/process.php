@@ -1,10 +1,16 @@
 <?php
 
 /* @var $this yii\web\View */
+/* @var $title \app\models\LayoutTitle */
 
 use yii\helpers\Html;
 
-$this->title = 'Our Process';
+if (!empty($title)){
+    $this->title = $title->title;
+} else {
+    $this->title = 'Our Process';
+}
+
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <h1 align="center" style="display:none">Our Process</h1>

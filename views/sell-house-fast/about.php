@@ -1,10 +1,15 @@
 <?php
-
+/* @var $title \app\models\LayoutTitle */
 /* @var $this yii\web\View */
 /* @var $content \app\models\Faq */
 use yii\helpers\Html;
 
-$this->title = 'FAQ';
+
+if (!empty($title)){
+    $this->title = $title->title;
+} else {
+    $this->title = 'FAQ';
+}
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="FAQ-body">

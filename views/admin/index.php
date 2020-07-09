@@ -18,6 +18,7 @@ use yii\helpers\Html;
             <?= Html::a('Editor', ['/blog'], ['class'=>'btn btn-primary']) ?>
             <?= Html::a('Owl carousel images', ['/info-images'], ['class'=>'btn btn-primary']) ?>
             <?= Html::a('Site metatags', ['/meta-layout'], ['class'=>'btn btn-primary']) ?>
+            <?= Html::a('Site titles', ['/layout-title'], ['class'=>'btn btn-primary']) ?>
             <?= Html::a('Blog metatags', ['/info-metatags'], ['class'=>'btn btn-primary']) ?>
             <?= Html::a('FAQ', ['/faq'], ['class'=>'btn btn-primary']) ?>
         </p>

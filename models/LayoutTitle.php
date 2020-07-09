@@ -5,22 +5,20 @@ namespace app\models;
 use Yii;
 
 /**
- * This is the model class for table "meta_layout".
+ * This is the model class for table "layout_title".
  *
  * @property int $id
  * @property int|null $page_id
- * @property string|null $name
- * @property string|null $content
  * @property string|null $title
  */
-class MetaLayout extends \yii\db\ActiveRecord
+class LayoutTitle extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return 'meta_layout';
+        return 'layout_title';
     }
 
     /**
@@ -30,7 +28,7 @@ class MetaLayout extends \yii\db\ActiveRecord
     {
         return [
             [['page_id'], 'integer'],
-            [['name', 'content','title'], 'string', 'max' => 255],
+            [['title'], 'string', 'max' => 255],
         ];
     }
 
@@ -42,9 +40,7 @@ class MetaLayout extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'page_id' => 'Page ID',
-            'name' => 'Name',
-            'content' => 'Content',
-            'title' => 'Page title'
+            'title' => 'Title',
         ];
     }
 }

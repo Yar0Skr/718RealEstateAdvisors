@@ -4,8 +4,13 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 use pa3py6aka\yii2\ModalAlert;
 /* @var $this yii\web\View */
+/* @var $title \app\models\LayoutTitle */
 
-$this->title = '718 Real Estate Advisors | Sell Your Property Fast | Get Fair All-Cash Offer';
+if (!empty($title)){
+    $this->title = $title->title;
+} else {
+    $this->title = '718 Real Estate Advisors | Sell Your Property Fast | Get Fair All-Cash Offer';
+}
 ?>
 <style>
     body{

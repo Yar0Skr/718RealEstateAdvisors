@@ -1,4 +1,5 @@
 <?php
+/* @var $title \app\models\LayoutTitle */
 
 /* @var $this yii\web\View */
 /* @var $content \app\models\Info */
@@ -7,7 +8,12 @@ use toriphes\lazyload\LazyLoad;
 use yii\helpers\Html;
 use yii\helpers\Url;
 
-$this->title = 'Common reasons to sell property';
+if (!empty($title)){
+    $this->title = $title->title;
+} else {
+    $this->title = 'Common reasons to sell property';
+
+}
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <style>
