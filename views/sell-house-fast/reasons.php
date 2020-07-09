@@ -33,6 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'dots'              => false,
                 'lazyLoad'          => true,
                 'lazyLoadEager'     => 2,
+                'margin'            => 20,
             ]
         ]);
         ?>

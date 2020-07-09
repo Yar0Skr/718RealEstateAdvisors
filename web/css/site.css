@@ -56,7 +56,7 @@ body {
 
 .pesontedan {
     justify-content: left;
-    /*margin-bottom: 1px;*/
+    margin-bottom: 3px;
     overflow: hidden;
 }
 
@@ -333,7 +333,6 @@ body {
     color: white;
     height: 400px;
     width: auto;
-    background-image: url("/web/img/layouts/weBuy2.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -357,7 +356,7 @@ body {
 
 .index-middle{
     height: 400px;
-    background-image: url("/web/img/index/middle.png");
+    background-image: url("/web/img/index/middle.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -369,7 +368,7 @@ body {
 }
 .index-bottom{
     height: 400px;
-    background-image: url("/web/img/index/bottom.png");
+    background-image: url("/web/img/index/bottom.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -554,6 +553,12 @@ a.desc:after {
     Border-radius: 60px;
 }
 
+.weBuy{
+    position: absolute;
+    top: 10%;
+    color: white;
+    font-size: 35pt;
+}
 
 @media(max-width:767px) {
     .nav li > form > button.logout {
@@ -585,6 +590,10 @@ a.desc:after {
         margin-bottom:10px;
         padding:10px;
         background: #ffffff;
+    }
+    
+    .weBuy{
+        font-size:20px;
     }
 }
 
@@ -663,6 +672,7 @@ hr {
     min-height:auto;
     }
     
+    
     .btnAbsolute{
         position:unset;
     }
@@ -691,8 +701,8 @@ hr {
     body{
         overflow-x: hidden;
     }
-
-    h2{
+    
+    .h2{
         font-size: 15pt;
     }
     p,li{
@@ -789,5 +799,8 @@ hr {
     .FAQ-body{
         padding-top: 0px;
         padding-bottom: 0px;
+    }
+    .weBuy{
+        font-size:20px;
     }
 }

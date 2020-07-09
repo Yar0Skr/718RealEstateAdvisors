@@ -72,6 +72,7 @@ $config = [
             'showScriptName' => false,
             'enableStrictParsing' => false,
             'rules' => [
+                '/robots.txt' => '/web/robots.txt',
                 '/' => 'sell-house-fast/index',
                 '/blog/delete' => '/blog/delete',
                 '/blog/index' => '/blog/index',

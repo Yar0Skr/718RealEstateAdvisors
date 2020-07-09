@@ -1,2 +1,31 @@
-User-agent: *
-Disallow:
+User-agent: googlebot
+Disallow: /admin/
+Disallow: /blog/
+Allow: /blog/view/
+Disallow: /estates/
+Disallow: /faq/
+Disallow: /info-images/
+Disallow: /info-metatags/
+Disallow: /messages/
+Disallow: /meta-layout/
+Disallow: /users/
+Disallow: /contact-us/
+Disallow: /homepage/
+Disallow: /privacy-policy/
+
+User-agent: anothercrawler
+Disallow: /admin/
+Disallow: /blog/
+Allow: /blog/view/
+Disallow: /estates/
+Disallow: /faq/
+Disallow: /info-images/
+Disallow: /info-metatags/
+Disallow: /messages/
+Disallow: /meta-layout/
+Disallow: /users/
+Disallow: /contact-us/
+Disallow: /homepage/
+Disallow: /privacy-policy/
+
+Sitemap: https://718realestateadvisors.com/web/sitemap.xml

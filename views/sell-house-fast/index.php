@@ -5,7 +5,7 @@ use yii\helpers\Url;
 use pa3py6aka\yii2\ModalAlert;
 /* @var $this yii\web\View */
 
-$this->title = '718 Real Estate Advisors';
+$this->title = '718 Real Estate Advisors | Sell Your Property Fast | Get Fair All-Cash Offer';
 ?>
 <style>
     body{
@@ -27,7 +27,7 @@ OwlCarouselWidget::begin([
         'loop'              => true,
         'dots'              => false,
         'lazyLoad'          => true,
-        'lazyLoadEager'     => 2,
+        'lazyLoadEager'     => 3,
     ]
 ]);
 ?>
@@ -48,8 +48,8 @@ OwlCarouselWidget::begin([
         <div class="row">
             <div class="col-sm-12 col-md-6">
                 <div>
-                    <h2 style="margin-top:40px">Watch this short video</h2> 
-                    <h2 style="margin-top:auto">to learn about us</h2>
+                    <h2 class = 'h2' style="margin-top:40px">Watch this short video</h2> 
+                    <h2 class = 'h2' style="margin-top:auto">to learn about us</h2>
                 </div>
                 <div class = "videoDiv">
                     <?=Html::img("/web/img/index/thumbnail.jpg",['alt' => "Press here to load video"])?>
@@ -57,7 +57,7 @@ OwlCarouselWidget::begin([
             </div>
             <div style="" class="col-sm-12 col-md-6 indexBtnContainer-top">
                 <div>
-                    <h2 style="margin-top:40px">Looking to sell a property fast?</h2>
+                    <h1 class='h2' style="margin-top:40px">Looking to sell a property fast?</h1>
                 </div>
                 <div>
                     <p>Whether your property is in excellent condition or barely standing, vacant or rented to tenants, paying rent or non-paying.</p>
@@ -79,7 +79,7 @@ OwlCarouselWidget::begin([
         <div class="row">
             <div class="col-sm-12 col-md-6">
                 <div>
-                    <h2>Get fair cash value for your house</h2>
+                    <h2 class = 'h2'>Get fair cash value for your house</h2>
                 </div>
                 <div class="index-middle">
 
@@ -87,7 +87,7 @@ OwlCarouselWidget::begin([
             </div>
             <div style="" class="col-sm-12 col-md-6 indexBtnContainer-bottom">
                 <div>
-                    <h2>We purchase a wide range of properties:</h2>
+                    <h2 class = 'h2'>We purchase a wide range of properties:</h2>
                 </div>
                 <div>
                     <ul style=" padding: 0;list-style: none">
@@ -122,7 +122,7 @@ OwlCarouselWidget::begin([
                 </div>
             </div>
             <div class="col-sm-12 col-md-6">
-                <h2>Avoid Foreclosure</h2>
+                <h2 class = 'h2'>Avoid Foreclosure</h2>
                 <br>
                 <p>We can help if your property is distressed, and we can assist you with foreclosure solutions.</p>
                 <br>
@@ -135,6 +135,7 @@ OwlCarouselWidget::begin([
 </div>
 
 
-<div align="center" class="process">
-    <?=Html::img("/web/img/layouts/weBuy.png",['alt' => "We buy houses in Brooklyn, Queens, Manhattan, Staten Island, Bronx, Nassau Country, New Jersey"] )?>
+<div align="center" style='position:relative; display: flex; justify-content: center;' class="process">
+    <div class = 'weBuy'><h2>WE BUY HOUSES IN</h2></div>
+    <?=Html::img("/web/img/layouts/indexBanner.jpg",['alt' => "We buy houses in Brooklyn, Queens, Manhattan, Staten Island, Bronx, Nassau Country, New Jersey"] )?>
 </div>
