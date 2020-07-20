@@ -70,10 +70,11 @@ function goToNext() {
                 $('.mm-finish-btn').addClass('active');
             }
             else {
-                $('.mm-page-'+count+' .mm-survery-content .mm-survey-item').on('click', function() {
+                $('.mm-page-'+count+' .mm-survery-content .mm-survey-item').on('click', function(e) {
                     $('.mm-survey').css('display',"none");
                     $('.mm-finish-btn').addClass('active');
-                    
+                    $('.theBtn').click();
+                    e.preventDefault();
                 });
             }
         }

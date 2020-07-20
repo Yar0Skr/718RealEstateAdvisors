@@ -163,8 +163,6 @@ preg_match('~>(.*?)<~', $model->text, $output);
 </div>
 <div align="center" class="blogLogo">
     <?=Html::img("/web/img/icons/Logo for Google.png")?>
-    <h2>Want To Sell House Fast?</h2>
-    <p>Get a Fair $ALL CASH$ Offer, Takes Less Than 30 Seconds...<p>
 </div>
 
 <div class="container">
@@ -278,7 +276,7 @@ preg_match('~>(.*?)<~', $model->text, $output);
                             'toggleButton' => [
                                 'label' => 'Submit',
                                 'tag' => 'button',
-                                'class' => 'btn mm-finish-btn',
+                                'class' => 'btn mm-finish-btn theBtn',
                             ],
                         ]);
                         ?>
@@ -287,19 +285,19 @@ preg_match('~>(.*?)<~', $model->text, $output);
                         ]); ?>
                         <div align="center">
                                 <p>Full Name</p>
-                            <input class="form-control" name="name" type="text">
+                            <input class="form-control" required name="name" type="text">
                             <br>
                             <p>Phone Number</p>
-                            <input class="form-control" name="phone" type="text">
+                            <input class="form-control" required name="phone" type="text">
                             <br>
                             <p>Best Email Address</p>
-                            <input class="form-control" name="mail" type="email">
+                            <input class="form-control" required name="mail" type="email">
                             <br>
                             <p>Your Property Address</p>
-                            <input class="form-control" name="address" type="text">
+                            <input class="form-control" required name="address" type="text">
                             <br>
                             <p>ZIP Code</p>
-                            <input class="form-control" name="zip" type="text">
+                            <input class="form-control" required name="zip" type="text">
                             <br>
                             <div class="form-group">
                                 <button type="submit" class="btn btn-primary">Yes, Send My $Cash Offer$</button>
