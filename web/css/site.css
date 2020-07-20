@@ -1,8 +1,10 @@
 @font-face {
+    font-display: fallback;
     font-family: "MazzardH";
     src: url("fonts/MazzardH-Bold.otf");
 }
 @font-face {
+    font-display: fallback;
     font-family: "MazzardH-Regular";
     src: url("fonts/MazzardH-Regular.otf");
 }
