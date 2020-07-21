@@ -37,12 +37,12 @@ OwlCarouselWidget::begin([
 ]);
 ?>
 
-<div class="item-class"><?=Html::img("/web/img/layouts/header1.jpg")?></div>
-<div class="item-class"><?=Html::img("/web/img/layouts/header2.jpg")?></div>
-<div class="item-class"><?=Html::img("/web/img/layouts/header3.jpg")?></div>
-<div class="item-class"><?=Html::img("/web/img/layouts/header4.jpg")?></div>
-<div class="item-class"><?=Html::img("/web/img/layouts/header5.jpg")?></div>
-<div class="item-class"><?=Html::img("/web/img/layouts/header6.jpg")?></div>
+<div class="item-class" id="1"></div>
+<div class="item-class" id="2"></div>
+<div class="item-class" id="3"></div>
+<div class="item-class" id="4"></div>
+<div class="item-class" id="5"></div>
+<div class="item-class" id="6"></div>
 
 <?php OwlCarouselWidget::end(); ?>
 <?= ModalAlert::widget([
