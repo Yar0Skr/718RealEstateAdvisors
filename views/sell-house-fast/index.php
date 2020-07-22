@@ -110,7 +110,7 @@ OwlCarouselWidget::begin([
                 </div>
                 <div class="btnAbsolute" align="center">
                     <a href="#contact">
-                        <button class="btn homeBtn send-btn">Call or fill out the Form</button>
+                        <button class="btn homeBtn send-btn">Call or fill out the form</button>
                     </a> 
                 </div>
             </div>
@@ -140,7 +140,11 @@ OwlCarouselWidget::begin([
 </div>
 
 
-<div align="center" style='position:relative; display: flex; justify-content: center;' class="process">
-    <div class = 'weBuy'><h2>WE BUY HOUSES IN</h2></div>
+<div align="center" style='position:relative;' class="process">
+    <div style ="display: flex; justify-content: center;">
+        <div class = 'weBuy'>
+            <h2>WE BUY HOUSES IN</h2>
+        </div>
+    </div>
     <?=Html::img("/web/img/layouts/indexBanner.jpg",['alt' => "We buy houses in Brooklyn, Queens, Manhattan, Staten Island, Bronx, Nassau Country, New Jersey"] )?>
 </div>
