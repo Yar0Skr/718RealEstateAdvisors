@@ -255,6 +255,7 @@ body {
     font-size: 14pt;
     width: 100%;
     background-color: #007cff;
+    margin-bottom: 0;
 }
 
 .phoneNav, .prePhoneNav{
@@ -287,6 +288,37 @@ body {
 .navbar-toggle{
     background-color: #1b1e21;
 }
+
+.circle p {
+    color: #007cff;
+    font-size: 46pt;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.circle {
+    position: relative;
+    text-align: center;
+    background-color: white;
+    border: 5px solid #007cff;
+    border-radius: 100px;
+
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    height: 160px;
+    width: 160px;
+}
+
+.wwwu{
+    /*background-image: url(/img/layouts/process-bottom.png);*/
+    background-image: url("/web/img/layouts/process-bottom.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .navbar a {
     color: white;
 }
