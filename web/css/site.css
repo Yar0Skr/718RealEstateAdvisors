@@ -251,6 +251,7 @@ body {
 }
 
 .navbar{
+    margin-bottom: 0px;
     font-family: "MazzardH-Regular";
     font-size: 14pt;
     width: 100%;
@@ -594,7 +595,7 @@ a.desc:after {
         background: #ffffff;
     }
     
-    .weBuy{
+    .weBuy h2{
         font-size:20px;
     }
 }
@@ -802,7 +803,8 @@ hr {
         padding-top: 0px;
         padding-bottom: 0px;
     }
-    .weBuy{
-        font-size:20px;
+    .weBuy h2{
+        margin-top:10px;
+        font-size:10px;
     }
 }

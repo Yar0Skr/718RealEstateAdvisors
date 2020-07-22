@@ -202,15 +202,19 @@ preg_match('~>(.*?)<~', $model->text, $output);
                     <div class="mm-survey-page" data-page="2">
                         <div class="mm-survery-content">
                             <div class="mm-survey-question">
-                                <p>Do You Own a Property?</p>
+                                <p>Are you a property owner?</p>
+                            </div>
+                            <div class="mm-survey-item">
+                                <input type="radio" id="radio09" data-item="2" name="radio2" value="honda" />
+                                <label for="radio09"><span></span><p>Yes, I'm the owner</p></label>
                             </div>
                             <div class="mm-survey-item">
                                 <input type="radio" id="radio05" data-item="2" name="radio2" value="honda" />
-                                <label for="radio05"><span></span><p>Yes, I'm The Homeowner</p></label>
+                                <label for="radio05"><span></span><p>Owner is deceased, I'm an heir to the estate</p></label>
                             </div>
                             <div class="mm-survey-item">
                                 <input type="radio" id="radio06" data-item="2" name="radio2" value="ford" />
-                                <label for="radio06"><span></span><p>No, a Different Person</p></label>
+                                <label for="radio06"><span></span><p>Other</p></label>
                             </div>
                         </div>
                     </div>

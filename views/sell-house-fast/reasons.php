@@ -21,7 +21,7 @@ $this->params['breadcrumbs'][] = $this->title;
         background-color: #ebebeb;
     }
 </style>
-<div style="padding: 15px" class="container">
+<div style="padding: 5px" class="container">
     <div align="center"><h1>Common Reasons To Sell Property</h1></div>
     <div>
         <?php
@@ -39,7 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'dots'              => false,
                 'lazyLoad'          => true,
                 'lazyLoadEager'     => 2,
-                'margin'            => 20,
+                'margin'            => 5,
             ]
         ]);
         ?>
