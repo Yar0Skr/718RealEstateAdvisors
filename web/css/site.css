@@ -732,6 +732,8 @@ hr {
 
     .topProcess > div > p {
         background-color: white;
+        border: 3px solid #000000;
+        padding: 5px
     }
 
     .bottomProcess > div > p {
