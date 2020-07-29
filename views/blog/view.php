@@ -7,7 +7,6 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\widgets\ActiveForm;
 use yii\widgets\DetailView;
-
 /* @var $this yii\web\View */
 /* @var $model app\models\Info */
 
@@ -118,7 +117,7 @@ preg_match('~>(.*?)<~', $model->text, $output);
                 <p>Share</p>
                 <?= \ymaker\social\share\widgets\SocialShare::widget([
                     'configurator'  => 'socialShare',
-                    'url'           => Url::base(true),
+                    'url'           => Url::base(true).Yii::$app->request->url,
                     'title'         => $model->header,
                     'description'   => $model->short_info,
                     'imageUrl'      => Url::to('/web/uploads/info/images/'.$model->image, true),
