@@ -234,13 +234,13 @@ function goBack() {
 $(document).ready(function () {
     var width = screen.width;
     if (width<=600){
-        for (var i = 1; i<7; i++){
+        for (let i = 1; i<7; i++){
             $("#"+i).html(
                 '<img src="/web/img/layouts/Banner'+i+'-min.jpeg" alt="">'
             )
         }
     } else {
-        for (var i = 1; i<7; i++){
+        for (let i = 1; i<7; i++){
             $("#"+i).html(
                 '<img src="/web/img/layouts/header'+i+'.jpg" alt="">'
             )

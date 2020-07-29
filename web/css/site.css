@@ -312,13 +312,7 @@ body {
     width: 160px;
 }
 
-.wwwu{
-    /*background-image: url(/img/layouts/process-bottom.png);*/
-    background-image: url("/web/img/layouts/process-bottom.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+
 
 .navbar a {
     color: white;
@@ -695,6 +689,14 @@ hr {
     background-color: transparent;
 }
 
+.color-1{
+    background-color: #ebebeb;
+}
+.color-2{
+    background-color: white;
+
+}
+
 .btn-secondary {
     border: 2px solid #00C851;
     color: #007E33!important;
@@ -705,6 +707,10 @@ hr {
     
     .indexBtnContainer-top{
     min-height:auto;
+    }
+
+    .topProcess > div > p {
+        background-color: white;
     }
     
     

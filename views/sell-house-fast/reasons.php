@@ -7,7 +7,7 @@ use kv4nt\owlcarousel\OwlCarouselWidget;
 use toriphes\lazyload\LazyLoad;
 use yii\helpers\Html;
 use yii\helpers\Url;
-
+$i = true;
 if (!empty($title)){
     $this->title = $title->title;
 } else {
@@ -144,10 +144,12 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="container white">
         <div class="navigaonusing">
             <div class="gaonutosal">
-                <?php foreach ($content as $element){ ?>
+                <?php foreach ($content as $element){
+                    $i = !$i;
+                    ?>
                     <div class="pesontedan">
                         <input id="pesontedan-<?=$element->id?>" type="checkbox" name="pesontedans">
-                        <label for="pesontedan-<?=$element->id?>"><?=$element->header?></label>
+                        <label class="color-<?=$i?>" for="pesontedan-<?=$element->id?>"><?=$element->header?></label>
                         <div class="pesontedan-content">
                             <?php if ($element->image != null){?>
                                 <div style="margin:20px" class="row">

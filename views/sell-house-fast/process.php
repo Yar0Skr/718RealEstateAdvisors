@@ -15,7 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div style="background-color: #ebebeb">
     <div class="container">
-        <div class="row ">
+        <div class="row topProcess">
             <br>
             <h1 align="center" style="color:#014a73;">OUR PROCESS</h1>
             <br>
@@ -59,8 +59,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 <p>We schedule
                     a closing at
                     a convenient time
-                    and place where</p>
-                    <p>YOU GET PAID!</p>
+                    and place where <br>
+                    YOU GET PAID!</p>
                 <br>
             </div>
         </div>
