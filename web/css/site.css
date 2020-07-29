@@ -731,6 +731,11 @@ hr {
     .topProcess > div > p {
         background-color: white;
     }
+
+    .bottomProcess > div > p {
+        padding: 5px;
+        border: 3px solid #ffffff;
+    }
     
     
     .btnAbsolute{

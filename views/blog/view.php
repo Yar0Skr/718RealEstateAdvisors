@@ -120,7 +120,7 @@ preg_match('~>(.*?)<~', $model->text, $output);
                     'url'           => Url::base(true).Yii::$app->request->url,
                     'title'         => $model->header,
                     'description'   => $model->short_info,
-                    'imageUrl'      => Url::to('/web/uploads/info/images/'.$model->image, true),
+                    'imageUrl'      => Url::to('https://718realestateadvisors.com/web/uploads/info/images/'.$model->image, true),
                     'containerOptions' => ['tag' => ''],
                     'linkContainerOptions' => ['tag' => ''],
                 ]); ?>
