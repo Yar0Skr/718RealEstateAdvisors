@@ -66,11 +66,11 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
     </div>
 </div>
-<div style="background-color: #ebebeb">
+<div style="background-color: #007cff">
     <div class="container">
-        <div class="row topProcess">
+        <div style="color: white" class="row bottomProcess">
             <br>
-            <h1 style="color: #014a73" align="center">WHY WORK WITH US</h1>
+            <h1 align="center">WHY WORK WITH US</h1>
             <br>
             <div align="center" class="col-12 col-md-3">
                 <?=Html::img("/web/img/icons/Layer 19.png")?>
