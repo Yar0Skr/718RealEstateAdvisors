@@ -16,9 +16,15 @@ body {
     font-size: 16pt;
     height: 100%;
 }
-.visible {
+
+.visiblePhone{
     display: none;
 }
+
+.visiblePC{
+    display: block;
+}
+
 .bigServices{
     background: #ffffff;
 }
@@ -704,7 +710,15 @@ hr {
 }
 
 @media only screen and (max-width: 600px) {
-    
+
+    .visiblePhone{
+        display: block;
+    }
+
+    .visiblePC{
+        display: none;
+    }
+
     .indexBtnContainer-top{
     min-height:auto;
     }
@@ -823,6 +837,7 @@ hr {
     }
 
     .videoDiv{
+        margin-top: 20px;
         height:150px;
     }
     .videoDiv img{

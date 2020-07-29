@@ -52,12 +52,16 @@ OwlCarouselWidget::begin([
     <div class="container">
         <div class="row">
             <div class="col-sm-12 col-md-6">
-                <div>
-                    <h2 class = 'h2' style="margin-top:40px">Watch this short video</h2> 
+                <div class="visiblePC">
+                    <h2 class = 'h2' style="margin-top:40px">Watch this short video</h2>
                     <h2 class = 'h2' style="margin-top:auto">to learn about us</h2>
                 </div>
                 <div class = "videoDiv">
-                    <?=Html::img("/web/img/index/thumbnail.jpg",['alt' => "Press here to load video"])?>
+                    <?=Html::img("@web/img/index/thumbnail.jpg",['alt' => "Press here to load video"])?>
+                </div>
+                <div class="visiblePhone">
+                    <h2 class = 'h2' style="margin-top:35px"> Watch this short video <br>
+                    to learn about us</h2>
                 </div>
             </div>
             <div style="" class="col-sm-12 col-md-6 indexBtnContainer-top">
@@ -122,12 +126,13 @@ OwlCarouselWidget::begin([
     <div class="container">
         <div class="row">
             <div style="padding: 20px" class="col-sm-12 col-md-6">
+                <h2 class = 'h2 visiblePhone'>Avoid Foreclosure</h2>
                 <div class="index-bottom">
 
                 </div>
             </div>
             <div class="col-sm-12 col-md-6">
-                <h2 class = 'h2'>Avoid Foreclosure</h2>
+                <h2 class = 'h2 visiblePC'>Avoid Foreclosure</h2>
                 <br>
                 <p>We can help if your property is distressed, and we can assist you with foreclosure solutions.</p>
                 <br>
