@@ -57,7 +57,7 @@ OwlCarouselWidget::begin([
                     <h2 class = 'h2' style="margin-top:auto">to learn about us</h2>
                 </div>
                 <div class = "videoDiv">
-                    <?=Html::img("@web/img/index/thumbnail.jpg",['alt' => "Press here to load video"])?>
+                    <?=Html::img("/web/img/index/thumbnail.jpg",['alt' => "Press here to load video"])?>
                 </div>
                 <div class="visiblePhone">
                     <h2 class = 'h2' style="margin-top:35px"> Watch this short video <br>
