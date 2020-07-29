@@ -59,14 +59,14 @@ $this->params['breadcrumbs'][] = $this->title;
                 <p>We schedule
                     a closing at
                     a convenient time
-                    and place where
-                    YOU GET PAID!</p>
+                    and place where</p>
+                    <p>YOU GET PAID!</p>
                 <br>
             </div>
         </div>
     </div>
 </div>
-<div class="wwwu">
+<div style="background-color: #007cff">
     <div class="container">
         <div style="color: white" class="row">
             <br>

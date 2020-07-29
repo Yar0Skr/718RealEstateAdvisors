@@ -12,6 +12,8 @@ Disallow: /users/
 Disallow: /contact-us/
 Disallow: /homepage/
 Disallow: /privacy-policy/
+Disallow: /sell-house-fast/index
+
 
 User-agent: anothercrawler
 Disallow: /admin/
@@ -27,5 +29,6 @@ Disallow: /users/
 Disallow: /contact-us/
 Disallow: /homepage/
 Disallow: /privacy-policy/
+Disallow: /sell-house-fast/index
 
 Sitemap: https://718realestateadvisors.com/web/sitemap.xml
