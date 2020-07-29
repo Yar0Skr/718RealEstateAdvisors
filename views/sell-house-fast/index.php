@@ -53,7 +53,7 @@ OwlCarouselWidget::begin([
         <div class="row">
             <div class="col-sm-12 col-md-6">
                 <div>
-                    <h2 class = 'h2' style="margin-top:40px">Watch this short video</h2>
+                    <h2 class = 'h2 header-margin'>Watch this short video</h2>
                     <h2 class = 'h2' style="margin-top:auto">to learn about us</h2>
                 </div>
                 <div class = "videoDiv">

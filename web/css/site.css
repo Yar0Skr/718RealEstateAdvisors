@@ -396,6 +396,10 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.header-margin{
+    margin-top: 40px;
+}
 .videoDiv img {
     height: 300px;
     width: 555px;
@@ -834,6 +838,10 @@ hr {
     .index-bottom, .index-middle {
         height: 200px;
         background-size: contain;
+    }
+
+    .header-margin{
+        margin-top: 20px;
     }
 
     .videoDiv{
