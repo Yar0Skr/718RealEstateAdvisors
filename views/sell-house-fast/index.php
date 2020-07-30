@@ -84,7 +84,7 @@ OwlCarouselWidget::begin([
         <div class="row">
             <div class="col-sm-12 col-md-6">
                 <div>
-                    <h2 class = 'h2'>Get fair cash value for your house</h2>
+                    <h2 class = 'h2 header-margin'>Get fair cash value for your house</h2>
                 </div>
                 <div class="index-middle">
 
@@ -92,7 +92,7 @@ OwlCarouselWidget::begin([
             </div>
             <div style="" class="col-sm-12 col-md-6 indexBtnContainer-bottom">
                 <div>
-                    <h2 class = 'h2'>We purchase a wide range of properties:</h2>
+                    <h2 class = 'h2 header-margin'>We purchase a wide range of properties:</h2>
                 </div>
                 <div>
                     <ul style=" padding: 0;list-style: none">
@@ -121,14 +121,16 @@ OwlCarouselWidget::begin([
 <div class="content gray">
     <div class="container">
         <div class="row">
-            <div style="padding: 20px" class="col-sm-12 col-md-6">
-                <h2 class = 'h2 visiblePhone'>Avoid Foreclosure</h2>
-                <div class="index-bottom">
+            <div class="col-sm-12 col-md-6">
+                <div class="header-margin">
+                    <h2 class = 'h2 visiblePhone'>Avoid Foreclosure</h2>
+                    <div class="index-bottom ">
 
+                    </div>
                 </div>
             </div>
             <div class="col-sm-12 col-md-6">
-                <h2 class = 'h2 visiblePC'>Avoid Foreclosure</h2>
+                <h2 class = 'header-margin h2 visiblePC'>Avoid Foreclosure</h2>
                 <br>
                 <p>We can help if your property is distressed, and we can assist you with foreclosure solutions.</p>
                 <br>
