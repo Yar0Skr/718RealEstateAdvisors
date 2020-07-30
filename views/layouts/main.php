@@ -26,8 +26,7 @@ AppAsset::register($this);
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);
         gtag('js', new Date());
-
-        gtag('config', 'UA-145164288-2');
+        gtag('config', 'UA-145164288-2')};
         </script>
     <!-- Facebook Pixel Code -->
     <script>
