@@ -580,6 +580,7 @@ a.desc:after {
     height: 25px;
     Border-radius: 60px;
     margin-right:5px;
+    padding: 2px 5px 5px 5px;
 }
 
 .tw{    
@@ -591,6 +592,7 @@ a.desc:after {
     width: 75px;
     height: 25px;
     Border-radius: 60px;
+    padding: 2px 5px 5px 5px;
 }
 
 .weBuy{
