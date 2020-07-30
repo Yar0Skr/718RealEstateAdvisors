@@ -166,12 +166,12 @@ body {
  */
 
 
-@media screen and (max-width: 320px) {
-    .myNav {
-      width: 100%;
-      box-shadow: none
-    }
-}
+/*@media screen and (max-width: 360px) {*/
+/*    .myNav {*/
+/*      width: 100%;*/
+/*      box-shadow: none*/
+/*    }*/
+/*}*/
 
 
 /**
@@ -228,8 +228,11 @@ body {
 .myNav > ul {
     display: block;
     margin: 0;
-    padding: 0;
+    padding: 25px;
     list-style: none;
+    background-color: #007cff;
+    left: 0;
+    position: absolute;
 }
 
 .myNav > ul > li {
