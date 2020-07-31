@@ -72,8 +72,7 @@ $config = [
             'showScriptName' => false,
             'enableStrictParsing' => false,
             'rules' => [
-                '/robots.txt' => '/web/robots.txt',
-                '/' => 'sell-house-fast/index',
+                ['pattern' => 'robots', 'route' => 'robotsTxt/web/index', 'suffix' => '.txt'],                '/' => 'sell-house-fast/index',
                 '/blog/delete' => '/blog/delete',
                 '/blog/index' => '/blog/index',
                 '/blog/update'=>'blog/update',
@@ -82,6 +81,43 @@ $config = [
             ],
         ],
 
+    ],
+    'modules' => [
+        'robotsTxt' => [
+            'class' => 'execut\robotsTxt\Module',
+            'components'    => [
+                'generator' => [
+                    'class' => \execut\robotsTxt\Generator::class,
+                    'host' => 'localhost',
+                    'sitemap' => [
+                        'sitemapModule/sitemapController/sitemapAction',
+                    ],
+                    'userAgent' => [
+                        '*' => [
+                            'Disallow' => [
+                                'noIndexedHtmlFile.html',
+                                [
+                                    'notIndexedModule/noIndexedController/noIndexedAction',
+                                    'noIndexedActionParam' => 'noIndexedActionParamValue',
+                                ]
+                            ],
+                            'Allow' => [
+                                //..
+                            ],
+                        ],
+                        'BingBot' => [
+                            'Sitemap' => '/sitemapSpecialForBing.xml',
+                            'Disallow' => [
+                                //..
+                            ],
+                            'Allow' => [
+                                //..
+                            ],
+                        ],
+                    ],
+                ],
+            ],
+        ],
     ],
     'params' => $params,
 ];

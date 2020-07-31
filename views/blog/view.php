@@ -319,10 +319,6 @@ preg_match('~>(.*?)<~', $model->text, $output);
 
                     </div>
 </div>
-
-<h2 align = "center">Questions?</h2>
-<h3 align = "center">Complete The Short Survey & We'll Call You Back</h3>
-<h4 align = "center">We Buy Houses "As-Is"</h4>
 <br>
 
 

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "611937f81f3e84f95ae996b785dc6090",
+    "content-hash": "be21883c6dc72d52e1fec68e196073b5",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -32,7 +32,7 @@
             "version": "3.3.11",
             "source": {
                 "type": "git",
-                "url": "git@github.com:RobinHerbots/Inputmask.git",
+                "url": "https://github.com/RobinHerbots/Inputmask.git",
                 "reference": "5e670ad62f50c738388d4dcec78d2888505ad77b"
             },
             "dist": {
@@ -107,7 +107,7 @@
             "version": "v1.3.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/bestiejs/punycode.js.git",
+                "url": "git@github.com:bestiejs/punycode.js.git",
                 "reference": "38c8d3131a82567bfef18da09f7f4db68c84f8a3"
             },
             "dist": {
@@ -315,6 +315,46 @@
                 "validator"
             ],
             "time": "2020-02-13T22:36:52+00:00"
+        },
+        {
+            "name": "execut/yii2-robots-txt",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/execut/yii2-robots-txt.git",
+                "reference": "a0e3940306118569c2a77b6f21a26ce93106451e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/execut/yii2-robots-txt/zipball/a0e3940306118569c2a77b6f21a26ce93106451e",
+                "reference": "a0e3940306118569c2a77b6f21a26ce93106451e",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "@dev"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "execut\\robotsTxt\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "eXeCUT"
+                }
+            ],
+            "description": "Module for generate robots.txt file by url rules",
+            "homepage": "https://github.com/execut/yii2-robots-txt",
+            "keywords": [
+                "robots.txt",
+                "yii2"
+            ],
+            "time": "2020-07-15T11:37:50+00:00"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -4387,7 +4427,8 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "kartik-v/yii2-widget-fileinput": 20,
-        "kartik-v/yii2-widget-sidenav": 20
+        "kartik-v/yii2-widget-sidenav": 20,
+        "execut/yii2-robots-txt": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

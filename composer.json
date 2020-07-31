@@ -23,7 +23,8 @@
         "kartik-v/yii2-widget-fileinput": "dev-master",
         "yiimaker/yii2-social-share": "^2.3",
         "kartik-v/yii2-widget-sidenav": "@dev",
-        "toriphes/yii2-widget-lazyload": "*"
+        "toriphes/yii2-widget-lazyload": "*",
+        "execut/yii2-robots-txt": "dev-master"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",
