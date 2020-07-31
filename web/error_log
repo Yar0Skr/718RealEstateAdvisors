@@ -941,3 +941,9 @@ $_SERVER = [
     'argv' => [],
     'argc' => 0,
 ]
+[30-Jul-2020 13:08:35 America/Boise] PHP Parse error:  syntax error, unexpected ''/blog/delete'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /home1/sevoneg5/public_html/config/web.php on line 77
+[30-Jul-2020 13:08:38 America/Boise] PHP Parse error:  syntax error, unexpected ''/blog/delete'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /home1/sevoneg5/public_html/config/web.php on line 77
+[30-Jul-2020 13:08:39 America/Boise] PHP Parse error:  syntax error, unexpected ''/blog/delete'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /home1/sevoneg5/public_html/config/web.php on line 77
+[30-Jul-2020 13:08:41 America/Boise] PHP Parse error:  syntax error, unexpected ''/blog/delete'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /home1/sevoneg5/public_html/config/web.php on line 77
+[30-Jul-2020 13:08:47 America/Boise] PHP Parse error:  syntax error, unexpected ''/blog/delete'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /home1/sevoneg5/public_html/config/web.php on line 77
+[30-Jul-2020 13:08:49 America/Boise] PHP Parse error:  syntax error, unexpected ''/blog/delete'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /home1/sevoneg5/public_html/config/web.php on line 77
