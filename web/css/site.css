@@ -720,6 +720,21 @@ hr {
 
 @media only screen and (max-width: 600px) {
 
+    .process-1{
+        background: #ebebeb;
+        color: #000000;
+    }
+    .process-2{
+        background: #ffffff;
+        color: #007cff;
+
+    }
+    .process-3{
+        background: #007cff;
+        color: #ffffff;
+
+    }
+
     .visiblePhone{
         display: block;
     }
@@ -732,11 +747,16 @@ hr {
     min-height:auto;
     }
 
-    .topProcess > div > p {
-        background-color: white;
-        border: 3px solid #000000;
-        padding: 5px
+    .topProcess > div{
+        padding-top: 15px;
+        padding-bottom: 5px;
     }
+
+    /*.topProcess > div > p {*/
+    /*    background-color: white;*/
+    /*    border: 3px solid #000000;*/
+    /*    padding: 5px*/
+    /*}*/
 
     .bottomProcess > div > p {
         padding: 5px;

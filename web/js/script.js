@@ -8,7 +8,7 @@ $('#navClose').on('click',function () {
     $('.myNav-toggle').click();
 })
 
-$(window).on('beforeunload', function(){
+$(window).bind('beforeunload', function(){
     if(close){
         $(".myNav-toggle").click();
     }
