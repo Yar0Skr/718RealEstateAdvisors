@@ -14,13 +14,17 @@ if (!empty($title)){
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <style>
+    h4{
+        margin: 20px;
+    }
     body{
         background-color: #ebebeb;
+        font-size: 13pt;
     }
 </style>
 <div style=" height:auto;">
     <div style="margin-bottom:20px" class="container bigServices">
-        <div style="color: #014a73;"align="center"><h1>OUR SERVICES</h1></div>
+        <div style="color: #014a73; margin-bottom: 20px"align="center"><h1>OUR SERVICES</h1></div>
         <div class="row">
             <div class="col-sm-12 col-md-3 services">
                 <div>

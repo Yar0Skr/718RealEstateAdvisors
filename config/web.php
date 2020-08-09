@@ -93,26 +93,41 @@ $config = [
                         'sitemapModule/sitemapController/sitemapAction',
                     ],
                     'userAgent' => [
-                        '*' => [
+                        'anothercrawler' => [
+                            'Sitemap' => '/sitemap.xml',
                             'Disallow' => [
-                                'noIndexedHtmlFile.html',
-                                [
-                                    'notIndexedModule/noIndexedController/noIndexedAction',
-                                    'noIndexedActionParam' => 'noIndexedActionParamValue',
-                                ]
+                                '/admin/',
+                                '/blog/',
+                                '/estates/',
+                                '/faq/',
+                                '/info-images/',
+                                '/info-metatags/',
+                                '/messages/',
+                                '/users/',
+                                '/contact-us/',
+                                '/homepage/',
+                                '/sell-house-fast/index',
                             ],
                             'Allow' => [
-                                //..
+                                '/blog/view/'
                             ],
                         ],
-                        'BingBot' => [
-                            'Sitemap' => '/sitemapSpecialForBing.xml',
+                        'googlebot' => [
+                            'Sitemap' => '/sitemap.xml',
                             'Disallow' => [
-                                //..
-                            ],
+                                '/admin/',
+                                '/blog/',
+                                '/estates/',
+                                '/faq/',
+                                '/info-images/',
+                                '/info-metatags/',
+                                '/messages/',
+                                '/users/',
+                                '/contact-us/',
+                                '/homepage/',
+                                '/sell-house-fast/index',                            ],
                             'Allow' => [
-                                //..
-                            ],
+                                '/blog/view/'                            ],
                         ],
                     ],
                 ],

@@ -21,10 +21,10 @@ $this->params['breadcrumbs'][] = $this->title;
                     $i = !$i;?>
                     <div class="pesontedan">
                         <input id="pesontedan-<?=$element->id?>" type="checkbox" name="pesontedans">
-                        <label class="white color-<?=$i?>" for="pesontedan-<?=$element->id?>"><?=$element->header?></label>
+                        <label class="white color-<?=$i?>" for="pesontedan-<?=$element->id?>" style="border: 3px solid;"><?=$element->header?></label>
                         <div class="pesontedan-content gray">
                             <div class="white" style="margin:20px" class="row">
-                                <div class="col-12">
+                                <div class="col-12 ">
                                     <p><?=$element->short_info?></p>
                                 </div>
                             </div>

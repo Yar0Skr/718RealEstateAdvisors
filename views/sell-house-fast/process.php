@@ -19,39 +19,39 @@ $this->params['breadcrumbs'][] = $this->title;
             <br>
             <h1 align="center" style="color:#014a73;">OUR PROCESS</h1>
             <br>
-            <div align="center" class="col-12 col-md-2 col-md-offset-1">
+            <div align="center" class="col-12 col-md-2 col-md-offset-1 process-1">
                 <div class="circle">
                     <p>1</p>
                 </div>
                 <br>
                 <p>Tell us about your property</p>
+            </div>
+
+            <div align="center" class="col-12 col-md-2 process-2">
+                <div class="circle">
+                    <p>2</p>
+                </div>
                 <br>
-                </div>
-                <div align="center" class="col-12 col-md-2">
-                    <div class="circle">
-                        <p>2</p>
-                    </div>
-                    <br>
-                    <p>If it meets our criteria, we will set up a quick appointment with you to visit your property.</p>
-                    <br>
-                </div>
-            <div align="center" class="col-12 col-md-2">
+                <p>If it meets our criteria, we will set up a quick appointment with you to visit your property.</p>
+            </div>
+
+            <div align="center" class="col-12 col-md-2 process-3">
                 <div class="circle">
                     <p>3</p>
                 </div>
                 <br>
                 <p>We’ll present you with a fair written, no-obligation offer.</p>
-                <br>
             </div>
-            <div align="center" class="col-12 col-md-2">
+
+            <div align="center" class="col-12 col-md-2 process-1">
                 <div class="circle">
                     <p>4</p>
                 </div>
                 <br>
                 <p>We will discuss your wants and needs and arrange terms that  suit you best. </p>
-                <br>
             </div>
-            <div align="center" class="col-12 col-md-2">
+
+            <div align="center" class="col-12 col-md-2 process-2">
                 <div class="circle">
                     <p>5</p>
                 </div>
@@ -61,8 +61,8 @@ $this->params['breadcrumbs'][] = $this->title;
                     a convenient time
                     and place where <br>
                     YOU GET PAID!</p>
-                <br>
             </div>
+
         </div>
     </div>
 </div>
