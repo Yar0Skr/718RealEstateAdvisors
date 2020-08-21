@@ -72,28 +72,28 @@ $this->params['breadcrumbs'][] = $this->title;
             <br>
             <h1 align="center">WHY WORK WITH US</h1>
             <br>
-            <div align="center" class="col-12 col-md-3">
+            <div align="center" class="col-12 col-md-3 process-3">
                 <?=Html::img("/web/img/icons/Layer 19.png")?>
                 <br>
                 <h3>PROFESSIONALISM</h3>
                 <p>We are a humble team of Real Estate experts who will display the highest level of professionalism and individual attention to details.</p>
                 <br>
             </div>
-            <div align="center" class="col-12 col-md-3">
+            <div align="center" class="col-12 col-md-3 process-1">
                 <?=Html::img("/web/img/icons/Layer 20.png")?>
                 <br>
                 <h3>EXPERIENCE</h3>
                 <p>We are well experienced and have been helping homeowners in New York Metro area in all market conditions. We have seen the good, the bad and the ugly. </p>
                 <br>
             </div>
-            <div align="center" class="col-12 col-md-3">
+            <div align="center" class="col-12 col-md-3 process-2">
                 <?=Html::img("/web/img/icons/Layer 18.png")?>
                 <br>
                 <h3>PROVEN SOLUTIONS</h3>
                 <p>We provide our clients complete information on how to sell houses and handle other real estate associated matters.</p>
                 <br>
             </div>
-            <div align="center" class="col-12 col-md-3">
+            <div align="center" class="col-12 col-md-3 process-3">
                 <?=Html::img("/web/img/icons/Layer 17.png")?>
                 <br>
                 <h3>SERVICE</h3>
