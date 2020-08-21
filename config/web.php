@@ -73,7 +73,7 @@ $config = [
             'enableStrictParsing' => false,
             'rules' => [
                 ['pattern' => 'robots', 'route' => 'robotsTxt/web/index', 'suffix' => '.txt'],
-                ['pattern' => 'sitemap', 'route' => 'robotsTxt/web/index', 'suffix' => '.xml'],
+                ['pattern' => 'sitemap', 'route' => 'web/sitemap.xml', 'suffix' => '.xml'],
                 '/' => 'sell-house-fast/index',
                 '/blog/delete' => '/blog/delete',
                 '/blog/index' => '/blog/index',
