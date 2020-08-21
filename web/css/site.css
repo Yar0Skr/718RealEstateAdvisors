@@ -761,6 +761,11 @@ hr {
         padding-bottom: 5px;
     }
 
+    .bottomProcess > div{
+        padding-top: 15px;
+        padding-bottom: 5px;
+    }
+
     /*.topProcess > div > p {*/
     /*    background-color: white;*/
     /*    border: 3px solid #000000;*/
