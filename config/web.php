@@ -72,7 +72,9 @@ $config = [
             'showScriptName' => false,
             'enableStrictParsing' => false,
             'rules' => [
-                ['pattern' => 'robots', 'route' => 'robotsTxt/web/index', 'suffix' => '.txt'],                '/' => 'sell-house-fast/index',
+                ['pattern' => 'robots', 'route' => 'robotsTxt/web/index', 'suffix' => '.txt'],
+                ['pattern' => 'sitemap', 'route' => 'robotsTxt/web/index', 'suffix' => '.xml'],
+                '/' => 'sell-house-fast/index',
                 '/blog/delete' => '/blog/delete',
                 '/blog/index' => '/blog/index',
                 '/blog/update'=>'blog/update',
@@ -94,7 +96,6 @@ $config = [
                             'Sitemap' => '/web/sitemap.xml',
                             'Disallow' => [
                                 '/admin/',
-                                '/blog/',
                                 '/estates/',
                                 '/faq/',
                                 '/info-images/',
@@ -113,7 +114,6 @@ $config = [
                             'Sitemap' => '/web/sitemap.xml',
                             'Disallow' => [
                                 '/admin/',
-                                '/blog/',
                                 '/estates/',
                                 '/faq/',
                                 '/info-images/',
@@ -122,9 +122,11 @@ $config = [
                                 '/users/',
                                 '/contact-us/',
                                 '/homepage/',
-                                '/sell-house-fast/index',                            ],
+                                '/sell-house-fast/index',
+                            ],
                             'Allow' => [
-                                '/blog/view/'                            ],
+                                '/blog/view/'
+                            ],
                         ],
                     ],
                 ],
