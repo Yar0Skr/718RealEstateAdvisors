@@ -777,6 +777,22 @@ hr {
     .bottomProcess > div{
         padding-top: 15px;
         padding-bottom: 5px;
+        border: inherit 5px solid;
+    }
+
+    .borderProcess.process-1 > p{
+        padding: 10px;
+        border: #000000 3px solid;
+    }
+
+    .borderProcess.process-2 > p{
+        padding: 10px;
+        border: #007cff 3px solid;
+    }
+
+    .borderProcess.process-3 > p{
+        padding: 10px;
+        border: #ffffff 3px solid;
     }
 
     /*.topProcess > div > p {*/

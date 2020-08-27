@@ -18,7 +18,6 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="row topProcess">
             <br>
             <h1 align="center" style="color:#014a73;">OUR PROCESS</h1>
-            <br>
             <div align="center" class="col-12 col-md-2 col-md-offset-1 process-1">
                 <div class="circle">
                     <p>1</p>
