@@ -105,6 +105,7 @@ preg_match('~>(.*?)<~', $model->text, $output);
         </div>
     </div>
     <div class="min-height-500">
+        <br>
         <div align="center" class="infoImg">
             <?=Html::img('/web/uploads/info/images/'.$model->image,['alt' => $model->alt_tag])?>
         </div>
