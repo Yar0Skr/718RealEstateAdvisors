@@ -107,7 +107,7 @@ $config = [
                                 '/sell-house-fast/index',
                             ],
                             'Allow' => [
-                                '/blog/view/'
+                                '*'
                             ],
                         ],
                         'googlebot' => [
@@ -125,7 +125,7 @@ $config = [
                                 '/sell-house-fast/index',
                             ],
                             'Allow' => [
-                                '/blog/view/'
+                                '*'
                             ],
                         ],
                     ],

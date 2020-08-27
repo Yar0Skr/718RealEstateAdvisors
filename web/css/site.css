@@ -744,6 +744,19 @@ hr {
 
     }
 
+    .process-4{
+        background: #FEFE22;
+        color: #000000;
+    }
+
+    .process-4 > .circle{
+        border: 5px solid #000000;
+    }
+
+    .process-4 > .circle > p{
+        color: #000000;
+    }
+
     .visiblePhone{
         display: block;
     }
