@@ -78,7 +78,7 @@ body {
     color: #007cff;
     position: relative;
     display: block;
-    padding: 0 0 0 1em;
+    padding: 0 15px 0 1em;
     line-height:3;
     cursor: pointer;
     font-size: 18pt;
