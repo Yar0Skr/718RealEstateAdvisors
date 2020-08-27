@@ -93,7 +93,7 @@ $config = [
                     'host' => 'localhost',
                     'userAgent' => [
                         'anothercrawler' => [
-                            'Sitemap' => '/web/sitemap.xml',
+                            'Sitemap' => '/sitemap.xml',
                             'Disallow' => [
                                 '/admin/',
                                 '/estates/',
@@ -104,14 +104,13 @@ $config = [
                                 '/users/',
                                 '/contact-us/',
                                 '/homepage/',
-                                '/sell-house-fast/index',
                             ],
                             'Allow' => [
                                 '*'
                             ],
                         ],
                         'googlebot' => [
-                            'Sitemap' => '/web/sitemap.xml',
+                            'Sitemap' => '/sitemap.xml',
                             'Disallow' => [
                                 '/admin/',
                                 '/estates/',
@@ -122,7 +121,6 @@ $config = [
                                 '/users/',
                                 '/contact-us/',
                                 '/homepage/',
-                                '/sell-house-fast/index',
                             ],
                             'Allow' => [
                                 '*'
