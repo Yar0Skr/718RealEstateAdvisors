@@ -68,7 +68,6 @@ class SellHouseFastController extends Controller
                 ]);
             }
         }
-
     }
 
     /**
